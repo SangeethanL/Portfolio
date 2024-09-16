@@ -1,0 +1,266 @@
+.myWork_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+}
+
+h1 {
+    font-family: 'Baloo', sans-serif;
+    font-size: 96px;
+    color: #5988FF;
+    line-height: 100%;
+    margin: unset;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 23px;
+    margin-bottom: 60px;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+
+.hoveringOverImage {
+    filter: grayscale(0%) !important;
+    scale: 1.1 !important;
+    z-index: 11 !important;
+}
+
+.activateArrow {
+    filter: grayscale(0%) !important;
+    rotate: 50deg !important;
+    scale: 1 !important;
+    opacity: 1 !important;
+    z-index: 40 !important;
+}
+
+.activateArrowReverse {
+    filter: grayscale(0%) !important;
+    rotate: -50deg !important;
+    scale: 1 !important;
+    opacity: 1 !important;
+    z-index: 40 !important;
+}
+
+.fadeInInfos {
+    animation: fadeInInfoContainer 0.5s forwards;
+    opacity: 1 !important;
+
+    @keyframes fadeInInfoContainer {
+        from {
+            transform: translateX(0px);
+        }
+
+        to {
+            transform: translateX(20px);
+        }
+    }
+}
+
+.fadeInInfosReverse {
+    animation: fadeInInfoContainerReverse 0.5s forwards;
+    opacity: 1 !important;
+
+    @keyframes fadeInInfoContainerReverse {
+        from {
+            transform: translateX(0px);
+        }
+
+        to {
+            transform: translateX(-20px);
+        }
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+
+@mixin project_image($imgLeft: 0vw, $imgRight: 0vw) {
+    img {
+        filter: grayscale(100%);
+        width: 620px;
+        height: 320px;
+        margin-left: $imgLeft;
+        margin-right: $imgRight;
+        z-index: 10;
+
+        &:hover {
+            filter: grayscale(0%);
+            scale: 1.1;
+            transition: all 125ms ease-in-out;
+        }
+
+        &:not(:hover) {
+            filter: grayscale(100%);
+            transition: all 125ms ease-in-out;
+        }
+    }
+}
+
+@mixin arrow($arrowNormal, $arrowReverse) {
+
+    #joinArrow,
+    #pokedexArrow,
+    #sharkieArrow {
+        position: absolute;
+        opacity: 0;
+        width: 105px;
+        height: 105px;
+        left: $arrowNormal;
+        right: $arrowReverse;
+        z-index: 39;
+    }
+}
+
+@mixin numberOfContainer($numberPosition) {
+    .numberOf {
+        position: relative;
+        display: flex;
+        justify-content: $numberPosition;
+        width: 100%;
+
+        span {
+            font-size: 38px;
+            color: rgb(255, 255, 255);
+            background-color: blue;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        z-index: 35 !important;
+    }
+
+}
+
+@mixin h2($textAlign) {
+    h2 {
+        font-family: 'Baloo', sans-serif;
+        font-size: 45px;
+        color: #5988FF;
+        text-align: $textAlign;
+        line-height: 80%;
+        margin: unset;
+    }
+}
+
+@mixin h3($textAlign) {
+    h3 {
+        font-size: 23px;
+        color: #5988FF;
+        text-align: $textAlign;
+        line-height: 90%;
+    }
+}
+
+@mixin work_container($direction: row, $imgRight: 0vw, $imgLeft: 0vw, $arrowNormal: unset, $arrowReverse: unset, $infoBoxPosition: flex-start, $numberPosition: flex-end, $textAlign: start) {
+    position: relative;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-between;
+    margin-bottom: 140px;
+    width: 100%;
+
+    .project_image {
+        position: relative;
+        display: flex;
+        align-items: center;
+        @include project_image($imgLeft, $imgRight);
+
+        @include arrow($arrowNormal, $arrowReverse);
+    }
+
+    .project_infos {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: $infoBoxPosition;
+        z-index: 35 !important;
+        width: 100%;
+        @include numberOfContainer($numberPosition);
+
+        .project_infos_content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border: 2px solid silver;
+            background-color: white;
+            border-radius: 20px;
+            opacity: 0;
+            width: fit-content;
+            padding: 5px;
+        }
+
+    }
+
+    @include h2($textAlign);
+    @include h3($textAlign);
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+h3,
+span {
+    font-family: "Montserrat", sans-serif;
+}
+
+span {
+    font-size: 16px;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+
+
+.work_container_normal {
+    @include work_container($imgRight: 8vw, $arrowNormal: 600px);
+}
+
+.work_container_reverse {
+    @include work_container(row-reverse, $imgLeft: 8vw, $arrowReverse: 600px, $infoBoxPosition: flex-end, $numberPosition: flex-start, $textAlign: end);
+}
+
+
+
+
+
+
+.ellipse_1 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 2%;
+    left: 45%;
+}
+
+.ellipse_2 {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    top: 10%;
+    left: 85%;
+}
+
+.ellipse_3 {
+    position: absolute;
+    width: 303px;
+    height: 303px;
+    top: 50%;
+    left: -12%;
+}
+
+.ellipse_4 {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 40%;
+    left: 85%;
+}

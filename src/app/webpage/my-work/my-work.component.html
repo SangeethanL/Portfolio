@@ -1,0 +1,85 @@
+<div id="link_to_myWork" class="target-element"></div>
+<div class="myWork_container">
+    <img src="./../../../assets/ellipse.png" class="ellipse_1">
+    <img src="./../../../assets/ellipse.png" class="ellipse_2">
+    <img src="./../../../assets/ellipse.png" class="ellipse_3">
+    <img src="./../../../assets/ellipse.png" class="ellipse_4">
+
+
+
+
+    <div class="content">
+        <h1 id="my_work_Title">Projekte</h1>
+        <p id="my_work_description">Hier sind einige meiner Projekte - Erkunden Sie <br>
+            meine Projekte um meine Skills zu sehen.</p>
+
+
+        <div class="work_container_normal" (mouseleave)="imgMouseleave()" id=joinContainer>
+            <div class="project_image">
+                <img src="./../../../assets/my_work/join.PNG" (mouseover)="imgMouseoverJoin()" id="joinImg">
+                <img src="./../../../assets/my_work/arrow.png" id="joinArrow">
+            </div>
+            <div class="project_infos">
+                <div class="numberOf"><span>1/3</span></div>
+                <div class="project_infos_content" id="joinInfos">
+                    <h2>Join</h2>
+                    <h3>JavaScript | HTML | CSS </h3>
+                    <span id="join">Task manager inspiriert vom Kanban System. Erstellen und<br>
+                        organisieren Sie Tasks per Drag und Drop Funktion, fügen Sie <br>
+                        User hinzu sowie Kategorien.</span>
+                    <div class="buttonContainerLeft">
+                        <button>Github</button>
+                        <button>Live test</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="work_container_reverse" (mouseleave)="imgMouseleave()">
+            <div class="project_image">
+                <img src="./../../../assets/my_work/sharkie_2.PNG" (mouseover)="imgMouseoverSharkie()" id="sharkieImg">
+                <img src="./../../../assets/my_work/arrow.png" id="sharkieArrow">
+            </div>
+            <div class="project_infos">
+                <div class="numberOf"><span>2/3</span></div>
+                <div class="project_infos_content" id="sharkieInfos">
+                    <h2>Sharkie</h2>
+                    <h3>JavaScript | HTML | CSS </h3>
+                    <span id="sharkie">2D-Spiel basierend auf einem objektorientierten Ansatz.<br>
+                        Helfe Sharkie Münzen und Gift Flaschen zu sammeln um gegen den <br>
+                        Endboss zu kämpfen.</span>
+                    <div class="buttonContainerRight">
+                        <button>Github</button>
+                        <button>Live test</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="work_container_normal" (mouseleave)="imgMouseleave()" style="margin-bottom: 10vh !important">
+            <div class="project_image">
+                <img src="./../../../assets/my_work/pokedex.PNG" (mouseover)="imgMouseoverPokedex()" id="pokedexImg">
+                <img src="./../../../assets/my_work/arrow.png" id="pokedexArrow">
+            </div>
+            <div class="project_infos">
+                <div class="numberOf"><span>3/3</span></div>
+                <div class="project_infos_content" id="pokedexInfos">
+                    <h2>Pokédex</h2>
+                    <h3>JavaScript | HTML | CSS | API </h3>
+                    <span id="pokedex">Basierend auf die PokéAPI ist dies eine simple library <br>
+                        die Informationen zu Pokemons liefert.</span>
+                    <div class="buttonContainerLeft">
+                        <button>Github</button>
+                        <button>Live test</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

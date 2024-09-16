@@ -1,0 +1,138 @@
+.skillSet_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
+    width: 100vw;
+    height: 75vh;
+    overflow: hidden;
+
+    .content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 85vw;
+    }
+}
+
+h1 {
+    font-family: 'Baloo', sans-serif;
+    font-size: 96px;
+    color: white;
+    line-height: 100%;
+    margin: unset;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.wrap_container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+
+
+@mixin wrapElementSettings () {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    min-width: 150px;
+    max-width: 150px;
+    margin: 25px;
+    cursor: pointer;
+
+    img {
+        width: 55px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+}
+
+.wrap_element {
+    @include wrapElementSettings();
+
+    &:hover {
+            font-weight: 700;
+            transition: all 125ms ease-in-out;
+
+        img {
+            animation: iconHover 0.7s ease-in-out;
+            /*transform: translate(1px, -12px);*/
+            transition: all 125ms ease-in-out;
+        }
+    }
+
+    &:not(:hover) {
+        transition: all 125ms ease-in-out;
+
+        img {
+            transition: all 125ms ease-in-out;
+        }
+    }
+}
+
+@keyframes iconHover {
+    0% {
+        transform: translate(0px);
+    }
+
+    20% {
+        transform: translate(15px);
+        scale: (0.9);
+    }
+
+    40% {
+        transform: translate(0px);
+        scale: (0.8);
+    }
+
+    80% {
+        transform: translate(-15px);
+        scale: (0.9);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+.growth_mindset {
+    div {
+        @include wrapElementSettings();
+        filter: drop-shadow(3px 1px 4px #000000c3);
+
+        &:hover {
+            filter: drop-shadow(3px 1px 4px #ffffff1d);
+            .growth_mindset_hover {
+                display: unset;
+                transition: all 125ms ease-in-out;
+            }
+        }
+
+        &:not(:hover) {
+            .growth_mindset_hover {
+                display: none;
+                transition: all 125ms ease-in-out;
+            }
+        }
+    }
+}
+
+.growth_mindset_hover {
+    position: absolute;
+    display: none;
+    width: 150px !important;
+    height: 110px !important;
+    bottom: 65px !important;
+    left: 55px;
+}

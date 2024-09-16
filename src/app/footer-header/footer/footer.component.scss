@@ -1,0 +1,75 @@
+.footer_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(71.18% 335.57% at 28.82% -124.4%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+    width: 100vw;
+    height: 35vh;
+}
+
+@mixin line_setting {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    width: 85vw;
+    height: max-content;
+}
+
+.line_1 {
+    @include line_setting();
+    font-size: 23px;
+
+    .frontend_logo {
+        width: 64px;
+        height: 72px;
+    }
+
+}
+
+.line_2 {
+    @include line_setting();
+    font-size: 16px;
+
+    .placeholder_line_2 {
+        width: 64px;
+        height: 72px;
+    }
+}
+
+.icons_footer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    img {
+        width: 30px;
+        height: 30px;
+        margin-left: 25px;
+        margin-right: 25px;
+        cursor: pointer;
+
+        &:hover {
+            scale: 1.2;
+            transition: all 125ms ease-in-out;
+        }
+
+        &:not(:hover) {
+            scale: 1;
+            transition: all 125ms ease-in-out;
+        }
+    }
+
+    div {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+

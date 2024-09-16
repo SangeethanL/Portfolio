@@ -1,0 +1,187 @@
+.contact_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
+    width: 100vw;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    height: fit-content;
+    padding-bottom: 20vh;
+}
+
+h1 {
+    font-family: 'Baloo', sans-serif;
+    font-size: 90px;
+}
+
+.left_and_right_side {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .left_side,
+    .right_side {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+}
+
+h2,
+p,
+span {
+    font-family: "Montserrat", sans-serif;
+
+    h2 {
+        font-size: 32px;
+    }
+
+    p,
+    span {
+        font-size: 16px;
+    }
+}
+
+h1,
+h2,
+span {
+    color: #5988FF;
+
+}
+
+.right_side {
+    position: relative;
+    align-items: center;
+
+    div {
+        display: flex;
+        flex-direction: row;
+
+        #checkbox {
+            max-width: 15px;
+            max-height: 15px;
+        }
+    }
+}
+
+input,
+textarea {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    border: 1px solid #5988FF;
+    border-radius: 10px;
+    width: 90%;
+    padding: 16px;
+    margin: 15px;
+
+}
+
+
+textarea {
+    resize: none;
+    height: 202px;
+}
+
+#sayHello {
+    margin-top: 20px;
+}
+
+
+
+
+
+
+.go_up_container {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    bottom: 5vh;
+
+    img {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+    }
+
+    .go_up_icon {
+        position: relative;
+        z-index: 1;
+    }
+
+    .go_up_icon_hover {
+        position: absolute;
+        opacity: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    &:hover {
+        .go_up_icon {
+            opacity: 0;
+            transition: all 125ms ease-in-out;
+        }
+
+        .go_up_icon_hover {
+            opacity: 1;
+            transition: all 125ms ease-in-out;
+        }
+
+    }
+
+    &:not(:hover) {
+        .go_up_icon {
+            opacity: 1;
+            transition: all 125ms ease-in-out;
+        }
+
+        .go_up_icon_hover {
+            opacity: 0;
+            transition: all 125ms ease-in-out;
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ellipsis_1 {
+    position: absolute;
+    width: 89px;
+    height: 89px;
+    left: 50%;
+}
+
+.ellipsis_2 {
+    position: absolute;
+    width: 143px;
+    height: 143px;
+    left: 20%;
+    bottom: 30%;
+}
+
+.ellipsis_3 {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    bottom: 10%;
+    right: 12%;
+}

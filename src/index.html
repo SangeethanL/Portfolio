@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sangeethan</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/baloo" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script>
+    window.onscroll = function () { scrollStop();scrollStop2(); };
+
+    function scrollStop() {
+      var navBar = document.getElementById('navigation');
+      /*var scrollStartPoint = navBar.height > (navBar.height + 1);*/
+      if (window.pageYOffset >= (navBar.offsetTop+40)) {
+        document.getElementById('navigation_background').classList.add('navigation_background');
+        document.getElementById('nav_links').classList.add('white-font');
+      } else{
+        document.getElementById('navigation_background').classList.remove('navigation_background');
+        document.getElementById('nav_links').classList.remove('white-font');
+      }
+    }
+
+    function scrollStop2() {
+      var navBar = document.getElementById('navigation');
+      if (window.pageYOffset > (navBar.offsetTop+150)) {
+        document.getElementById('english').style = "width: 23px; height: 23px;";
+        document.getElementById('german').style = "width: 23px; height: 23px;";
+        document.getElementById('scrollText').classList.remove('animate-scrollText');
+        document.getElementById('scrollText').classList.add('display-scrollText');
+        document.getElementById('scrollBar').classList.remove('animate-scrollBar');
+        document.getElementById('scrollBar').classList.add('display-scrollBar');
+      } else {
+        document.getElementById('english').style = "";
+        document.getElementById('german').style = "";
+        document.getElementById('scrollText').classList.add('animate-scrollText');
+        document.getElementById('scrollText').classList.remove('display-scrollText');
+        document.getElementById('scrollBar').classList.add('animate-scrollBar');
+        document.getElementById('scrollBar').classList.remove('display-scrollBar');
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
+</html>

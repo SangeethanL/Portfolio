@@ -1,0 +1,214 @@
+#startScreen_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(234, 240, 255, 1) 100%);
+    height: 100vh;
+
+    .content {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        color: #5988FF;
+        width: 85vw;
+        height: 100vh;
+
+        .left_side {
+            width: 43vw;
+        }
+
+        .right_side {
+            width: 57vw;
+        }
+
+    }
+}
+
+.left_side {
+    img {
+        position: absolute;
+        width: 610px;
+        height: 630px;
+        top: 0;
+        left: -10%;
+    }
+}
+
+.right_side {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .placeholder_right_side {
+        position: relative;
+        margin-bottom: 25vh;
+    }
+}
+
+.title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10vh;
+
+    div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+
+    }
+
+    h1 {
+        font-size: 34px;
+        font-weight: 400;
+        margin: unset;
+    }
+
+    span {
+        font-family: 'Baloo', sans-serif;
+        font-size: 100px;
+        line-height: 100%;
+    }
+}
+
+.bottom_part {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+
+    .scrollSection {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        opacity: 0.5;
+        height: 100%;
+
+        .animate-scrollText {
+            opacity: 0;
+            animation: fadeInText 7s infinite;
+            animation-delay: 1.5s;
+            font-size: 18px;
+        }
+
+        .display-scrollText{
+            animation: fadeInText 1.5s forwards;
+            font-size: 18px;
+        }
+
+        .scrollBar {
+            .animate-scrollBar {
+                animation: fadeInBar 7s infinite;
+                animation-delay: 1.5s;
+                border-radius: 3px;
+                height: 100%;
+            }
+
+            .display-scrollBar {
+                animation: fadeInBar 1.5s forwards;
+                border-radius: 3px;
+                height: 100%;
+            }
+
+            width: 4px;
+            height: 87%;
+        }
+    }
+}
+
+.side_icons {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: max-content;
+    margin-bottom: 40px;
+
+    div {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 16px;
+
+        img {
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+        }
+
+    }
+}
+
+.hover_side_icons {
+    transform: translateX(-10px);
+    transition: all 125ms ease-in-out;
+    cursor: pointer;
+}
+
+.return {
+    transform: translateX(0px);
+    transition: all 125ms ease-in-out;
+    cursor: pointer;
+}
+
+
+
+
+@keyframes fadeInBar {
+    0% {
+        background: rgb(89, 136, 255);
+        background: linear-gradient(180deg, rgba(89, 136, 255, 1) 85%, rgba(255, 255, 255, 1) 100%);
+        height: 0%;
+    }
+
+    27% {
+        background: linear-gradient(180deg, rgba(89, 136, 255, 1) 90%, rgba(255, 255, 255, 1) 100%);
+        height: 100%;
+    }
+
+    28% {
+        background: linear-gradient(180deg, rgba(89, 136, 255, 1) 93%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    29% {
+        background: linear-gradient(180deg, rgba(89, 136, 255, 1) 95%, rgba(255, 255, 255, 1) 100%);
+
+    }
+
+    30% {
+        background: linear-gradient(180deg, rgba(89, 136, 255, 1) 97%, rgba(255, 255, 255, 1) 100%);
+
+    }
+
+    31% {
+        background: linear-gradient(180deg, rgba(89, 136, 255, 1) 100%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    100% {
+        background: linear-gradient(180deg, rgba(89, 136, 255, 1) 100%, rgba(255, 255, 255, 1) 100%);
+    }
+}
+
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,136 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.display-none {
+    display: none;
+}
+
+.visibilityOff {
+    visibility: hidden;
+    transition: all 125ms ease-in-out;
+}
+
+.target-element {
+    display: block;
+    position: relative;
+    visibility: hidden;
+    top: -15vh;
+}
+
+.language_img_onScroll {
+    width: 15px;
+    height: 15px;
+}
+
+@mixin buttonSettings() {
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: #5988FF;
+    background-color: unset;
+    border: 2px solid #5988FF;
+    border-radius: 10px;
+    width: max-content;
+    height: max-content;
+    padding: 8px;
+    cursor: pointer;
+
+    &:hover {
+        animation: button_hover 0.3s;
+        animation-fill-mode: forwards;
+    }
+
+    &:not(:hover) {
+        animation: button_hover_backwards 0.1s;
+        animation-fill-mode: forwards;
+    }
+
+}
+
+
+@mixin buttonContainer($justify: flex-end, $marginLeft: 0, $marginRight: 0) {
+    position: relative;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: $justify;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    button {
+        margin-right: $marginRight;
+        margin-left: $marginLeft;
+        padding-left: unset !important;
+
+        @include buttonSettings();
+    }
+}
+
+.buttonContainerLeft {
+    @include buttonContainer($justify: flex-start !important, $marginLeft: unset, $marginRight: 20px);
+}
+
+.buttonContainerRight {
+    @include buttonContainer($justify: flex-end, $marginLeft: 20px, $marginRight: unset);
+}
+
+.button {
+    @include buttonSettings();
+}
+
+
+
+
+
+
+
+
+
+@keyframes button_hover {
+    0% {
+        color: #5988FF;
+        background-color: unset;
+    }
+
+    25% {
+        color: white;
+        background: linear-gradient(104.85deg, #5988FF -90.22%, #5988FF -49.45%, #0043F0 27.88%, #FFFFFF 33.64%, #FFFFFF 39.44%, #FFFFFF 90.08%);
+    }
+
+    50% {
+        color: white;
+        background: linear-gradient(104.4deg, #5988FF 9.21%, #5988FF 27.52%, #0043F0 62.24%, #FFFFFF 64.83%, #FFFFFF 67.43%, #FFFFFF 90.18%);
+    }
+
+    75% {
+        color: white;
+        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+        transform: scale(1.1);
+    }
+
+    100% {
+        color: white;
+        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+        transform: scale(1.1);
+    }
+}
+
+
+
+
+
+
+@keyframes button_hover_backwards {
+    0% {
+        color: #5988FF;
+        background-color: unset;
+        transform: scale(1.1);
+    }
+
+    100% {}
+}

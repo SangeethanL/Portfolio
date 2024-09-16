@@ -1,0 +1,106 @@
+.navigation_container {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    height: 15vh;
+    z-index: 50;
+
+    .empty_space {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 7.5vw;
+        height: 100%;
+
+        img {
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            cursor: pointer;
+
+            &:hover {
+                filter: brightness(1.1);
+                transition: all 125ms ease-in-out;
+            }
+
+            &:not(:hover) {
+                transition: all 125ms ease-in-out;
+            }
+        }
+    }
+
+    nav {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 85vw;
+
+        img {
+            width: 43px;
+            height: 45px;
+
+            &:hover {
+                filter: brightness(1.025);
+                transition: all 125ms ease-in-out;
+            }
+        }
+
+        .nav_links {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 35%;
+
+            div {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                min-width: 100px;
+                max-width: 100px;
+            }
+        }
+
+        a {
+            font-family: "Montserrat", sans-serif;
+            font-size: 18px;
+            color: #5988FF;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                font-weight: 700;
+                transition: all 125ms ease-in-out;
+            }
+
+            &:not(:hover) {
+                transition: all 125ms ease-in-out;
+            }
+
+        }
+    }
+}
+
+
+
+/*------------------------------------------------------------------------------*/
+
+.navigation_background {
+    position: absolute;
+    background: rgb(39, 69, 145);
+    background: linear-gradient(180deg, rgba(39, 69, 145, 1) 88%, rgba(39, 69, 145, 0.8436508392419468) 91%, rgba(39, 69, 145, 0) 100%);
+    width: 100vw;
+    height: 15vh;
+    top: 0;
+}
+
+.white-font {
+    div {
+        a {
+            color: white !important;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+<div id="link_to_startScreen" class="target-element"></div>
+<div id="startScreen_container">
+
+    <div class="content">
+
+        <div class="left_side">
+            <img src="./../../../assets/start_ellipse.png">
+        </div>
+
+        <div class="right_side">
+            <div class="placeholder_right_side"></div>
+
+            <div class="title">
+                <div>
+                    <h1 id="namePresentation">Hallo! Ich bin Sangeethan</h1>
+                    <span>FRONTEND</span>
+                    <span>DEVELOPER</span>
+                </div>
+            </div>
+
+            <div class="bottom_part">
+                <div></div>
+                <div class="scrollSection">
+                    <span class="animate-scrollText" id="scrollText">SCROLL</span>
+    
+                    <div class="scrollBar">
+                        <div class="animate-scrollBar" id="scrollBar"></div>
+                    </div>
+                </div>
+
+                <div class="side_icons">
+                    <div (mouseenter)="switchToLeft('gitHub')" (mouseleave)="returnToRight('gitHub')">
+                        <img src="./../../../assets/start/github.png" id="gitHub">
+                    </div>
+                    <div (mouseenter)="switchToLeft('mail')" (mouseleave)="returnToRight('mail')">
+                        <img src="./../../../assets/start/mail.png" id="mail">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
