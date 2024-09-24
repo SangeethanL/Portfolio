@@ -54,8 +54,8 @@ export class FunctionsComponent {
         let needADeveloper = document.getElementById('needADeveloper') as HTMLElement; needADeveloper.innerHTML = `Need a Frontend developer? <b>Contact me!</b>`;
         let readPrivacyPolicy = document.getElementById('read_privacy_policy') as HTMLElement; readPrivacyPolicy.innerHTML = `
         I've read the privacy policy and agree to the processing of my data as outlined.`;
-        let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = `Say hello ;)`;
-        let imprint= document.getElementById('imprint') as HTMLElement; imprint.innerHTML = `Imprint`;
+        let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = 'Say hello ;)';
+        let imprint= document.getElementById('imprint') as HTMLElement; imprint.innerHTML = 'Imprint';
         let inputMessage = document.getElementById('clientMessage') as HTMLTextAreaElement; inputMessage.placeholder = 'Message';
     }
 
@@ -97,7 +97,6 @@ export class FunctionsComponent {
         Zusammen finden wir eine Lösung, <br>wie ich mit meiner Arbeit eine Lösung für Ihre Ideen finde.`;
         let needADeveloper = document.getElementById('needADeveloper') as HTMLElement; needADeveloper.innerHTML = `
         Sie brauchen einen Frontend Developer? <b>Kontaktieren Sie mich!</b>`;
-        let yourName = document.getElementById('yourName') as HTMLElement; yourName.innerHTML = `Ihr Name`;
         let readPrivacyPolicy = document.getElementById('read_privacy_policy') as HTMLElement; readPrivacyPolicy.innerHTML = `
         Ich habe die Datenschutzerklärung gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.`;
         let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = `Sag Hallo ;)`;

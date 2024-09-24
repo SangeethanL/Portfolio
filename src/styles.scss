@@ -8,12 +8,11 @@ body {
 }
 
 .display-none {
-    display: none;
+    display: none !important;
 }
 
-.visibilityOff {
-    visibility: hidden;
-    transition: all 125ms ease-in-out;
+.display-unset {
+    display: unset !important;
 }
 
 .target-element {
@@ -63,11 +62,9 @@ body {
     padding-bottom: 12px;
 
     button {
+        @include buttonSettings();
         margin-right: $marginRight;
         margin-left: $marginLeft;
-        padding-left: unset !important;
-
-        @include buttonSettings();
     }
 }
 

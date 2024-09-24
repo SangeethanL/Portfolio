@@ -26,3 +26,35 @@
     </div>
 
 </div>
+
+
+
+
+
+
+
+
+<div class="header_responsive">
+
+    <nav>
+        <img src="./../../../assets/frontend_logo.png">
+        <div class="menu_close_container">
+            <img src="./../../../assets/menu.png" (click)="openMenu()" id="menu">
+            <img src="./../../../assets/close.png" (click)="closeMenu()" id="close">
+        </div>
+    </nav>
+
+    <div class="resonsive_menu" id="responsive_menu">
+        <div class="placeholder_top"></div>
+        <div class="resp_menu_content">
+            <nav>
+                <a href="#link_to_startScreen" (click)="closeMenu()">Start</a>
+                <a href="#link_to_aboutMe" (click)="closeMenu()">Über mich</a>
+                <a href="#link_to_skillSet" (click)="closeMenu()">Skills</a>
+                <a href="#link_to_myWork" (click)="closeMenu()">Projekte</a>
+            </nav>
+        </div>
+    </div>
+
+
+</div>

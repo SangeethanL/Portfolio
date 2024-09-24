@@ -10,7 +10,8 @@ import { Component } from '@angular/core';
 export class SkillSetComponent {
 
   icons: (any)[] = [];
-  iconsName: (string)[] = ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'Scrum', 'Firebase', 'GIT', 'CSS', 'REST-Api', 'Material Design']
+  iconsName: (string)[] = ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'Scrum', 'Firebase', 'GIT', 'CSS', 'REST-Api', 'Material Design'];
+  clicked:boolean = false;
 
 
   constructor() {
@@ -32,6 +33,16 @@ export class SkillSetComponent {
         image_name: i,
         name: ''
       });
+    }
+  }
+
+  show_growthMindset_note() {
+    if (this.clicked == false) {
+      document.getElementById('growth_mindset_note')?.classList.add('display-unset');
+      this.clicked = true;
+    } else if (this.clicked == true) {
+      document.getElementById('growth_mindset_note')?.classList.remove('display-unset');
+      this.clicked = false;
     }
   }
 

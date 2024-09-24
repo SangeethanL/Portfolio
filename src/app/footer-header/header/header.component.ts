@@ -12,5 +12,16 @@ export class HeaderComponent {
 
   functions = inject(FunctionsComponent);
  
+  openMenu() {
+    document.getElementById('responsive_menu')?.classList.add('rollOut');
+    document.getElementById('menu')?.classList.add('display-none');
+    document.getElementById('close')?.classList.add('display-unset');
+  }
+
+  closeMenu() {
+    document.getElementById('responsive_menu')?.classList.remove('rollOut');
+    document.getElementById('menu')?.classList.remove('display-none');
+    document.getElementById('close')?.classList.remove('display-unset');
+  }
 
 }

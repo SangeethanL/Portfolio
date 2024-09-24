@@ -32,7 +32,8 @@ p {
 
 .hoveringOverImage {
     filter: grayscale(0%) !important;
-    scale: 1.1 !important;
+    scale: 1.1;
+    transition: all 125ms ease-in-out;
     z-index: 11 !important;
 }
 
@@ -92,12 +93,6 @@ p {
         margin-left: $imgLeft;
         margin-right: $imgRight;
         z-index: 10;
-
-        &:hover {
-            filter: grayscale(0%);
-            scale: 1.1;
-            transition: all 125ms ease-in-out;
-        }
 
         &:not(:hover) {
             filter: grayscale(100%);
@@ -200,7 +195,6 @@ p {
             width: fit-content;
             padding: 5px;
         }
-
     }
 
     @include h2($textAlign);
@@ -263,4 +257,63 @@ span {
     height: 35px;
     top: 40%;
     left: 85%;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1080px) {
+
+    #joinArrow,
+    #pokedexArrow,
+    #sharkieArrow {
+        display: none;
+    }
+
+    .numberOf {
+        display: none !important;
+    }
+
+    .work_container_normal, .work_container_reverse {
+       display: flex;
+       flex-direction: column;
+    }
+
+    
+    .project_image {
+        display: flex;
+        justify-content: center; 
+        width: 100%;
+
+        img {
+            filter: grayscale(0%) !important;
+            margin-left: unset !important;
+            margin-right: unset !important;
+        }
+    }
+
+    .project_infos {
+        flex-direction: unset !important;
+        justify-content: center !important;
+
+        .project_infos_content {
+            align-items: center;
+            border: unset !important;
+            background-color: unset !important;
+            border-radius: unset !important;
+            opacity: 1 !important;
+            margin-top: 40px;
+            padding: unset !important;
+
+            h2, h3, #join, #sharkie, #pokedex {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+    }
 }

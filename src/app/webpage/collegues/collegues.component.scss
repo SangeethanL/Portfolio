@@ -50,7 +50,7 @@
             flex-direction: column;
             color: white;
             border-radius: 10px;
-            padding: 18px;
+            margin: 18px;
 
             .collegue_name {
                 font-family: "Montserrat", sans-serif;
@@ -74,3 +74,12 @@
     }
 }
 
+
+@media (max-width: 1080px) {
+    .reviews {
+        overflow-x: scroll;
+        div {
+            margin-right: 28px;
+        }
+    }
+}

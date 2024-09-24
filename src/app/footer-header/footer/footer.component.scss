@@ -73,3 +73,21 @@
     }
 }
 
+
+
+
+@media (max-width: 1080px) {
+    .line_1, .line_2 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
+        align-items: center;
+    }
+
+    .line_2 {
+        .placeholder_line_2, .icons_footer {
+            display: none;
+        }
+    }
+}
