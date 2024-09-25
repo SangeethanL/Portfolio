@@ -60,6 +60,16 @@ h1 {
     @media (max-width: 1080px) {
         margin: 15px;
     }
+
+    @media (max-width: 1000px) {
+        img {
+            width: 50px;
+            height: 55px;
+            margin-bottom: 15px;
+        }
+        margin: 4px;
+        margin-bottom: 35px;
+    }
 }
 
 .wrap_element {
@@ -72,7 +82,6 @@ h1 {
         img {
             animation: iconHover 0.7s ease-in-out;
             /*transform: translate(1px, -12px);*/
-            transition: all 125ms ease-in-out;
         }
     }
 
@@ -151,6 +160,19 @@ h1 {
         font-size: 90px;
         margin-top: 40px;
         margin-bottom: 10px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .wrap_container {
+        height: 80%;
     }
 
 }

@@ -253,6 +253,19 @@
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1440px) {
 
     .right_side {
@@ -296,13 +309,169 @@
 
     #ellipse {
         width: 85vw !important;
-        height: 630px;
     }
 }
-
 
 @media (max-width: 1080px) {
     #ellipse {
         width: 60vw !important;
+        height: 610px !important;
+    }
+
+    .title_responsive {
+
+        h1 {
+            font-size: 26px !important;
+        }
+
+        span {
+            font-size: 79px !important;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    #ellipse {
+        width: 65vw !important;
+        height: 580px !important;
+    }
+
+}
+
+@media (max-width: 800px) {
+    #ellipse {
+        width: 70vw !important;
+        height: 510px !important;
+    }
+
+    
+    .title_responsive {
+
+        h1 {
+            font-size: 26px !important;
+        }
+
+        span {
+            font-size: 74px !important;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    #ellipse {
+        height: 460px !important;
+    }
+
+    .title_responsive {
+
+        h1 {
+            font-size: 22px !important;
+        }
+
+        span {
+            font-size: 62px !important;
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    #ellipse {
+        width: 75vw !important;
+        height: 420px !important;
+    }
+
+    .title_responsive {
+        span {
+            font-size: 56px !important;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #ellipse {
+        width: 70vw !important;
+        height: 400px !important;
+    }
+
+    .title_responsive {
+
+        h1 {
+            font-size: 20px !important;
+        }
+
+        span {
+            font-size: 48px !important;
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    #ellipse {
+        width: 75vw !important;
+        height: 380px !important;
+    }
+
+}
+
+@media (max-width: 440px) {
+    #ellipse {
+        height: 360px !important;
+    }
+
+    .title_responsive {
+
+        h1 {
+            font-size: 18px !important;
+        }
+
+        span {
+            font-size: 42px !important;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    #ellipse {
+        height: 350px !important;
+    }
+    .title_responsive {
+
+        span {
+            font-size: 39px !important;
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    #ellipse {
+        height: 340px !important;
+    }
+    .title_responsive {
+
+        h1 {
+            font-size: 16px !important;
+        }
+
+        span {
+            font-size: 35px !important;
+        }
+    }
+}
+
+@media (max-width: 330px) {
+    #ellipse {
+        width: 75vw !important;
+        height: 330px !important;
+    }
+
+    .title_responsive {
+
+        h1 {
+            font-size: 15px !important;
+        }
+
+        span {
+            font-size: 33px !important;
+        }
     }
 }

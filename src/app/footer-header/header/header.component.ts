@@ -16,12 +16,14 @@ export class HeaderComponent {
     document.getElementById('responsive_menu')?.classList.add('rollOut');
     document.getElementById('menu')?.classList.add('display-none');
     document.getElementById('close')?.classList.add('display-unset');
+    document.getElementById('languages')?.classList.add('fadeInLanguages');
   }
 
   closeMenu() {
     document.getElementById('responsive_menu')?.classList.remove('rollOut');
     document.getElementById('menu')?.classList.remove('display-none');
     document.getElementById('close')?.classList.remove('display-unset');
+    document.getElementById('languages')?.classList.remove('fadeInLanguages');
   }
 
 }
