@@ -14,7 +14,6 @@
         align-items: center;
         width: 85vw;
         height: 100%;
-        overflow-y: auto;
 
         .left_side,
         .right_side {
@@ -181,32 +180,28 @@ h2 {
 
 @media (max-width: 1080px) {
     .aboutMe_container {
-        height: 100vh;
+        height:min-content !important;
     }
 
     .content {
         flex-direction: column !important;
         justify-content: space-evenly !important;
+        width: 96vw !important;
 
         .left_side,
         .right_side {
             width: 100% !important;
-            height: 40% !important;
+        }
+
+        .left_side {
+            height: 50vh !important;
+            margin-bottom: 30px !important;
         }
     }
 
-
-    .right_side {
-        width: 100% !important;
-
-        .rightSide_mainPart {
-            width: 100% !important;
-
-            div {
-                justify-content: space-between;
-                width: fit-content;
-            }
-        }
+    .leftSide_mainPart,
+    .rightSide_mainPart {
+        width: 100%;
     }
 
     h1 {
@@ -214,16 +209,19 @@ h2 {
     }
 
     h2 {
-        font-size: 38px;
+        font-size: 40px;
     }
-
 
     .shortCutsContainer {
         flex-direction: column;
         align-items: center;
 
+        div:first-child {
+            margin-bottom: 10px;
+        }
+
         div {
-            width: 70%;
+            width: 55%;
 
             div {
                 justify-content: space-between;
@@ -231,6 +229,7 @@ h2 {
             }
 
             .shortCutsImages {
+                width: 51px;
 
                 #location_img,
                 #location_hover_img {
@@ -250,13 +249,21 @@ h2 {
 
         span {
             text-align: right;
-            font-size: 24px;
+            font-size: 26px;
         }
     }
 
 
     .right_side {
         font-size: 26px;
+        height: min-content !important;
+        .rightSide_mainPart {
+           
+            div {
+                justify-content: space-evenly;
+                width: fit-content;
+            }
+        }
     }
 }
 
@@ -271,30 +278,17 @@ h2 {
 @media (max-width: 900px) {
 
     h1 {
-        font-size: 70px;
+        font-size: 72px;
     }
 
     h2 {
-        font-size: 35px;
+        font-size: 37px;
     }
 
 
     .shortCutsContainer {
-
-        #location_img,
-        #location_hover_img {
-            width: 29px;
-            height: 44px;
-        }
-
-        #remote_img,
-        #remote_hover_img {
-            width: 51px;
-            height: 43px;
-        }
-
         span {
-            font-size: 22px;
+            font-size: 24px;
         }
     }
 
@@ -305,13 +299,51 @@ h2 {
 
 
 
-
-
-
-@media (max-width: 800px) {
-
+@media (max-width: 720px) {
     h1 {
-        font-size: 60px;
+        font-size: 68px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+
+    .shortCutsContainer {
+        span {
+            font-size: 22px;
+        }
+    }
+
+    .right_side {
+        font-size: 22px;
+
+        br {
+            display: none !important;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 52px;
+    }
+
+    .shortCutsContainer {
+        div {
+            width: 65%;
+        }
+    }
+}
+
+
+
+
+
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 45px;
     }
 
     h2 {
@@ -326,30 +358,6 @@ h2 {
     }
 
     .right_side {
-        font-size: 22px;
-    }
-}
-
-
-
-@media (max-width: 700px) {
-
-    h1 {
-        font-size: 50px;
-    }
-
-    h2 {
-        font-size: 27px;
-    }
-
-
-    .shortCutsContainer {
-        span {
-            font-size: 19px;
-        }
-    }
-
-    .right_side {
         font-size: 20px;
     }
 }
@@ -357,93 +365,20 @@ h2 {
 
 
 
-
-
-@media (max-width: 600px) {
-
+@media (max-width: 400px) {
     h1 {
-        font-size: 45px;
-    }
-
-    h2 {
-        font-size: 27px;
+        font-size: 42px;
     }
 
 
     .shortCutsContainer {
-
         span {
-            font-size: 19px;
+            font-size: 18px;
         }
     }
-
 
     .right_side {
-        font-size: 20px;
-    }
-}
-
-
-
-
-
-
-@media (max-width: 550px) {
-
-    h1 {
-        font-size: 45px;
-    }
-
-    h2 {
-        font-size: 27px;
-    }
-
-
-    .shortCutsContainer {
-
-        span {
-            font-size: 17px;
-        }
-    }
-
-
-    .right_side {
-        font-size: 16px;
-
-        br {
-            display: none !important;
-        }
-    }
-}
-
-
-
-
-@media (max-width: 450px) {
-
-    h1 {
-        font-size: 40px;
-    }
-
-    h2 {
-        font-size: 27px;
-    }
-
-
-    .shortCutsContainer {
-
-        span {
-            font-size: 15px;
-        }
-    }
-
-
-    .right_side {
-        font-size: 16px;
-
-        br {
-            display: none !important;
-        }
+        font-size: 18px;
     }
 }
 
@@ -452,29 +387,11 @@ h2 {
 
 
 @media (max-width: 350px) {
-
     h1 {
-        font-size: 40px;
+        font-size: 32px;
     }
 
     h2 {
-        font-size: 22px;
-    }
-
-
-    .shortCutsContainer {
-
-        span {
-            font-size: 13px;
-        }
-    }
-
-
-    .right_side {
-        font-size: 16px;
-
-        br {
-            display: none !important;
-        }
+        font-size: 27px;
     }
 }

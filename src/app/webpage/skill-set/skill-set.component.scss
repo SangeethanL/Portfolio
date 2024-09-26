@@ -67,8 +67,15 @@ h1 {
             height: 55px;
             margin-bottom: 15px;
         }
+
         margin: 4px;
         margin-bottom: 35px;
+    }
+
+    @media (max-width: 550px) {
+        img {
+            margin-bottom: 10px;
+        }
     }
 }
 
@@ -76,8 +83,8 @@ h1 {
     @include wrapElementSettings();
 
     &:hover {
-            font-weight: 700;
-            transition: all 125ms ease-in-out;
+        font-weight: 700;
+        transition: all 125ms ease-in-out;
 
         img {
             animation: iconHover 0.7s ease-in-out;
@@ -126,6 +133,7 @@ h1 {
 
         &:hover {
             filter: drop-shadow(3px 1px 4px #ffffff1d);
+
             .growth_mindset_hover {
                 display: unset;
                 transition: all 125ms ease-in-out;
@@ -159,7 +167,7 @@ h1 {
     h1 {
         font-size: 90px;
         margin-top: 40px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
 }
@@ -169,10 +177,11 @@ h1 {
 
     h1 {
         font-size: 60px;
+        margin-bottom: 40px;
     }
 
     .wrap_container {
-        height: 80%;
+        height: 70%;
     }
 
 }
