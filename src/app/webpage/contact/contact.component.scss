@@ -194,15 +194,70 @@ textarea {
 
 
 @media (max-width: 1080px) {
+    .content {
+        width: 96vw;
+        padding-bottom: 10vh;
+    }
     .left_and_right_side {
         flex-direction: column;
         align-items: center;
         justify-content: unset;
-        background-color: green;
 
         .left_side,
         .right_side {
             width: 100%;
         }
+
+        .left_side {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 80px;
+        margin: unset !important;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 70px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 390px) {
+    h1 {
+        font-size: 55px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 21px;
     }
 }

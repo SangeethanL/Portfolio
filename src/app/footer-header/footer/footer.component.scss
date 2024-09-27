@@ -85,6 +85,14 @@
         align-items: center;
     }
 
+    .line_1 {
+        margin-bottom: 20px;
+
+        img, span {
+            margin-bottom: 20px;
+        }
+    }
+
     .line_2 {
         .placeholder_line_2, .icons_footer {
             display: none;

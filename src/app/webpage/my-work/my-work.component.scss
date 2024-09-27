@@ -15,7 +15,7 @@
 h1 {
     font-family: 'Baloo', sans-serif;
     font-size: 96px;
-    color: #5988FF;;
+    color: #5988FF;
     line-height: 100%;
     margin: unset;
     margin-top: 50px;
@@ -100,10 +100,31 @@ p {
         }
     }
 
+    @media (max-width: 720px) {
+        img {
+            width: 470px !important;
+            height: 250px !important;
+        }
+    }
+
     @media (max-width: 500px) {
         img {
-            width: 330px;
-            height: 190px;
+            width: 360px !important;
+            height: 190px !important;
+        }
+    }
+
+    @media (max-width: 400px) {
+        img {
+            width: 290px !important;
+            height: 160px !important;
+        }
+    }
+
+    @media (max-width: 350px) {
+        img {
+            width: 240px !important;
+            height: 140px !important;
         }
     }
 }
@@ -206,6 +227,11 @@ p {
 
     @include h2($textAlign);
     @include h3($textAlign);
+
+    
+    @media (max-width: 1080px) {
+        margin-bottom: 80px;
+    }
 }
 
 /*-------------------------------------------------------------------------------------------------*/
@@ -275,6 +301,9 @@ span {
 
 
 @media (max-width: 1080px) {
+    .content {
+        width: 96vw;
+    }
 
     #joinArrow,
     #pokedexArrow,
@@ -286,15 +315,16 @@ span {
         display: none !important;
     }
 
-    .work_container_normal, .work_container_reverse {
-       display: flex;
-       flex-direction: column;
+    .work_container_normal,
+    .work_container_reverse {
+        display: flex;
+        flex-direction: column;
     }
 
-    
+
     .project_image {
         display: flex;
-        justify-content: center; 
+        justify-content: center;
         width: 100%;
 
         img {
@@ -317,10 +347,76 @@ span {
             margin-top: 40px;
             padding: unset !important;
 
-            h2, h3, #join, #sharkie, #pokedex {
+            h2,
+            h3,
+            #join,
+            #sharkie,
+            #pokedex {
                 text-align: center;
                 margin-bottom: 30px;
             }
         }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1080px) {
+    h1 {
+        font-size: 86px;
+    }
+}
+
+@media (max-width: 900px) {
+    p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 720px) {}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 70px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 500px) {}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 55px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 21px;
     }
 }
