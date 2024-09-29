@@ -10,30 +10,30 @@ import { Component } from '@angular/core';
 export class SkillSetComponent {
 
   icons: (any)[] = [];
-  iconsName: (string)[] = ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'Scrum', 'Firebase', 'GIT', 'CSS', 'REST-Api', 'Material Design'];
+  skill: (string)[] = ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'Scrum', 'Firebase', 'GIT', 'CSS', 'REST-Api', 'Material Design'];
   clicked:boolean = false;
 
 
   constructor() {
-    this.generateArray();
+    this.generateIconsArray();
   }
 
-  async generateArray() {
-    await this.createNumbers();
-
-    for (let k = 0; k < 10; k++) {
-      this.icons[k].name = this.iconsName[k];
-    }
-
-  }
-
-  createNumbers() {
+  createImgNumbers() {
     for (let i = 1; i < 11; i++) {
       this.icons.push({
-        image_name: i,
+        file_name: i,
         name: ''
       });
     }
+  }
+
+  async generateIconsArray() {
+    await this.createImgNumbers();
+
+    for (let k = 0; k < 10; k++) {
+      this.icons[k].name = this.skill[k];
+    }
+
   }
 
   show_growthMindset_note() {

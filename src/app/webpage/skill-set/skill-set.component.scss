@@ -81,6 +81,8 @@ h1 {
 
 .wrap_element {
     @include wrapElementSettings();
+    transition: all 125ms ease-in-out;
+    opacity: 0;
 
     &:hover {
         font-weight: 700;
@@ -127,6 +129,8 @@ h1 {
 }
 
 .growth_mindset {
+    transition: all 125ms ease-in-out;
+    opacity: 0;
     div {
         @include wrapElementSettings();
         filter: drop-shadow(3px 1px 4px #000000c3);

@@ -3,13 +3,13 @@
     <div class="content">
         <h1 id="skills">Skills</h1>
         <div class="wrap_container">
-            @for (image of icons; track image) {
-            <div class="wrap_element">
-                <img src="./../../../assets/skill_set/{{image.image_name}}.png">
-                <span>{{image.name}}</span>
+            @for (icon of icons; track icon) {
+            <div class="wrap_element" id="{{icon.file_name}}">
+                <img src="./../../../assets/skill_set/{{icon.file_name}}.png" >
+                <span>{{icon.name}}</span>
             </div>
             }
-            <div class="growth_mindset" (click)="show_growthMindset_note()">
+            <div class="growth_mindset" (click)="show_growthMindset_note()" id="11">
                 <div>
                     <img src="./../../../assets/skill_set/growth_mindset_hover.png" class="growth_mindset_hover" id="growth_mindset_note">
                     <img src="./../../../assets/skill_set/11.png">

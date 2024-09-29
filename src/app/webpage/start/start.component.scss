@@ -93,6 +93,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     height: 100%;
 
     .scrollSection {
@@ -102,7 +103,7 @@
         align-items: center;
         justify-content: space-between;
         opacity: 0.5;
-        height: 100%;
+        height: 60%;
 
         .animate-scrollText {
             opacity: 0;
@@ -252,6 +253,14 @@
         }
     }
 }
+
+.scroll_info_responsive {
+    position: absolute;
+    font-size: 20px;
+    bottom: 0 !important;
+    right: 0 !important;
+}
+
 
 
 
