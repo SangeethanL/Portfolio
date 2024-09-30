@@ -261,6 +261,9 @@ h2 {
             div {
                 justify-content: space-evenly;
                 width: fit-content;
+                br {
+                    display: none;
+                }
             }
         }
     }

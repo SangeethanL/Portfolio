@@ -18,7 +18,9 @@ export class FunctionsComponent {
         let aboutMe = document.getElementById('about_me') as HTMLElement; aboutMe.innerHTML = 'About me';
         let skillSet = document.getElementById('skill_set') as HTMLElement; skillSet.innerHTML = 'Skill set';
         let myWork = document.getElementById('my_work') as HTMLElement; myWork.innerHTML = 'My work';
+        
         let namePresentation = document.getElementById('namePresentation') as HTMLElement; namePresentation.innerHTML = 'Hello! I am Sangeethan';
+        let namePresentationResp = document.getElementById('namePresentationResp') as HTMLElement; namePresentationResp.innerHTML = 'Hello! I am Sangeethan';
         let workTogether = document.getElementById('work_together') as HTMLElement; workTogether.innerHTML = `Let's work together`;
         let iAm = document.getElementById('i_am') as HTMLElement; iAm.innerHTML = 'I am';
         let locatedIn = document.getElementById('locatedIn') as HTMLElement; locatedIn.innerHTML = `located in <br> Stuttgart`;
@@ -57,6 +59,9 @@ export class FunctionsComponent {
         let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = 'Say hello ;)';
         let imprint= document.getElementById('imprint') as HTMLElement; imprint.innerHTML = 'Imprint';
         let inputMessage = document.getElementById('clientMessage') as HTMLTextAreaElement; inputMessage.placeholder = 'Message';
+
+        let respAboutMe= document.getElementById('respAboutMe') as HTMLLinkElement; respAboutMe.innerHTML = 'About me';
+        let respProjects = document.getElementById('respProjects') as HTMLLinkElement; respProjects.innerHTML = 'Projects';
     }
 
     german() {
@@ -64,6 +69,7 @@ export class FunctionsComponent {
         let skillSet = document.getElementById('skill_set') as HTMLElement; skillSet.innerHTML = 'Skills';
         let myWork = document.getElementById('my_work') as HTMLElement; myWork.innerHTML = 'Projekte';
         let namePresentation = document.getElementById('namePresentation') as HTMLElement; namePresentation.innerHTML = 'Hallo! Ich bin Sangeethan';
+        let namePresentationResp = document.getElementById('namePresentationResp') as HTMLElement; namePresentationResp.innerHTML = 'Hallo! Ich bin Sangeethan';
         let workTogether = document.getElementById('work_together') as HTMLElement; workTogether.innerHTML = 'Lasst uns zusammen arbeiten';
         let iAm = document.getElementById('i_am') as HTMLElement; iAm.innerHTML = 'Ich bin';
         let locatedIn = document.getElementById('locatedIn') as HTMLElement; locatedIn.innerHTML = `wohnhaft in <br> Stuttgart`;
@@ -102,6 +108,9 @@ export class FunctionsComponent {
         let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = `Sag Hallo ;)`;
         let imprint= document.getElementById('imprint') as HTMLElement; imprint.innerHTML = `Impressum`;
         let inputMessage = document.getElementById('clientMessage') as HTMLTextAreaElement; inputMessage.placeholder = 'Nachricht';
+
+        let respAboutMe= document.getElementById('respAboutMe') as HTMLLinkElement; respAboutMe.innerHTML = 'Über mich';
+        let respProjects = document.getElementById('respProjects') as HTMLLinkElement; respProjects.innerHTML = 'Projekte';
     }
 
 }

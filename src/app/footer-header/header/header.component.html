@@ -39,8 +39,8 @@
     <nav>
         <img src="./../../../assets/frontend_logo.png">
         <div id="languages">
-            <img src="./../../../assets/english.png" (click)="functions.english();closeMenu()" id="english">
-            <img src="./../../../assets/german.png" (click)="functions.german();closeMenu()" id="german">
+            <img src="./../../../assets/english.png" (click)="functions.english();" id="english">
+            <img src="./../../../assets/german.png" (click)="functions.german();" id="german">
         </div>
         <div class="menu_close_container">
             <img src="./../../../assets/menu.png" (click)="openMenu()" id="menu">
@@ -52,10 +52,10 @@
         <div class="placeholder_top"></div>
         <div class="resp_menu_content">
             <nav>
-                <a href="#link_to_startScreen" (click)="closeMenu()">Start</a>
-                <a href="#link_to_aboutMe" (click)="closeMenu()">Über mich</a>
-                <a href="#link_to_skillSet" (click)="closeMenu()">Skills</a>
-                <a href="#link_to_myWork" (click)="closeMenu()">Projekte</a>
+                <a href="#link_to_startScreen" (click)="closeMenu()" id="respStart">Start</a>
+                <a href="#link_to_aboutMe" (click)="closeMenu()" id="respAboutMe">Über mich</a>
+                <a href="#link_to_skillSet" (click)="closeMenu()" id="respSkills">Skills</a>
+                <a href="#link_to_myWork" (click)="closeMenu()" id="respProjects">Projekte</a>
             </nav>
         </div>
     </div>

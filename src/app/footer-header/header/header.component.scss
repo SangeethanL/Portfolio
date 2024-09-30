@@ -90,8 +90,8 @@
 
 .navigation_background {
     position: absolute;
-    background: rgb(231,245,254);
-    background: linear-gradient(180deg, rgba(231,245,254, 1) 88%, rgba(231,245,254, 0.8436508392419468) 91%, rgba(231,245,254, 0) 100%);
+    background: rgb(231, 245, 254);
+    background: linear-gradient(180deg, rgba(231, 245, 254, 1) 88%, rgba(231, 245, 254, 0.8436508392419468) 91%, rgba(231, 245, 254, 0) 100%);
     transition: all 425ms ease-in-out;
     width: 100vw;
     height: 12vh;
@@ -113,7 +113,7 @@
     position: fixed;
     display: flex;
     justify-content: center;
-    background: #76bfeb;
+    background: rgb(91, 145, 180);
     width: 100vw;
     height: 11vh;
     visibility: hidden;
@@ -136,8 +136,16 @@
         }
 
         #languages {
+            display: flex;
+            justify-content: space-between;
             opacity: 0;
             transition: all 75ms ease-in-out;
+            width: 30%;
+
+            img {
+                width: 35px;
+                height: 35px;
+            }
         }
 
         .menu_close_container {
@@ -155,7 +163,7 @@
     position: absolute;
     transform: translateX(110vw);
     transition: all 125ms ease-in-out;
-    background-color: rgba(19, 19, 80, 0.5);
+    background-color: rgb(91, 145, 180);
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -164,24 +172,31 @@
     z-index: 52;
 
     .placeholder_top {
-        background: #5d96b9;
+        background: rgb(91, 145, 180);
         width: 100vw;
         height: 11vh;
     }
+
     .resp_menu_content {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(63, 101, 125, 0.955);
+        background-color: rgba(63, 101, 125);
         width: 100vw;
         height: 89vh;
 
         nav {
             display: flex;
             flex-direction: column;
-            background-color: yellow;
             width: 40%;
             height: 40%;
+
+            a {
+                font-family: "Montserrat", sans-serif;
+                font-size: 23px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
         }
     }
 }
