@@ -26,4 +26,16 @@ export class HeaderComponent {
     document.getElementById('languages')?.classList.remove('fadeInLanguages');
   }
 
+  goHome() {
+    if(window.location.pathname.endsWith("/imprint")) {
+      window.location.href = "#link_to_startScreen";
+    }
+  }
+
+  activateCursor() {
+    if(window.location.pathname.endsWith("/imprint")) {
+      document.getElementById('logo')?.classList.add('cursor');
+    }
+  }
+
 }
