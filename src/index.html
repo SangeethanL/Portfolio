@@ -26,6 +26,10 @@
     let pokeImgOffset;
     let pokeImgHeight;
     let skillsOffset;
+
+    let nameOffset;
+    let emailOffset;
+    let messageOffset;
     function init() {
       joinImgOffset = document.getElementById('joinImg').getBoundingClientRect().top;
       joinImgHeight = document.getElementById('joinImg').getBoundingClientRect().height;
@@ -37,28 +41,62 @@
       pokeImgHeight = document.getElementById('pokedexImg').getBoundingClientRect().height;
       
       skillsOffset = document.getElementById('skills').getBoundingClientRect().bottom;
+
+      nameOffset = document.getElementById('clientName').getBoundingClientRect().top;
+      emailOffset = document.getElementById('clientEmail').getBoundingClientRect().top;
+      messageOffset = document.getElementById('clientMessage').getBoundingClientRect().top;
     }
 
     function rest() {
       if (window.scrollY + window.innerHeight > (joinImgOffset + (joinImgHeight/2))) {
-        document.getElementById('joinImg').style = "opacity: 1 !important; transition: all 125ms ease-in-out;"
+        document.getElementById('joinImg').style = "opacity: 1 !important;scale: 1; transition: all 125ms ease-in-out;";
       }
       else {
-        document.getElementById('joinImg').style = "opacity: 0 !important; transition: all 125ms ease-in-out;"
+        document.getElementById('joinImg').style = "opacity: 0 !important;scale: 0.9; transition: all 125ms ease-in-out;";
       }
 
       if (window.scrollY + window.innerHeight > (sharkieImgOffset + (sharkieImgHeight/2))) {
-        document.getElementById('sharkieImg').style = "opacity: 1 !important; transition: all 125ms ease-in-out;"
+        document.getElementById('sharkieImg').style = "opacity: 1 !important;scale: 1; transition: all 125ms ease-in-out;";
       }
       else {
-        document.getElementById('sharkieImg').style = "opacity: 0 !important; transition: all 125ms ease-in-out;"
+        document.getElementById('sharkieImg').style = "opacity: 0 !important;scale: 0.9; transition: all 125ms ease-in-out;";
       }
 
       if (window.scrollY + window.innerHeight > (pokeImgOffset + (pokeImgHeight/2))) {
-        document.getElementById('pokedexImg').style = "opacity: 1 !important; transition: all 125ms ease-in-out;"
+        document.getElementById('pokedexImg').style = "opacity: 1 !important; scale: 1;transition: all 125ms ease-in-out;";
       }
       else {
-        document.getElementById('pokedexImg').style = "opacity: 0 !important; transition: all 125ms ease-in-out;"
+        document.getElementById('pokedexImg').style = "opacity: 0 !important;scale: 0.9; transition: all 125ms ease-in-out;";
+      }
+
+      if (window.scrollY + window.innerHeight > nameOffset+170) {
+        document.getElementById('clientName').style = "opacity: 1 !important; transition: all 125ms ease-in-out;";
+      }
+      else {
+        document.getElementById('clientName').style = "opacity: 0 !important; transition: all 125ms ease-in-out;";
+      }
+
+      if (window.scrollY + window.innerHeight > emailOffset+170) {
+        document.getElementById('clientEmail').style = "opacity: 1 !important; transition: all 125ms ease-in-out;";
+        document.getElementById('clientMessage').style = "opacity: 1 !important; transition: all 125ms ease-in-out;";
+      }
+      else {
+        document.getElementById('clientEmail').style = "opacity: 0 !important; transition: all 125ms ease-in-out;";
+        document.getElementById('clientMessage').style = "opacity: 0 !important; transition: all 125ms ease-in-out;";
+      }
+
+      if (window.scrollY + window.innerHeight > messageOffset+140) {
+        document.getElementById('clientMessage').style = "opacity: 1 !important; transition: all 125ms ease-in-out;";
+      }
+      else {
+        document.getElementById('clientMessage').style = "opacity: 0 !important; transition: all 125ms ease-in-out;";
+      }
+
+      /*if (window.scrollY + window.innerHeight > emailOffset+60) {
+        document.getElementById('clientMessage').style = "opacity: 1 !important; transition: all 125ms ease-in-out;";
+      }
+      else {
+        document.getElementById('clientMessage').style = "opacity: 0 !important; transition: all 125ms ease-in-out;";
       }
 
       /* let start = document.getElementById('startScreen_container').clientHeight;
@@ -81,6 +119,12 @@
         document.getElementById('navigation_background').classList.remove('navigation_background');
         document.getElementById('nav_links').classList.remove('white-font');
         resetOnScrollChanges();
+      }
+
+      if (window.pageYOffset >= 160){
+        document.getElementById('arrow').classList.remove('arrowAnimation');
+      } else {
+        document.getElementById('arrow').classList.add('arrowAnimation');
       }
     }
 

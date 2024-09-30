@@ -32,7 +32,7 @@ p {
 
 .hoveringOverImage {
     filter: grayscale(0%) !important;
-    scale: 1.1;
+    scale: 1.1 !important;
     transition: all 125ms ease-in-out;
     z-index: 11 !important;
 }
