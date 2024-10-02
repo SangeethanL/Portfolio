@@ -91,21 +91,6 @@
       else {
         document.getElementById('clientMessage').style = "opacity: 0 !important; transition: all 125ms ease-in-out;";
       }
-
-      /*if (window.scrollY + window.innerHeight > emailOffset+60) {
-        document.getElementById('clientMessage').style = "opacity: 1 !important; transition: all 125ms ease-in-out;";
-      }
-      else {
-        document.getElementById('clientMessage').style = "opacity: 0 !important; transition: all 125ms ease-in-out;";
-      }
-
-      /* let start = document.getElementById('startScreen_container').clientHeight;
-       let about = document.getElementById('aboutMe_container').clientHeight;
-       if (window.pageYOffset > (+start + +about  + 400)) {
-         document.getElementById('joinImg').style = "opacity: 1 !important; scale: 1 !important; transition: all 125ms ease-in-out;"
-       } else {
-         document.getElementById('joinImg').style = "opacity: 0 !important; scale: 0.9 !important; transition: all 125ms ease-in-out;"
-       }*/
     }
 
     function scrollStop() {
@@ -113,11 +98,11 @@
       /*var scrollStartPoint = navBar.height > (navBar.height + 1);*/
       if (window.pageYOffset >= (navBar.offsetTop + 40)) {
         document.getElementById('navigation_background').classList.add('navigation_background');
-        document.getElementById('nav_links').classList.add('white-font');
+        document.getElementById('nav_links').classList.add('scroll-font-color');
         activateOnScrollChanges();
       } else {
         document.getElementById('navigation_background').classList.remove('navigation_background');
-        document.getElementById('nav_links').classList.remove('white-font');
+        document.getElementById('nav_links').classList.remove('scroll-font-color');
         resetOnScrollChanges();
       }
 

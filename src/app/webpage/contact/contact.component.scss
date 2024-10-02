@@ -10,13 +10,14 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    font-family: "Montserrat";
     width: 85vw;
     height: fit-content;
     padding-bottom: 20vh;
 }
 
 h1 {
-    font-family: 'Baloo', sans-serif;
+    font-family: 'Baloo';
     font-size: 90px;
 }
 
@@ -37,7 +38,6 @@ h1 {
 h2,
 p,
 span {
-    font-family: "Montserrat", sans-serif;
 
     h2 {
         font-size: 32px;
@@ -73,7 +73,7 @@ span {
 
 input,
 textarea {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat";
     font-size: 16px;
     border: 1px solid #5988FF;
     border-radius: 10px;

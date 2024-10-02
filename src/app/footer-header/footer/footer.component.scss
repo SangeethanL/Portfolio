@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat";
     color: white;
     width: 85vw;
     height: max-content;
@@ -50,30 +50,24 @@
     display: flex;
     flex-direction: row;
 
-    img {
+    div, img {
+        position: relative;
         width: 30px;
         height: 30px;
         margin-left: 25px;
         margin-right: 25px;
-        cursor: pointer;
+    }
 
+    img {
+        cursor: pointer;
         &:hover {
             scale: 1.2;
             transition: all 125ms ease-in-out;
         }
 
         &:not(:hover) {
-            scale: 1;
             transition: all 125ms ease-in-out;
         }
-    }
-
-    div {
-        position: relative;
-        width: 30px;
-        height: 30px;
-        margin-left: 25px;
-        margin-right: 25px;
     }
 }
 

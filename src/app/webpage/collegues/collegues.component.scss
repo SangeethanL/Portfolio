@@ -11,6 +11,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    font-family: "Montserrat";
     color: white;
     width: 85vw;
     height: 80%;
@@ -23,7 +24,7 @@
     }
 
     h1 {
-        font-family: 'Baloo', sans-serif;
+        font-family: 'Baloo';
         font-size: 45px;
         font-weight: 400;
         line-height: 100%;
@@ -31,44 +32,40 @@
     }
 
     h2 {
-        font-family: "Montserrat", sans-serif;
         font-size: 32px;
         font-weight: 400;
         line-height: 100%;
         margin: unset;
     }
+}
 
-    .reviews {
+.reviews {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    div {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
+        flex-direction: column;
+        color: white;
+        border-radius: 10px;
+        margin: 18px;
 
-        div {
-            display: flex;
-            flex-direction: column;
-            color: white;
-            border-radius: 10px;
-            margin: 18px;
+        .collegue_name {
+            font-size: 24px;
+            font-weight: 700;
+        }
 
-            .collegue_name {
-                font-family: "Montserrat", sans-serif;
-                font-size: 24px;
-                font-weight: 700;
-            }
+        .project {
+            font-size: 16px;
+            font-weight: 400;
+        }
 
-            .project {
-                font-family: "Montserrat", sans-serif;
-                font-size: 16px;
-                font-weight: 400;
-            }
-
-            p {
-                font-family: "Montserrat", sans-serif;
-                font-size: 18px;
-                font-weight: 400;
-                margin-top: 35px;
-            }
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 35px;
         }
     }
 }
@@ -79,9 +76,29 @@
         height: 60vh;
     }
 
-    .reviews {
-        overflow-x: auto;
+    .content {
+        height: 90%;
     }
+
+    .title {
+        height: 20%;
+    }
+
+    .reviews {
+        height: 70%;
+        overflow-x: auto;
+
+        span {
+            height: 25%;
+            overflow: hidden;
+        }
+
+        p {
+            height: 50%;
+            overflow-y: auto;
+        }
+    }
+
 }
 
 @media (max-width: 900px) {
@@ -105,6 +122,7 @@
 
         p {
             font-size: 18px !important;
+
             br {
                 display: none;
             }
@@ -120,12 +138,10 @@
     }
 }
 
-@media (max-width: 720px) {
-   
-}
+@media (max-width: 720px) {}
 
 @media (max-width: 650px) {
-  
+
     .title {
         margin-bottom: 40px;
     }
@@ -143,7 +159,7 @@
             font-size: 16px !important;
         }
     }
-   
+
 }
 
 @media (max-width: 500px) {

@@ -9,11 +9,12 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    font-family: "Montserrat";
     width: 85vw;
 }
 
 h1 {
-    font-family: 'Baloo', sans-serif;
+    font-family: 'Baloo';
     font-size: 96px;
     color: #5988FF;
     line-height: 100%;
@@ -23,7 +24,6 @@ h1 {
 }
 
 p {
-    font-family: "Montserrat", sans-serif;
     font-size: 23px;
     margin-bottom: 60px;
 }
@@ -166,7 +166,7 @@ p {
 
 @mixin h2($textAlign) {
     h2 {
-        font-family: 'Baloo', sans-serif;
+        font-family: 'Baloo';
         font-size: 45px;
         color: #5988FF;
         text-align: $textAlign;
@@ -228,17 +228,13 @@ p {
     @include h2($textAlign);
     @include h3($textAlign);
 
-    
+
     @media (max-width: 1080px) {
         margin-bottom: 80px;
     }
 }
 
 /*-------------------------------------------------------------------------------------------------*/
-h3,
-span {
-    font-family: "Montserrat", sans-serif;
-}
 
 span {
     font-size: 16px;
@@ -348,12 +344,19 @@ span {
             padding: unset !important;
 
             h2,
-            h3,
-            #join,
-            #sharkie,
-            #pokedex {
-                text-align: center;
+            h3,div {
+                text-align: left;
                 margin-bottom: 30px;
+            }
+
+            div {
+                display: flex;
+                justify-content: center !important;
+
+                span {
+                    text-align: left;
+                    width: 90% !important;
+                }
             }
         }
     }
