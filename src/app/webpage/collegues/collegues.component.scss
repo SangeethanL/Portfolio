@@ -95,6 +95,7 @@
 
         p {
             height: 50%;
+            margin-top: 2px !important;
             overflow-y: auto;
         }
     }
@@ -235,6 +236,10 @@
 
     .reviews {
 
+        span {
+            height: fit-content;
+        }
+
         .collegue_name {
             font-size: 16px !important;
         }
@@ -245,6 +250,8 @@
 
         p {
             font-size: 12px !important;
+            height: 40%;
+            margin-top: 12px !important;
         }
 
     }

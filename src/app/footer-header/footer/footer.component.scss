@@ -49,6 +49,7 @@
     position: relative;
     display: flex;
     flex-direction: row;
+    max-width: 160px;
 
     div, img {
         position: relative;
@@ -68,6 +69,12 @@
         &:not(:hover) {
             transition: all 125ms ease-in-out;
         }
+    }
+
+    span {
+        font-size: 12px;
+        text-align: center;
+        color: #ffc8d2;
     }
 }
 
@@ -92,8 +99,38 @@
     }
 
     .line_2 {
-        .placeholder_line_2, .icons_footer {
+        .placeholder_line_2 {
             display: none;
         }
+
+        span {
+            font-size: 10px;
+            margin-top: 10px;
+        }
     }
+}
+
+
+@media (max-width: 400px) {
+    .icons_footer img, .icons_footer div {
+        width: 20px;
+        height: 20px;
+    }
+
+    .line_1 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        .frontend_logo {
+            width: 44px;
+            height: 52px;
+        }
+        img, span {
+            margin-bottom: 10px;
+        }
+    }
+
+    .line_2 {
+        font-size: 12px;
+    }
+   
 }

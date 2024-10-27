@@ -18,7 +18,13 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <script>
-    window.onscroll = function () { rest(); scrollStop(); icons(); };
+    window.onscroll = function () {
+      scrollStop();
+      if (!window.location.pathname.endsWith('imprint')) {
+        rest();
+        icons();
+      }
+    };
     let joinImgOffset;
     let joinImgHeight;
     let sharkieImgOffset;
@@ -31,52 +37,54 @@
     let emailOffset;
     let messageOffset;
     function init() {
-      joinImgOffset = document.getElementById('joinImg').getBoundingClientRect().top;
-      joinImgHeight = document.getElementById('joinImg').getBoundingClientRect().height;
+      if (!window.location.pathname.endsWith('imprint')) {
+        joinImgOffset = document.getElementById('joinImg').getBoundingClientRect().top;
+        joinImgHeight = document.getElementById('joinImg').getBoundingClientRect().height;
 
-      sharkieImgOffset = document.getElementById('sharkieImg').getBoundingClientRect().top;
-      sharkieImgHeight = document.getElementById('sharkieImg').getBoundingClientRect().height;
+        sharkieImgOffset = document.getElementById('sharkieImg').getBoundingClientRect().top;
+        sharkieImgHeight = document.getElementById('sharkieImg').getBoundingClientRect().height;
 
-      pokeImgOffset = document.getElementById('pokedexImg').getBoundingClientRect().top;
-      pokeImgHeight = document.getElementById('pokedexImg').getBoundingClientRect().height;
-      
-      skillsOffset = document.getElementById('skills').getBoundingClientRect().bottom;
+        pokeImgOffset = document.getElementById('pokedexImg').getBoundingClientRect().top;
+        pokeImgHeight = document.getElementById('pokedexImg').getBoundingClientRect().height;
 
-      nameOffset = document.getElementById('clientName').getBoundingClientRect().top;
-      emailOffset = document.getElementById('clientEmail').getBoundingClientRect().top;
-      messageOffset = document.getElementById('clientMessage').getBoundingClientRect().top;
+        skillsOffset = document.getElementById('skills').getBoundingClientRect().bottom;
+
+        nameOffset = document.getElementById('clientName').getBoundingClientRect().top;
+        emailOffset = document.getElementById('clientEmail').getBoundingClientRect().top;
+        messageOffset = document.getElementById('clientMessage').getBoundingClientRect().top;
+      }
     }
 
     function rest() {
-      if (window.scrollY + window.innerHeight > (joinImgOffset + (joinImgHeight/2))) {
+      if (window.scrollY + window.innerHeight > (joinImgOffset + (joinImgHeight / 2))) {
         document.getElementById('joinImg').style = "opacity: 1 !important;scale: 1; transition: all 125ms ease-in-out;";
       }
       else {
         document.getElementById('joinImg').style = "opacity: 0 !important;scale: 0.9; transition: all 125ms ease-in-out;";
       }
 
-      if (window.scrollY + window.innerHeight > (sharkieImgOffset + (sharkieImgHeight/2))) {
+      if (window.scrollY + window.innerHeight > (sharkieImgOffset + (sharkieImgHeight / 2))) {
         document.getElementById('sharkieImg').style = "opacity: 1 !important;scale: 1; transition: all 125ms ease-in-out;";
       }
       else {
         document.getElementById('sharkieImg').style = "opacity: 0 !important;scale: 0.9; transition: all 125ms ease-in-out;";
       }
 
-      if (window.scrollY + window.innerHeight > (pokeImgOffset + (pokeImgHeight/2))) {
+      if (window.scrollY + window.innerHeight > (pokeImgOffset + (pokeImgHeight / 2))) {
         document.getElementById('pokedexImg').style = "opacity: 1 !important; scale: 1;transition: all 125ms ease-in-out;";
       }
       else {
         document.getElementById('pokedexImg').style = "opacity: 0 !important;scale: 0.9; transition: all 125ms ease-in-out;";
       }
 
-      if (window.scrollY + window.innerHeight > nameOffset+170) {
+      if (window.scrollY + window.innerHeight > nameOffset + 170) {
         document.getElementById('clientName').style = "opacity: 1 !important; transition: all 125ms ease-in-out;";
       }
       else {
         document.getElementById('clientName').style = "opacity: 0 !important; transition: all 125ms ease-in-out;";
       }
 
-      if (window.scrollY + window.innerHeight > emailOffset+170) {
+      if (window.scrollY + window.innerHeight > emailOffset + 170) {
         document.getElementById('clientEmail').style = "opacity: 1 !important; transition: all 125ms ease-in-out;";
         document.getElementById('clientMessage').style = "opacity: 1 !important; transition: all 125ms ease-in-out;";
       }
@@ -85,7 +93,7 @@
         document.getElementById('clientMessage').style = "opacity: 0 !important; transition: all 125ms ease-in-out;";
       }
 
-      if (window.scrollY + window.innerHeight > messageOffset+140) {
+      if (window.scrollY + window.innerHeight > messageOffset + 140) {
         document.getElementById('clientMessage').style = "opacity: 1 !important; transition: all 125ms ease-in-out;";
       }
       else {
@@ -99,23 +107,31 @@
       if (window.pageYOffset >= (navBar.offsetTop + 40)) {
         document.getElementById('navigation_background').classList.add('navigation_background');
         document.getElementById('nav_links').classList.add('scroll-font-color');
-        activateOnScrollChanges();
+        document.getElementById('english').style = "width: 21px; height: 21px;";
+        document.getElementById('german').style = "width: 21px; height: 21px;";
+        if (!window.location.pathname.endsWith('imprint')) {
+          activateOnScrollChanges();
+        }
       } else {
         document.getElementById('navigation_background').classList.remove('navigation_background');
         document.getElementById('nav_links').classList.remove('scroll-font-color');
-        resetOnScrollChanges();
+        document.getElementById('english').style = "";
+        document.getElementById('german').style = "";
+        if (!window.location.pathname.endsWith('imprint')) {
+          resetOnScrollChanges();
+        }
       }
 
-      if (window.pageYOffset >= 160){
-        document.getElementById('arrow').classList.remove('arrowAnimation');
-      } else {
-        document.getElementById('arrow').classList.add('arrowAnimation');
+      if (!window.location.pathname.endsWith('imprint')) {
+        if (window.pageYOffset >= 160) {
+          document.getElementById('arrow').classList.remove('arrowAnimation');
+        } else {
+          document.getElementById('arrow').classList.add('arrowAnimation');
+        }
       }
     }
 
     function activateOnScrollChanges() {
-      document.getElementById('english').style = "width: 21px; height: 21px;";
-      document.getElementById('german').style = "width: 21px; height: 21px;";
       document.getElementById('scrollText').classList.remove('animate-scrollText');
       document.getElementById('scrollText').classList.add('display-scrollText');
       document.getElementById('scrollBar').classList.remove('animate-scrollBar');
@@ -123,8 +139,6 @@
     }
 
     function resetOnScrollChanges() {
-      document.getElementById('english').style = "";
-      document.getElementById('german').style = "";
       document.getElementById('scrollText').classList.add('animate-scrollText');
       document.getElementById('scrollText').classList.remove('display-scrollText');
       document.getElementById('scrollBar').classList.add('animate-scrollBar');
@@ -132,9 +146,16 @@
     }
 
     function icons() {
+      let s = 100;
       for (let i = 1; i < 12; i++) {
+        if (i == 1) { }
+        else if (i >= 2) {
+          let k = s / i;
+          s = k + s;
+        }
+
         if (window.scrollY + window.innerHeight > (skillsOffset + 225)) {
-          document.getElementById(`${i}`).style = `opacity: 1 !important; transition-delay: ${i}00ms;`;
+          document.getElementById(`${i}`).style = `opacity: 1 !important; transition-delay: ${s}ms;`;
         } else {
           document.getElementById(`${i}`).style = 'opacity: 0;';
         }
@@ -144,7 +165,7 @@
   </script>
 </head>
 
-<body onload="init();">
+<body onload="init()">
   <app-root></app-root>
 </body>
 

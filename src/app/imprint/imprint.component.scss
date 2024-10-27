@@ -1,9 +1,10 @@
 .imprint_container {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     font-family: "Montserrat";
     width: 100vw;
-    height: 53vh;
+    height: fit-content;
     margin-top: 12vh;
 }
 

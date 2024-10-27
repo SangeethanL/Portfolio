@@ -58,6 +58,7 @@ export class FunctionsComponent {
         I've read the privacy policy and agree to the processing of my data as outlined.`;
         let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = 'Say hello ;)';
         let imprint= document.getElementById('imprint') as HTMLElement; imprint.innerHTML = 'Imprint';
+        let angular= document.getElementById('angular') as HTMLElement; angular.innerHTML = 'This site was created with Angular.';
         let inputMessage = document.getElementById('clientMessage') as HTMLTextAreaElement; inputMessage.placeholder = 'Message';
 
         let respAboutMe= document.getElementById('respAboutMe') as HTMLLinkElement; respAboutMe.innerHTML = 'About me';
@@ -107,6 +108,7 @@ export class FunctionsComponent {
         Ich habe die Datenschutzerklärung gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.`;
         let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = `Sag Hallo ;)`;
         let imprint= document.getElementById('imprint') as HTMLElement; imprint.innerHTML = `Impressum`;
+        let angular= document.getElementById('angular') as HTMLElement; angular.innerHTML = 'Diese Seite wurde mit Angular erstellt.';
         let inputMessage = document.getElementById('clientMessage') as HTMLTextAreaElement; inputMessage.placeholder = 'Nachricht';
 
         let respAboutMe= document.getElementById('respAboutMe') as HTMLLinkElement; respAboutMe.innerHTML = 'Über mich';
