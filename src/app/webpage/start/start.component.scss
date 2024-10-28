@@ -315,10 +315,6 @@
         width: 0%;
     }
 
-    .content {
-        width: 96vw !important;
-    }
-
     .side_icons {
         display: none;
     }
@@ -354,6 +350,16 @@
 
     #scroll_info_responsive {
         display: unset !important;
+    }
+}
+
+@media (max-width: 1250px) {
+    .content {
+        width: 96vw !important;
+    }
+    
+    #ellipse {
+        width: 47vw !important;
     }
 }
 

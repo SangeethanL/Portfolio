@@ -229,7 +229,7 @@ p {
     @include h3($textAlign);
 
 
-    @media (max-width: 1080px) {
+    @media (max-width: 1250px) {
         margin-bottom: 80px;
     }
 }
@@ -262,6 +262,7 @@ span {
     height: 80px;
     top: 2%;
     left: 45%;
+    opacity: 0.6;
 }
 
 .ellipse_2 {
@@ -270,6 +271,7 @@ span {
     height: 140px;
     top: 10%;
     left: 85%;
+    opacity: 0.6;
 }
 
 .ellipse_3 {
@@ -278,6 +280,7 @@ span {
     height: 303px;
     top: 50%;
     left: -12%;
+    opacity: 0.6;
 }
 
 .ellipse_4 {
@@ -286,6 +289,7 @@ span {
     height: 35px;
     top: 40%;
     left: 85%;
+    opacity: 0.6;
 }
 
 
@@ -296,9 +300,19 @@ span {
 
 
 
-@media (max-width: 1080px) {
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1250px) {
     .content {
-        width: 96vw;
+        width: 96vw !important;
     }
 
     #joinArrow,
@@ -361,22 +375,6 @@ span {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

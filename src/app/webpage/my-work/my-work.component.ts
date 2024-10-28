@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class MyWorkComponent {
 
   imgMouseoverJoin() {
-    if (window.screen.width > 1080) {
+    if (window.screen.width >= 1080) {
       document.getElementById('joinImg')?.classList.add('hoveringOverImage');
       document.getElementById('joinArrow')?.classList.add('activateArrow');
       document.getElementById('joinInfos')?.classList.add('fadeInInfos');
@@ -18,7 +18,7 @@ export class MyWorkComponent {
   }
 
   imgMouseoverSharkie() {
-    if (window.screen.width > 1080) {
+    if (window.screen.width >= 1080) {
       document.getElementById('sharkieImg')?.classList.add('hoveringOverImage');
       document.getElementById('sharkieArrow')?.classList.add('activateArrowReverse');
       document.getElementById('sharkieInfos')?.classList.add('fadeInInfosReverse');
@@ -26,7 +26,7 @@ export class MyWorkComponent {
   }
 
   imgMouseoverPokedex() {
-    if (window.screen.width > 1080) {
+    if (window.screen.width >= 1080) {
       document.getElementById('pokedexImg')?.classList.add('hoveringOverImage');
       document.getElementById('pokedexArrow')?.classList.add('activateArrow');
       document.getElementById('pokedexInfos')?.classList.add('fadeInInfos');
@@ -34,7 +34,7 @@ export class MyWorkComponent {
   }
 
   imgMouseleave() {
-    if (window.screen.width > 1080) {
+    if (window.screen.width >= 1080) {
       document.getElementById('joinImg')?.classList.remove('hoveringOverImage');
       document.getElementById('joinArrow')?.classList.remove('activateArrow');
       document.getElementById('joinInfos')?.classList.remove('fadeInInfos');

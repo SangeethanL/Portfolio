@@ -149,6 +149,7 @@ h2 {
     height: 166px;
     top: -20%;
     left: 41%;
+    opacity: 0.6;
 }
 
 .ellipse_2 {
@@ -157,21 +158,10 @@ h2 {
     height: 56px;
     top: 6%;
     left: 71%;
+    opacity: 0.6;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 1080px) {
+@media (max-width: 1440px) {
     .aboutMe_container {
         height: min-content !important;
     }
@@ -179,7 +169,6 @@ h2 {
     .content {
         flex-direction: column !important;
         justify-content: space-evenly !important;
-        width: 96vw !important;
 
         .left_side,
         .right_side {
@@ -197,13 +186,7 @@ h2 {
         width: 100%;
     }
 
-    h1 {
-        font-size: 75px;
-    }
-
-    h2 {
-        font-size: 37px;
-    }
+   
 
     .shortCutsContainer {
         flex-direction: column;
@@ -220,7 +203,67 @@ h2 {
                 justify-content: space-between;
                 width: 100%;
             }
+        }
 
+        span {
+            text-align: right;
+        }
+    }
+
+
+    .right_side {
+        height: min-content !important;
+
+        .rightSide_mainPart {
+
+            div {
+                justify-content: space-evenly;
+                width: fit-content;
+
+                br {
+                    display: none;
+                }
+
+                #contact_me_BtnContainer {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 30px;
+                    width: 100%;
+
+                    a {
+                        max-width: fit-content;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .content {
+        width: 96vw !important;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 1080px) {
+
+    h1 {
+        font-size: 75px;
+    }
+
+    h2 {
+        font-size: 37px;
+    }
+
+    .shortCutsContainer {
+        div {
             .shortCutsImages {
                 width: 51px;
 
@@ -236,39 +279,16 @@ h2 {
                     height: 43px;
                 }
             }
-
-
         }
-
         span {
-            text-align: right;
             font-size: 26px;
         }
     }
 
-
     .right_side {
         font-size: 26px;
-        height: min-content !important;
-
-        .rightSide_mainPart {
-
-            div {
-                justify-content: space-evenly;
-                width: fit-content;
-
-                br {
-                    display: none;
-                }
-
-                a {
-                    margin-bottom: 30px;
-                }
-            }
-        }
     }
 }
-
 
 
 

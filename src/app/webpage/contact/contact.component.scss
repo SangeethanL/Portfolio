@@ -171,6 +171,7 @@ textarea {
     width: 89px;
     height: 89px;
     left: 50%;
+    opacity: 0.6;
 }
 
 .ellipsis_2 {
@@ -179,6 +180,7 @@ textarea {
     height: 143px;
     left: 20%;
     bottom: 30%;
+    opacity: 0.6;
 }
 
 .ellipsis_3 {
@@ -187,6 +189,7 @@ textarea {
     height: 55px;
     bottom: 10%;
     right: 12%;
+    opacity: 0.6;
 }
 
 
@@ -196,7 +199,7 @@ textarea {
 
 
 
-@media (max-width: 1080px) {
+@media (max-width: 1250px) {
     .content {
         width: 96vw;
         padding-bottom: 10vh;
