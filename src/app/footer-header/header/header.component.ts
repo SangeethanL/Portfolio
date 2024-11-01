@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { FunctionsComponent } from '../../../models/functions';
+import { LanguagesComponent } from '../../../models/languages';
 
 @Component({
   selector: 'app-header',
@@ -9,8 +9,7 @@ import { FunctionsComponent } from '../../../models/functions';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
-  functions = inject(FunctionsComponent);
+  languagesTS = inject(LanguagesComponent);
  
   openMenu() {
     document.getElementById('responsive_menu')?.classList.add('rollOut');

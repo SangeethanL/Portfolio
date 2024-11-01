@@ -6,7 +6,6 @@
   <title>Sangeethan</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--<script language="javascript" type="text/javascript" src="languageFunctions.js"></script>-->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +18,7 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <script>
+    /*
     let skillsOffset;
 
     let joinImgOffset;
@@ -40,23 +40,25 @@
         window.location.href.endsWith('#myWork_link')
     }
 
-    function init() {
+    async function init() {
       if (!window.location.href.endsWith('imprint')) {
-        skillsOffset = document.getElementById('skills').getBoundingClientRect().bottom;
-
-        joinImgOffset = document.getElementById('joinImg').getBoundingClientRect().top;
-        joinImgHeight = document.getElementById('joinImg').getBoundingClientRect().height;
-
-        sharkieImgOffset = document.getElementById('sharkieImg').getBoundingClientRect().top;
-        sharkieImgHeight = document.getElementById('sharkieImg').getBoundingClientRect().height;
-
-        pokeImgOffset = document.getElementById('pokedexImg').getBoundingClientRect().top;
-        pokeImgHeight = document.getElementById('pokedexImg').getBoundingClientRect().height;
-
-        nameOffset = document.getElementById('clientName').getBoundingClientRect().top;
-        emailOffset = document.getElementById('clientEmail').getBoundingClientRect().top;
-        messageOffset = document.getElementById('clientMessage').getBoundingClientRect().top;
+        await defineElementsRectsOffsets();
+        fadeItems();
+        fadeSkillsIcons();
       }
+    }
+
+    async function defineElementsRectsOffsets() {
+      skillsOffset = document.getElementById('skills').getBoundingClientRect().bottom;
+      joinImgOffset = document.getElementById('joinImg').getBoundingClientRect().top;
+      joinImgHeight = document.getElementById('joinImg').getBoundingClientRect().height;
+      sharkieImgOffset = document.getElementById('sharkieImg').getBoundingClientRect().top;
+      sharkieImgHeight = document.getElementById('sharkieImg').getBoundingClientRect().height;
+      pokeImgOffset = document.getElementById('pokedexImg').getBoundingClientRect().top;
+      pokeImgHeight = document.getElementById('pokedexImg').getBoundingClientRect().height;
+      nameOffset = document.getElementById('clientName').getBoundingClientRect().top;
+      emailOffset = document.getElementById('clientEmail').getBoundingClientRect().top;
+      messageOffset = document.getElementById('clientMessage').getBoundingClientRect().top;
     }
 
     function fadeJoin() {
@@ -197,11 +199,11 @@
         fadeItems();
         fadeSkillsIcons();
       }
-    };
+    }; */
   </script>
 </head>
 
-<body onload="init()">
+<body>
   <app-root></app-root>
 </body>
 

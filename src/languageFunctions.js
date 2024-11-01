@@ -1,10 +1,10 @@
-function pathnameWebpage() {
+export function pathnameWebpage() {
     return window.location.href.endsWith('') || window.location.href.endsWith('#startScreen_link') ||
         window.location.href.endsWith('#aboutMe_link') || window.location.href.endsWith('#skillSet_link') ||
         window.location.href.endsWith('#myWork_link')
 }
 
-function headerFooterToEnglish() {
+export function headerFooterToEnglish() {
     document.getElementById('about_me').innerHTML = 'About me';
     document.getElementById('skill_set').innerHTML = 'Skill set';
     document.getElementById('my_work').innerHTML = 'My work';
@@ -17,7 +17,7 @@ function headerFooterToEnglish() {
 
 
 
-function aboutMeToEnglish() {
+export function aboutMeToEnglish() {
     document.getElementById('work_together').innerHTML = `Let's work together`;
     document.getElementById('i_am').innerHTML = 'I am';
     document.getElementById('locatedIn').innerHTML = `located in <br> Stuttgart`;
@@ -37,7 +37,7 @@ function aboutMeToEnglish() {
     document.getElementById('sendMessage').innerHTML = `Send a message`;
 }
 
-function myWorkToEnglish() {
+export function myWorkToEnglish() {
     document.getElementById('my_work_Title').innerHTML = `My work`;
     document.getElementById('my_work_description').innerHTML = `
         Explore a selection of my work here - Interact with <br> projects to see my skills in action.`;
@@ -50,7 +50,7 @@ function myWorkToEnglish() {
         Based on the PokéAPI a simple library that provides and <br>catalogues pokemon information.`;
 }
 
-function contactToEnglish() {
+export function contactToEnglish() {
     document.getElementById('contact').innerHTML = `Contact`;
     document.getElementById('gotAProblem').innerHTML = `Got a problem to solve?`;
     document.getElementById('contactMeText').innerHTML = `Contact me through this form, 
@@ -62,7 +62,7 @@ function contactToEnglish() {
     document.getElementById('sayHello').innerHTML = 'Say hello ;)';
 }
 
-function english() {
+export function english() {
     if (window.location.pathname.endsWith('imprint') || !window.location.href.endsWith('imprint')) {
         headerFooterToEnglish();
     }
@@ -87,7 +87,7 @@ function english() {
 
 
 
-function headerFooterToGerman() {
+export function headerFooterToGerman() {
     document.getElementById('about_me').innerHTML = 'Über mich';
     document.getElementById('skill_set').innerHTML = 'Skills';
     document.getElementById('my_work').innerHTML = 'Projekte';
@@ -98,7 +98,7 @@ function headerFooterToGerman() {
     document.getElementById('angular').innerHTML = 'Diese Seite wurde mit Angular erstellt.';
 }
 
-function aboutMeToGerman() {
+export function aboutMeToGerman() {
     document.getElementById('work_together').innerHTML = 'Lasst uns zusammen arbeiten';
     document.getElementById('i_am').innerHTML = 'Ich bin';
     document.getElementById('locatedIn').innerHTML = `wohnhaft in <br> Stuttgart`;
@@ -117,7 +117,7 @@ function aboutMeToGerman() {
     document.getElementById('sendMessage').innerHTML = `Kontaktiere mich`;
 }
 
-function myWorkToGerman() {
+export function myWorkToGerman() {
     document.getElementById('my_work_Title').innerHTML = `Projekte`;
     document.getElementById('my_work_description').innerHTML = `
     Hier sind einige meiner Projekte - Erkunden Sie <br> meine Projekte um meine Skills zu sehen.`;
@@ -130,7 +130,7 @@ function myWorkToGerman() {
     Basierend auf die PokéAPI ist dies eine simple library <br>die Informationen zu Pokemons liefert.`;
 }
 
-function functioncontactToGerman() {
+export function contactToGerman() {
     let contact = document.getElementById('contact').innerHTML = `Kontakt`;
     document.getElementById('gotAProblem').innerHTML = `Sie haben ein Problem?`;
     document.getElementById('contactMeText').innerHTML = `Kontaktieren Sie mich. 
@@ -143,7 +143,7 @@ function functioncontactToGerman() {
     document.getElementById('sayHello').innerHTML = `Sag Hallo ;)`;
 }
 
-function german() {
+export function german() {
     if (window.location.pathname.endsWith('imprint') || !window.location.href.endsWith('imprint')) {
         headerFooterToGerman();
     }
@@ -163,7 +163,7 @@ function german() {
 
 
 
-function loadLanguage() {
+export function loadLanguage() {
     let loadEnglish;
     let loadGerman;
 
@@ -188,15 +188,8 @@ function loadLanguage() {
 }
 
 
-
-
-
-
-
-
-module.exports = {
-    languageJS
+export function print() {
+    console.log(
+'SANGEETHAN'
+    )
 }
-
-
-

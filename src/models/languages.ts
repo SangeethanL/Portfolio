@@ -1,18 +1,10 @@
-import { Component, Injectable, input } from '@angular/core';
-
-@Component({
-    selector: 'app-header',
-    standalone: true,
-    imports: [],
-    template: '',
-    styles: ''
-})
+import { Injectable } from '@angular/core';
 
 @Injectable({
     providedIn: 'root'
 })
 
-export class FunctionsComponent {
+export class LanguagesComponent {
 
     pathnameWebpage() {
         return window.location.href.endsWith('') || window.location.href.endsWith('#startScreen_link') ||
@@ -174,6 +166,30 @@ export class FunctionsComponent {
         localStorage.setItem("english", 'false');
         localStorage.setItem("german", 'true');
     }
+
+
+
+    loadLanguage() {
+        let loadEnglish: any;
+        let loadGerman: any;
+        let getEnglish = localStorage.getItem('english');
+        if (getEnglish) {
+            loadEnglish = JSON.parse(getEnglish);
+        }
+        let getGerman = localStorage.getItem('german');
+        if (getGerman) {
+            loadGerman = JSON.parse(getGerman);
+        }
+        if (loadEnglish == true) {
+            this.english();
+        } else if (loadGerman == true) {
+            this.german();
+        } else {
+            this.german();
+        }
+    }
+
+
 
 
 }
