@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './footer-header/header/header.component';
 import { FooterComponent } from './footer-header/footer/footer.component';
 import { LanguagesComponent } from '../models/languages';
-import { WebpageFunctions } from '../webpageFunctions';
+import { WebpageFunctions } from '../models/webpageFunctions';
 
 @Component({
   selector: 'app-root',
@@ -19,9 +19,13 @@ export class AppComponent {
   webpageTS = inject(WebpageFunctions);
 
   constructor() {
-    this.webpageTS.test123();
+      setTimeout(() => {
+        this.webpageTS.init();
+      }, 2000);
+    setTimeout(() => {
+      this.languagesTS.loadLanguage();
+    }, 1000);
     window.addEventListener('scroll', this.scroll, true); //third parameter
-    //this.languagesTS.loadLanguage();
   }
 
   ngOnDestroy() {
@@ -29,7 +33,7 @@ export class AppComponent {
   }
 
   scroll = (event: any): void => {
-    console.log('JAJAJAJAJA')
+    this.webpageTS.scroll();
   };
 
   /*@HostListener('window:scroll', ['$event']) // for window scroll events
