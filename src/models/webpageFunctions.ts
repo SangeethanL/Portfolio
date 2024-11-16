@@ -62,7 +62,7 @@ export class WebpageFunctions {
   
 
     fadeProject(imgOffset: any, imgHeight: any, imgId: string) {
-        if (window.scrollY + window.innerHeight > (imgOffset + (imgHeight / 2))) {
+        if (window.pageYOffset + window.innerHeight > (imgOffset + (imgHeight / 2))) {
             document.getElementById(imgId)?.setAttribute("style", "opacity: 1 !important;scale: 1; transition: all 125ms ease-in-out;");
         }
         else {
@@ -71,7 +71,7 @@ export class WebpageFunctions {
     }
 
     fadeContactField(fieldOffset: any, plusOffset: number, fieldId: string) {
-        if (window.scrollY + window.innerHeight > fieldOffset + plusOffset) {
+        if (window.pageYOffset+ window.innerHeight > fieldOffset + plusOffset) {
             document.getElementById(fieldId)?.setAttribute("style", "opacity: 1 !important; transition: all 125ms ease-in-out;");
         }
         else {
@@ -95,7 +95,7 @@ export class WebpageFunctions {
                 let addToMs = milliseconds / i;
                 milliseconds = addToMs + milliseconds;
             }
-            if (window.scrollY + window.innerHeight > (this.skillsOffset + 225)) {
+            if (window.pageYOffset + window.innerHeight > (this.skillsOffset + 225)) {
                 document.getElementById(`${i}`)?.setAttribute("style", `opacity: 1 !important; transition-delay: ${milliseconds}ms;`);
             } else {
                 document.getElementById(`${i}`)?.setAttribute("style", `opacity: 0;`);

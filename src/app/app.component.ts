@@ -19,22 +19,26 @@ export class AppComponent {
   webpageTS = inject(WebpageFunctions);
 
   constructor() {
-      setTimeout(() => {
-        this.webpageTS.init();
-      }, 2000);
-    setTimeout(() => {
-      this.languagesTS.loadLanguage();
-    }, 1000);
-    window.addEventListener('scroll', this.scroll, true); //third parameter
+    /*setTimeout(() => {
+      this.webpageTS.init();
+      this.webpageTS.scroll();
+    }, 2000);
+    window.addEventListener('scroll', this.scroll, true); //third parameter*/
   }
 
-  ngOnDestroy() {
-    window.removeEventListener('scroll', this.scroll, true);
+  ngAfterContentChecked() {
+    this.webpageTS.init();
+    this.webpageTS.scroll();
+    window.addEventListener('scroll', this.scroll, true); //third parameter
   }
 
   scroll = (event: any): void => {
     this.webpageTS.scroll();
   };
+
+  ngOnDestroy() {
+    window.removeEventListener('scroll', this.scroll, true);
+  }
 
   /*@HostListener('window:scroll', ['$event']) // for window scroll events
 onScroll(event:any) {
