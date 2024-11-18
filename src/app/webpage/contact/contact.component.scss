@@ -88,7 +88,9 @@ textarea {
     height: 202px;
 }
 
-#clientName, #clientEmail, #clientMessage {
+#clientName,
+#clientEmail,
+#clientMessage {
     opacity: 0;
 }
 
@@ -172,9 +174,6 @@ textarea {
     height: 89px;
     left: 50%;
     opacity: 0.5;
-    @media (max-width: 1440px) {
-        opacity: 0.2;
-    }
 }
 
 .ellipsis_2 {
@@ -184,9 +183,6 @@ textarea {
     left: 20%;
     bottom: 30%;
     opacity: 0.5;
-    @media (max-width: 1440px) {
-        opacity: 0.2;
-    }
 }
 
 .ellipsis_3 {
@@ -196,9 +192,6 @@ textarea {
     bottom: 10%;
     right: 12%;
     opacity: 0.5;
-    @media (max-width: 1440px) {
-        opacity: 0.2;
-    }
 }
 
 
@@ -206,13 +199,20 @@ textarea {
 
 
 
-
+@media (max-width: 1440px) {
+    .ellipsis_1,
+    .ellipsis_2,
+    .ellipsis_3 {
+        opacity: 0.2;
+    }
+}
 
 @media (max-width: 1250px) {
     .content {
         width: 96vw;
         padding-bottom: 10vh;
     }
+
     .left_and_right_side {
         flex-direction: column;
         align-items: center;
