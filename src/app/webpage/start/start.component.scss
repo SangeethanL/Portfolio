@@ -337,11 +337,6 @@
         display: flex;
         justify-content: center;
         width: 100%;
-
-        img {
-            width: 270px;
-            height: 400px;
-        }
     }
 
     #ellipse {
@@ -438,7 +433,6 @@
         width: 65vw !important;
         height: 405px !important;
     }
-
 }
 
 @media (max-width: 580px) {
@@ -452,6 +446,13 @@
     #ellipse {
         width: 75vw !important;
         height: 385px !important;
+    }
+    
+    .image_container {
+        img {
+            width: 360px !important;
+            height: 540px !important;
+        }
     }
 }
 
@@ -499,6 +500,13 @@
         height: 337px !important;
     }
 
+    .image_container {
+        img {
+            width: 330px !important;
+            height: 520px !important;
+        }
+    }
+
     .title_responsive {
 
         h1 {
@@ -515,6 +523,13 @@
     #ellipse {
         width: 97vw !important;
         height: 330px !important;
+    }
+
+    .image_container {
+        img {
+            width: 290px !important;
+            height: 450px !important;
+        }
     }
 
     .title_responsive {
