@@ -263,6 +263,9 @@ span {
     top: 2%;
     left: 45%;
     opacity: 0.5;
+    @media (max-width: 1440px) {
+        opacity: 0.2;
+    }
 }
 
 .ellipse_2 {
@@ -272,6 +275,9 @@ span {
     top: 10%;
     left: 85%;
     opacity: 0.5;
+    @media (max-width: 1440px) {
+        opacity: 0.2;
+    }
 }
 
 .ellipse_3 {
@@ -281,6 +287,9 @@ span {
     top: 50%;
     left: -12%;
     opacity: 0.5;
+    @media (max-width: 1440px) {
+        opacity: 0.2;
+    }
 }
 
 .ellipse_4 {
@@ -290,6 +299,9 @@ span {
     top: 40%;
     left: 85%;
     opacity: 0.5;
+    @media (max-width: 1440px) {
+        opacity: 0.2;
+    }
 }
 
 

@@ -150,6 +150,9 @@ h2 {
     top: -20%;
     left: 41%;
     opacity: 0.5;
+    @media (max-width: 1440px) {
+        opacity: 0.2;
+    }
 }
 
 .ellipse_2 {
@@ -159,6 +162,9 @@ h2 {
     top: 6%;
     left: 71%;
     opacity: 0.5;
+    @media (max-width: 1440px) {
+        opacity: 0.2;
+    }
 }
 
 @media (max-width: 1440px) {

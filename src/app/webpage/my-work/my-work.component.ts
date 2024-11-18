@@ -11,25 +11,31 @@ export class MyWorkComponent {
 
   imgMouseoverJoin() {
     if (window.screen.width >= 1080) {
-      document.getElementById('joinImg')?.classList.add('hoveringOverImage');
-      document.getElementById('joinArrow')?.classList.add('activateArrow');
-      document.getElementById('joinInfos')?.classList.add('fadeInInfos');
+      if (document.getElementById('joinImg')?.style.opacity == '1') {
+        document.getElementById('joinImg')?.classList.add('hoveringOverImage');
+        document.getElementById('joinArrow')?.classList.add('activateArrow');
+        document.getElementById('joinInfos')?.classList.add('fadeInInfos');
+      }
     }
   }
 
   imgMouseoverSharkie() {
     if (window.screen.width >= 1080) {
-      document.getElementById('sharkieImg')?.classList.add('hoveringOverImage');
-      document.getElementById('sharkieArrow')?.classList.add('activateArrowReverse');
-      document.getElementById('sharkieInfos')?.classList.add('fadeInInfosReverse');
+      if (document.getElementById('sharkieImg')?.style.opacity == '1') {
+        document.getElementById('sharkieImg')?.classList.add('hoveringOverImage');
+        document.getElementById('sharkieArrow')?.classList.add('activateArrowReverse');
+        document.getElementById('sharkieInfos')?.classList.add('fadeInInfosReverse');
+      }
     }
   }
 
   imgMouseoverPokedex() {
     if (window.screen.width >= 1080) {
-      document.getElementById('pokedexImg')?.classList.add('hoveringOverImage');
-      document.getElementById('pokedexArrow')?.classList.add('activateArrow');
-      document.getElementById('pokedexInfos')?.classList.add('fadeInInfos');
+      if (document.getElementById('pokedexImg')?.style.opacity == '1') {
+        document.getElementById('pokedexImg')?.classList.add('hoveringOverImage');
+        document.getElementById('pokedexArrow')?.classList.add('activateArrow');
+        document.getElementById('pokedexInfos')?.classList.add('fadeInInfos');
+      }
     }
   }
 
