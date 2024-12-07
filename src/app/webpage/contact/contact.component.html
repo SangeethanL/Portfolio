@@ -20,8 +20,8 @@
                 <input type="text" placeholder="Name" required id="clientName" [(ngModel)]="contactData.name" name="name">
                 <input type="text" placeholder="E-Mail" required id="clientEmail" [(ngModel)]="contactData.email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" name="email">
                 <textarea placeholder="Nachricht" required id="clientMessage" #message="ngModel" [(ngModel)]="contactData.message" name="message"></textarea>
-                @if (!message.valid && message.touched && !message.disabled) {
-                    <span>Please enter a message</span>
+                @if (!message.valid && message.touched) {
+                    <span style="color:red;">Please enter a message</span>
                 }
                 <div>
                     <input type="checkbox" id="checkbox">
