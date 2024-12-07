@@ -17,16 +17,25 @@
 
 
             <form class="right_side" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-                <input type="text" placeholder="Name" required id="clientName" [(ngModel)]="contactData.name" name="name">
-                <input type="text" placeholder="E-Mail" required id="clientEmail" [(ngModel)]="contactData.email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" name="email">
-                <textarea placeholder="Nachricht" required id="clientMessage" #message="ngModel" [(ngModel)]="contactData.message" name="message"></textarea>
+                <input type="text" placeholder="Name" required id="clientName" [(ngModel)]="contactData.name" name="name" #name="ngModel">
+                @if (!name.valid && name.touched) {
+                    <span style="color:red;">Name required</span>
+                }
+                <input type="text" placeholder="E-Mail" required id="clientEmail" [(ngModel)]="contactData.email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" name="email" #mail="ngModel">
+                @if (!mail.valid && mail.touched) {
+                    <span style="color:red;">E-mail address required</span>
+                }
+                <textarea placeholder="Nachricht" required id="clientMessage" [(ngModel)]="contactData.message" name="message" #message="ngModel"></textarea>
                 @if (!message.valid && message.touched) {
-                    <span style="color:red;">Please enter a message</span>
+                    <span style="color:red;">Message required</span>
                 }
                 <div>
-                    <input type="checkbox" id="checkbox">
+                    <input type="checkbox" id="checkbox" (change)="check()" #checkbox>
                     <span id="read_privacy_policy">Ich habe die Datenschutzerklärung gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.</span>
                 </div>
+                @if (!checkbox.checked && contactForm.submitted) {
+                    <span style="color:red;">Accept privacy policy</span>
+                }
                 <div class="buttonContainerCenter">
                     <div>
                         <button class="button" id="sayHello" type="submit">Say hello ;)</button>

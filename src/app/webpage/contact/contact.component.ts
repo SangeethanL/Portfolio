@@ -17,10 +17,12 @@ export class ContactComponent {
     message: "",
   }
 
-  http = inject(HttpClient)
+  privacyChecked: boolean = false;
+
+  http = inject(HttpClient);
 
   post = {
-    endPoint: 'http://sangeethan-developer.com/sendMail.php',
+    endPoint: 'http://sangeethan-developer.com/sendMailPHP.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -30,9 +32,21 @@ export class ContactComponent {
     },
   };
 
+  check() {
+    if(this.privacyChecked == false) {
+      this.privacyChecked = true;
+    } else if (this.privacyChecked == true) {
+      this.privacyChecked = false;
+    }
+  }
+
+  resetCheckbox() {
+    let checkbox = document.getElementById('checkbox') as HTMLInputElement; checkbox.checked = false;
+    this.privacyChecked = false;
+  }
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid) {
+    if (ngForm.submitted && ngForm.form.valid && this.privacyChecked) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -41,7 +55,7 @@ export class ContactComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => this.resetCheckbox()
         });
     }
   }

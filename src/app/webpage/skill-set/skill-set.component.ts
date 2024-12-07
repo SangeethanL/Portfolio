@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-skill-set',
@@ -45,5 +46,13 @@ export class SkillSetComponent {
       this.clicked = false;
     }
   }
+
+  /*removeTransitionDelay() {
+    for (let i = 1; i < 11; i++) {
+      if(document.getElementById(`${i}`)?.style.opacity == '1'){
+        document.getElementById(`${i}`)?.setAttribute('style','transition-delay: unset !important;');
+      }
+    }
+  }*/
 
 }

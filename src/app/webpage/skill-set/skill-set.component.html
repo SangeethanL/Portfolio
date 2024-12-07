@@ -5,13 +5,14 @@
         <div class="wrap_container">
             @for (icon of icons; track icon) {
             <div class="wrap_element" id="{{icon.file_name}}">
-                <img src="./../../../assets/skill_set/{{icon.file_name}}.png" >
+                <img src="./../../../assets/skill_set/{{icon.file_name}}.png">
                 <span>{{icon.name}}</span>
             </div>
             }
             <div class="growth_mindset" (click)="show_growthMindset_note()" id="11">
                 <div>
-                    <img src="./../../../assets/skill_set/growth_mindset_hover.png" class="growth_mindset_hover" id="growth_mindset_note">
+                    <img src="./../../../assets/skill_set/growth_mindset_hover.png" class="growth_mindset_hover"
+                        id="growth_mindset_note">
                     <img src="./../../../assets/skill_set/11.png">
                     <span>Growth Mindset</span>
                 </div>
