@@ -32,38 +32,37 @@ export class LanguagesComponent {
         let remoteWork = document.getElementById('remoteWork') as HTMLElement; remoteWork.innerHTML = `open to work <br> remote`;
         let about_me_main = document.getElementById('about_me_main') as HTMLElement; about_me_main.innerHTML = `
             I am a Front-end developer based in Stuttgart,<br>
-            Germany. I enjoy helping designers and<br>
-            companies bring their ideas into real life. I am<br>
-            looking forward to continuing my developer<br>
-            career with a job in a junior web developer<br>
-            position. My ability to solve complex problems<br>
-            and my passion for programming make me a<br>
-            valuable member for your team.`;
+            Germany. I am able to realize the ideas of designers <br>
+            and companies in real projects.<br>
+            Therefore I would like to start a position as junior web developer. <br>
+            My abilities to solve complex problems as well as <br>
+            my coding skills would make me a valuable member of your team.`;
         let contact_if_match = document.getElementById('contact_if_match') as HTMLElement; contact_if_match.innerHTML = `
-            If you think I’d be a good match for your projects,<br>
-            contact me!`;
+            Contact me for a personal talk.`;
         let sendMessageButton = document.getElementById('sendMessage') as HTMLElement; sendMessageButton.innerHTML = `Send a message`;
     }
 
     myWorkToEnglish() {
         let myWorkTitle = document.getElementById('my_work_Title') as HTMLElement; myWorkTitle.innerHTML = `My work`;
         let my_work_description = document.getElementById('my_work_description') as HTMLElement; my_work_description.innerHTML = `
-            Explore a selection of my work here - Interact with <br> projects to see my skills in action.`;
+            Explore some of my projects live to experience my skills. <br>
+            Also visit the GitHub pages of my projects to see the codes.`;
         let join = document.getElementById('join') as HTMLElement; join.innerHTML = `
-            Task manager inspired by the Kanban System. Create and<br>organize tasks using drag and drop functions, assign users and<br>
-            categories.`;
+            Task manager inspired by the Kanban System. Create and<br>organize tasks using drag and drop functions. Create users and<br>
+            log-in and out any time.`;
         let sharkie = document.getElementById('sharkie') as HTMLElement; sharkie.innerHTML = `
-            2D game based on object-oriented approach.<br> Help Sharkie to catch coins and poison bottles to fight against the<br>endboss.`;
+            2D game based on object-oriented approach.<br> Help Sharkie to catch coins and poison bottles to fight <br> the endboss.`;
         let pokedex = document.getElementById('pokedex') as HTMLElement; pokedex.innerHTML = `
-            Based on the PokéAPI a simple library that provides and <br>catalogues pokemon information.`;
+            Based on the PokéAPI this is a simple library that provides <br> informations on pokemons.`;
     }
 
     contactToEnglish() {
         let contact = document.getElementById('contact') as HTMLElement; contact.innerHTML = `Contact`;
-        let gotAProblem = document.getElementById('gotAProblem') as HTMLElement; gotAProblem.innerHTML = `Got a problem to solve?`;
-        let contactMeText = document.getElementById('contactMeText') as HTMLElement; contactMeText.innerHTML = `Contact me through this form, 
-        I am interested in hearing<br>from you, knowing your ideas and contributing to your<br>projects with my work`;
-        let needADeveloper = document.getElementById('needADeveloper') as HTMLElement; needADeveloper.innerHTML = `Need a Frontend developer? <b>Contact me!</b>`;
+        let gotAProblem = document.getElementById('gotAProblem') as HTMLElement; gotAProblem.innerHTML = `Are you interested?`;
+        let contactMeText = document.getElementById('contactMeText') as HTMLElement; contactMeText.innerHTML = `Don't wait to contact me. <br> 
+        I am motivated to take part in realising your projects.`;
+        let needADeveloper = document.getElementById('needADeveloper') as HTMLElement; needADeveloper.innerHTML = `We can talk about your questions and ideas. <br>
+        <b>I am looking forward hearing from you!</b>`;
         let inputMessage = document.getElementById('clientMessage') as HTMLTextAreaElement; inputMessage.placeholder = 'Message';
         let readPrivacyPolicy = document.getElementById('read_privacy_policy') as HTMLElement; readPrivacyPolicy.innerHTML = `
         I've read the privacy policy and agree to the processing of my data as outlined.`;
@@ -107,44 +106,42 @@ export class LanguagesComponent {
     }
 
     aboutMeToGerman() {
-        let workTogether = document.getElementById('work_together') as HTMLElement; workTogether.innerHTML = 'Lasst uns zusammen arbeiten';
+        let workTogether = document.getElementById('work_together') as HTMLElement; workTogether.innerHTML = 'Lasst uns gemeinsam arbeiten';
         let iAm = document.getElementById('i_am') as HTMLElement; iAm.innerHTML = 'Ich bin';
         let locatedIn = document.getElementById('locatedIn') as HTMLElement; locatedIn.innerHTML = `wohnhaft in <br> Stuttgart`;
         let remoteWork = document.getElementById('remoteWork') as HTMLElement; remoteWork.innerHTML = `bereit remote <br> zu arbeiten`;
         let about_me_main = document.getElementById('about_me_main') as HTMLElement; about_me_main.innerHTML = `
-        Ich bin ein Frontend Developer aus Stuttgart.<br>
-        Ich setze gerne die Ideen von Designern <br>
-        und Unternehmen in echte Projekte um. <br>
-        Ich bin würde deshalb gerne eine Stelle <br>
-        als junior web developer aufnehmen.<br>
-        Meine Fähigkeiten komplexe Probleme zu lösen <br> 
-        und meine Leidenschaft für das Programmieren <br>
-        machen mich zu einem wertvollen Mitglied für Ihr Team.`;
-        let contact_if_match = document.getElementById('contact_if_match') as HTMLElement; contact_if_match.innerHTML = `Kontaktieren Sie mich, wenn Sie denken,<br>
-        dass ich in Ihr Team passe.`;
-        let sendMessageButton = document.getElementById('sendMessage') as HTMLElement; sendMessageButton.innerHTML = `Kontaktiere mich`;
+        Ich bin Frontend Developer und wohnhaft in Stuttgart.<br>
+        Mit meinen Kenntnissen bin ich in der Lage, Ideen von Designern und Unternehmen in echte Projekte umzusetzen. <br>
+        Daher würde ich gerne eine Stelle als Junior Web Developer aufnehmen. <br>
+        Meine Fähigkeiten komplexe Probleme zu lösen <br>
+        als auch meine Leidenschaft für das Programmieren <br>
+        würden mich zu einem wertvollen Mitglied in Ihrem Team machen.`;
+        let contact_if_match = document.getElementById('contact_if_match') as HTMLElement; contact_if_match.innerHTML = `Kontaktieren Sie mich, für ein persönliches Gespräch.`;
+        let sendMessageButton = document.getElementById('sendMessage') as HTMLElement; sendMessageButton.innerHTML = `Kontaktieren`;
     }
 
     myWorkToGerman() {
         let myWorkTitle = document.getElementById('my_work_Title') as HTMLElement; myWorkTitle.innerHTML = `Projekte`;
         let my_work_description = document.getElementById('my_work_description') as HTMLElement; my_work_description.innerHTML = `
-        Hier sind einige meiner Projekte - Erkunden Sie <br> meine Projekte um meine Skills zu sehen.`;
+        Erleben Sie einige meiner Projekte live um meine Skills näher kennenzulernen. <br> 
+        Besuchen Sie außerdem die GitHub Seiten der Projekte um die Codes einzusehen.`;
         let join = document.getElementById('join') as HTMLElement; join.innerHTML = `
-        Task manager inspiriert vom Kanban System. Erstellen und<br>organisieren Sie Tasks per Drag und Drop Funktion, fügen Sie <br>
-        User hinzu sowie Kategorien.`;
+        Task-Manager inspiriert vom Kanban System. Erstellen und <br>
+        organisieren Sie Tasks per Drag und Drop Funktion. Fügen Sie <br> User hinzu und loggen Sie sich beliebig ein- und aus.`;
         let sharkie = document.getElementById('sharkie') as HTMLElement; sharkie.innerHTML = `
-        2D-Spiel basierend auf einem objektorientierten Ansatz.<br> Helfe Sharkie Münzen und Gift Flaschen zu sammeln um gegen den <br> Endboss zu kämpfen.`;
+        2D-Spiel basierend auf einem objektorientierten Ansatz.<br> Helfen Sie Sharkie Münzen und Gift Flaschen zu sammeln um gegen den Endboss zu kämpfen.`;
         let pokedex = document.getElementById('pokedex') as HTMLElement; pokedex.innerHTML = `
-        Basierend auf die PokéAPI ist dies eine simple library <br>die Informationen zu Pokemons liefert.`;
+        Basierend auf die PokéAPI ist dies eine simpele library <br>die Informationen zu Pokemons liefert.`;
     }
 
     contactToGerman() {
         let contact = document.getElementById('contact') as HTMLElement; contact.innerHTML = `Kontakt`;
-        let gotAProblem = document.getElementById('gotAProblem') as HTMLElement; gotAProblem.innerHTML = `Sie haben ein Problem?`;
-        let contactMeText = document.getElementById('contactMeText') as HTMLElement; contactMeText.innerHTML = `Kontaktieren Sie mich. 
-            Zusammen finden wir eine Lösung, <br>wie ich mit meiner Arbeit eine Lösung für Ihre Ideen finde.`;
+        let gotAProblem = document.getElementById('gotAProblem') as HTMLElement; gotAProblem.innerHTML = `Sie sind Interessiert?`;
+        let contactMeText = document.getElementById('contactMeText') as HTMLElement; contactMeText.innerHTML = `Dann kontaktieren Sie mich. <br> 
+            Ich bin motiviert bei der Umsetzung Ihrer Projekte mitzuwirken.`;
         let needADeveloper = document.getElementById('needADeveloper') as HTMLElement; needADeveloper.innerHTML = `
-            Sie brauchen einen Frontend Developer? <b>Kontaktieren Sie mich!</b>`;
+            Wir können alle Anregungen und offenen Fragen klären. <br> <b>Ich freue mich auf Sie!</b>`;
         let inputMessage = document.getElementById('clientMessage') as HTMLTextAreaElement; inputMessage.placeholder = 'Nachricht';
         let readPrivacyPolicy = document.getElementById('read_privacy_policy') as HTMLElement; readPrivacyPolicy.innerHTML = `
             Ich habe die Datenschutzerklärung gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.`;

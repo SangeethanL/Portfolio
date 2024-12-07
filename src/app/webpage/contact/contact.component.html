@@ -8,25 +8,28 @@
         <h1 id="contact">Kontakt</h1>
         <div class="left_and_right_side">
             <div class="left_side">
-                <h2 id="gotAProblem">Sie haben ein Problem?</h2>
-                <p id="contactMeText">Kontaktieren Sie mich. Zusammen finden wir eine Lösung, <br>
-                    wie ich mit meiner Arbeit eine Lösung für Ihre Ideen finde.</p>
+                <h2 id="gotAProblem">Sie sind Interessiert?</h2>
+                <p id="contactMeText">Dann kontaktieren Sie mich. <br> 
+                    Ich bin motiviert bei der Umsetzung Ihrer Projekte mitzuwirken.</p>
 
-                <span id="needADeveloper">Sie brauchen einen Frontend Developer? <b>Kontaktieren Sie mich!</b></span>
+                <span id="needADeveloper">Wir können alle Anregungen und offenen Fragen klären. <br> <b>Ich freue mich auf Sie!</b></span>
             </div>
 
 
-            <form class="right_side">
-                <input type="text" placeholder="Name" required id="clientName">
-                <input type="text" placeholder="E-Mail" required id="clientEmail">
-                <textarea placeholder="Nachricht" required id="clientMessage"></textarea>
+            <form class="right_side" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                <input type="text" placeholder="Name" required id="clientName" [(ngModel)]="contactData.name" name="name">
+                <input type="text" placeholder="E-Mail" required id="clientEmail" [(ngModel)]="contactData.email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" name="email">
+                <textarea placeholder="Nachricht" required id="clientMessage" #message="ngModel" [(ngModel)]="contactData.message" name="message"></textarea>
+                @if (!message.valid && message.touched && !message.disabled) {
+                    <span>Please enter a message</span>
+                }
                 <div>
                     <input type="checkbox" id="checkbox">
                     <span id="read_privacy_policy">Ich habe die Datenschutzerklärung gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.</span>
                 </div>
                 <div class="buttonContainerCenter">
                     <div>
-                        <button class="button" id="sayHello">Say hello ;)</button>
+                        <button class="button" id="sayHello" type="submit">Say hello ;)</button>
                     </div>
                 </div>
             </form>
