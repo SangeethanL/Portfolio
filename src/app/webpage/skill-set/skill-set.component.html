@@ -4,7 +4,7 @@
         <h1 id="skills">Skills</h1>
         <div class="wrap_container">
             @for (icon of icons; track icon) {
-            <div class="wrap_element" id="{{icon.file_name}}">
+            <div class="wrap_element" id="{{icon.file_name}}" (mouseover)="removeTransitionDelay(icon.file_name)" (mouseleave)="removeTransitionDelay(icon.file_name)">
                 <img src="./../../../assets/skill_set/{{icon.file_name}}.png">
                 <span>{{icon.name}}</span>
             </div>

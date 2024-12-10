@@ -56,6 +56,11 @@ export class LanguagesComponent {
             Based on the PokéAPI this is a simple library that provides <br> informations on pokemons.`;
     }
 
+    colleguesToEnglish() {
+        let teamplayer = document.getElementById('templayerNeeded') as HTMLElement; teamplayer.innerHTML = 'Need a teamplayer?';
+        let whatColleguesSaid = document.getElementById('whatColleguesSaid') as HTMLElement; whatColleguesSaid.innerHTML = 'Here what my colleagues said about me';
+    }
+
     contactToEnglish() {
         let contact = document.getElementById('contact') as HTMLElement; contact.innerHTML = `Contact`;
         let gotAProblem = document.getElementById('gotAProblem') as HTMLElement; gotAProblem.innerHTML = `Are you interested?`;
@@ -79,6 +84,7 @@ export class LanguagesComponent {
             this.aboutMeToEnglish();
             let skills = document.getElementById('skills') as HTMLElement; skills.innerHTML = `Skill set`;
             this.myWorkToEnglish();
+            this.colleguesToEnglish();
             this.contactToEnglish();
         }
         localStorage.setItem("english", 'true');
@@ -135,6 +141,11 @@ export class LanguagesComponent {
         Basierend auf die PokéAPI ist dies eine simpele library <br>die Informationen zu Pokemons liefert.`;
     }
 
+    colleguesToGerman() {
+        let teamplayer = document.getElementById('templayerNeeded') as HTMLElement; teamplayer.innerHTML = 'Teamplayer gesucht?';
+        let whatColleguesSaid = document.getElementById('whatColleguesSaid') as HTMLElement; whatColleguesSaid.innerHTML = 'Das sagen meine Kollegen über mich';
+    }
+
     contactToGerman() {
         let contact = document.getElementById('contact') as HTMLElement; contact.innerHTML = `Kontakt`;
         let gotAProblem = document.getElementById('gotAProblem') as HTMLElement; gotAProblem.innerHTML = `Sie sind Interessiert?`;
@@ -158,6 +169,7 @@ export class LanguagesComponent {
             this.aboutMeToGerman();
             let skills = document.getElementById('skills') as HTMLElement; skills.innerHTML = `Skills`;
             this.myWorkToGerman();
+            this.colleguesToGerman();
             this.contactToGerman();
         }
         localStorage.setItem("english", 'false');

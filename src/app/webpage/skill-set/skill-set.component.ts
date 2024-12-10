@@ -47,12 +47,10 @@ export class SkillSetComponent {
     }
   }
 
-  /*removeTransitionDelay() {
-    for (let i = 1; i < 11; i++) {
-      if(document.getElementById(`${i}`)?.style.opacity == '1'){
-        document.getElementById(`${i}`)?.setAttribute('style','transition-delay: unset !important;');
-      }
+  removeTransitionDelay(id : number) {
+      if(document.getElementById(`${id}`)?.style.opacity == '1'){
+        document.getElementById(`${id}`)?.setAttribute('style','transition-delay: unset !important;');
     }
-  }*/
+  }
 
 }
