@@ -74,6 +74,14 @@ export class LanguagesComponent {
         let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = 'Say hello ;)';
     }
 
+    imprintToEnglish() {
+        let imprint = document.getElementById('imprint') as HTMLElement; imprint.innerHTML = 'Imprint';
+        let informationAccordingTo = document.getElementById('informationAccording') as HTMLElement; informationAccordingTo.innerHTML = 'Information according § 5 DDG';
+        let representedBy = document.getElementById('representedBy') as HTMLElement; representedBy.innerHTML = 'Represented by:';
+        let contactImprint = document.getElementById('contactImprint') as HTMLElement; contactImprint.innerHTML = 'Contact:';
+        let telephone = document.getElementById('telephone') as HTMLElement; telephone.innerHTML = 'Telephone:';
+    }
+
     english() {
         if (window.location.pathname.endsWith('imprint') || !window.location.href.endsWith('imprint')) {
             this.headerFooterToEnglish();
@@ -86,6 +94,7 @@ export class LanguagesComponent {
             this.myWorkToEnglish();
             this.colleguesToEnglish();
             this.contactToEnglish();
+            this.imprintToEnglish();
         }
         localStorage.setItem("english", 'true');
         localStorage.setItem("german", 'false');
@@ -159,6 +168,14 @@ export class LanguagesComponent {
         let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = `Sag Hallo ;)`;
     }
 
+    imprintToGerman() {
+        let imprint = document.getElementById('imprint') as HTMLElement; imprint.innerHTML = 'Impressum';
+        let informationAccordingTo = document.getElementById('informationAccording') as HTMLElement; informationAccordingTo.innerHTML = 'Angaben gemäß § 5 DDG';
+        let representedBy = document.getElementById('representedBy') as HTMLElement; representedBy.innerHTML = 'Vertreten durch:';
+        let contactImprint = document.getElementById('contactImprint') as HTMLElement; contactImprint.innerHTML = 'Kontakt:';
+        let telephone = document.getElementById('telephone') as HTMLElement; telephone.innerHTML = 'Telefon:';
+    }
+
     german() {
         if (window.location.pathname.endsWith('imprint') || !window.location.href.endsWith('imprint')) {
             this.headerFooterToGerman();
@@ -171,6 +188,7 @@ export class LanguagesComponent {
             this.myWorkToGerman();
             this.colleguesToGerman();
             this.contactToGerman();
+            this.imprintToGerman();
         }
         localStorage.setItem("english", 'false');
         localStorage.setItem("german", 'true');
