@@ -12,7 +12,7 @@ export class ImprintComponent {
 
   languagesTS = inject(LanguagesComponent);
 
-  ngAfterViewInit() { 
+  ngAfterContentInit() { //ngAfterViewInit
     this.languagesTS.loadLanguage();
   }
 

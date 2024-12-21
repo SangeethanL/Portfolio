@@ -17,7 +17,7 @@ export class ContactComponent {
     message: "",
   }
 
-  privacyChecked: boolean = false;
+  //privacyChecked: boolean = false;
 
   http = inject(HttpClient);
 
@@ -32,21 +32,21 @@ export class ContactComponent {
     },
   };
 
-  check() {
+  /*check() {
     if(this.privacyChecked == false) {
       this.privacyChecked = true;
     } else if (this.privacyChecked == true) {
       this.privacyChecked = false;
     }
-  }
+  }*/
 
-  resetCheckbox() {
+  /*resetCheckbox() {
     let checkbox = document.getElementById('checkbox') as HTMLInputElement; checkbox.checked = false;
     this.privacyChecked = false;
-  }
+  }*/
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && this.privacyChecked) {
+    if (ngForm.submitted && ngForm.form.valid /*&& this.privacyChecked*/) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -54,8 +54,8 @@ export class ContactComponent {
           },
           error: (error) => {
             console.error(error);
-          },
-          complete: () => this.resetCheckbox()
+          }//,
+          //complete: () => this.resetCheckbox()
         });
     }
   }

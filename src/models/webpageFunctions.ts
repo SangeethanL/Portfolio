@@ -27,6 +27,9 @@ export class WebpageFunctions {
     messageTop: any;
     messageOffset: any;
 
+    footerTop: any;
+    footerOffset: any;
+
     pathIsWebpage() {
         return window.location.href.endsWith('') || window.location.href.endsWith('#startScreen_link') ||
             window.location.href.endsWith('#aboutMe_link') || window.location.href.endsWith('#skillSet_link') ||
@@ -56,10 +59,13 @@ export class WebpageFunctions {
             this.emailOffset = this.emailTop + window.pageYOffset;
             this.messageTop = document.getElementById('clientMessage')?.getBoundingClientRect().top;
             this.messageOffset = this.messageTop + window.pageYOffset;
+
+            this.footerTop = document.getElementById('frontend_logo')?.getBoundingClientRect().top;
+            this.footerOffset = this.footerTop + window.pageYOffset;
         }
     }
 
-  
+
 
     fadeProject(imgOffset: any, imgHeight: any, imgId: string) {
         if (window.pageYOffset + window.innerHeight > (imgOffset + (imgHeight / 2))) {
@@ -71,7 +77,7 @@ export class WebpageFunctions {
     }
 
     fadeContactField(fieldOffset: any, plusOffset: number, fieldId: string) {
-        if (window.pageYOffset+ window.innerHeight > fieldOffset + plusOffset) {
+        if (window.pageYOffset + window.innerHeight > fieldOffset + plusOffset) {
             document.getElementById(fieldId)?.setAttribute("style", "opacity: 1 !important; transition: all 125ms ease-in-out;");
         }
         else {
@@ -103,6 +109,16 @@ export class WebpageFunctions {
         }
     }
 
+    reduceHeaderLogoBrightness() {
+        if (window.pageYOffset + window.innerHeight > this.footerOffset) {
+            document.getElementById('logo')?.setAttribute("style", `opacity: 0.5; transition: all 105ms ease-in-out;`);
+            document.getElementById('logo_responsive')?.setAttribute("style", `opacity: 0.5; transition: all 105ms ease-in-out;`);
+        } else {
+            document.getElementById('logo')?.setAttribute("style", `opacity: 1; transition: all 105ms ease-in-out;`);
+            document.getElementById('logo_responsive')?.setAttribute("style", `opacity: 1; transition: all 105ms ease-in-out;`);
+        }
+    }
+
     scroll() {
         let navBar = document.getElementById('navigation') as HTMLElement;
         if (window.pageYOffset >= (navBar.offsetTop + 40)) {
@@ -113,6 +129,7 @@ export class WebpageFunctions {
         this.fadeItems();
         this.fadeSkillsIcons();
         this.responsiveArrowAnimation();
+        this.reduceHeaderLogoBrightness();
     }
 
     fixHeader() {

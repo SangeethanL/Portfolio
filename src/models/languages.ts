@@ -19,7 +19,7 @@ export class LanguagesComponent {
         let respAboutMe = document.getElementById('respAboutMe') as HTMLLinkElement; respAboutMe.innerHTML = 'About me';
         let respSkills = document.getElementById('respSkillSet') as HTMLLinkElement; respSkills.innerHTML = 'Skill set';
         let respProjects = document.getElementById('respMyWork') as HTMLLinkElement; respProjects.innerHTML = 'My Work';
-        let imprint = document.getElementById('imprint') as HTMLElement; imprint.innerHTML = 'Imprint';
+        let imprint = document.getElementById('imprint') as HTMLLinkElement; imprint.innerHTML = 'Imprint';
         let angular = document.getElementById('angular') as HTMLElement; angular.innerHTML = 'This site was created with Angular.';
     }
 
@@ -59,6 +59,18 @@ export class LanguagesComponent {
     colleguesToEnglish() {
         let teamplayer = document.getElementById('templayerNeeded') as HTMLElement; teamplayer.innerHTML = 'Need a teamplayer?';
         let whatColleguesSaid = document.getElementById('whatColleguesSaid') as HTMLElement; whatColleguesSaid.innerHTML = 'Here what my colleagues said about me';
+        let project_join = document.getElementById('project_join') as HTMLElement; project_join.innerHTML = 'Project Join';
+        let project_join2 = document.getElementById('project_join2') as HTMLElement; project_join2.innerHTML = 'Project Join';
+        let thomas_opinion = document.getElementById('thomas_oppinion') as HTMLElement; thomas_opinion.innerHTML = `
+        ‘‘Sangeethan was a very pleasant partner. <br>
+        We could realize our project with him very well. <br>
+        He designed the board and he was responsible <br>
+        for the code.’’`;
+        let julia_opinion = document.getElementById('julia_oppinion') as HTMLElement; julia_opinion.innerHTML = `
+        ‘‘Sangeethan has written a clean code <br>
+        which made it possible, that the project <br>
+        is working very well. He was responsible <br>
+        that the project is operating correctly.’’`;
     }
 
     contactToEnglish() {
@@ -69,22 +81,23 @@ export class LanguagesComponent {
         let needADeveloper = document.getElementById('needADeveloper') as HTMLElement; needADeveloper.innerHTML = `We can talk about your questions and ideas. <br>
         <b>I am looking forward hearing from you!</b>`;
         let inputMessage = document.getElementById('clientMessage') as HTMLTextAreaElement; inputMessage.placeholder = 'Message';
-        let readPrivacyPolicy = document.getElementById('read_privacy_policy') as HTMLElement; readPrivacyPolicy.innerHTML = `
-        I've read the privacy policy and agree to the processing of my data as outlined.`;
+        /*let readPrivacyPolicy = document.getElementById('read_privacy_policy') as HTMLElement; readPrivacyPolicy.innerHTML = `
+        I've read the privacy policy and agree to the processing of my data as outlined.`;*/
         let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = 'Say hello ;)';
     }
 
     imprintToEnglish() {
-        let imprint = document.getElementById('imprint') as HTMLElement; imprint.innerHTML = 'Imprint';
-        let informationAccordingTo = document.getElementById('informationAccording') as HTMLElement; informationAccordingTo.innerHTML = 'Information according § 5 DDG';
-        let representedBy = document.getElementById('representedBy') as HTMLElement; representedBy.innerHTML = 'Represented by:';
-        let contactImprint = document.getElementById('contactImprint') as HTMLElement; contactImprint.innerHTML = 'Contact:';
-        let telephone = document.getElementById('telephone') as HTMLElement; telephone.innerHTML = 'Telephone:';
+        let imprintTitle = document.getElementById('imprintTitle') as HTMLTitleElement; imprintTitle.innerHTML = 'Imprint';
+        let informationAccordingTo = document.getElementById('informationAccording') as HTMLParagraphElement; informationAccordingTo.innerHTML = 'Information according to § 5 DDG';
+        let representedBy = document.getElementById('representedBy') as HTMLSpanElement; representedBy.innerHTML = 'Represented by:';
+        let contactImprint = document.getElementById('contactImprint') as HTMLSpanElement; contactImprint.innerHTML = 'Contact:';
+        let telephone = document.getElementById('telephone') as HTMLSpanElement; telephone.innerHTML = 'Telephone:';
     }
 
     english() {
-        if (window.location.pathname.endsWith('imprint') || !window.location.href.endsWith('imprint')) {
-            this.headerFooterToEnglish();
+        this.headerFooterToEnglish();
+        if (window.location.pathname.endsWith('imprint') || window.location.href.endsWith('imprint')) {
+            this.imprintToEnglish();
         }
         if (!window.location.href.endsWith('imprint')) {
             let namePresentation = document.getElementById('namePresentation') as HTMLElement; namePresentation.innerHTML = 'Hello! I am Sangeethan';
@@ -94,7 +107,6 @@ export class LanguagesComponent {
             this.myWorkToEnglish();
             this.colleguesToEnglish();
             this.contactToEnglish();
-            this.imprintToEnglish();
         }
         localStorage.setItem("english", 'true');
         localStorage.setItem("german", 'false');
@@ -153,6 +165,18 @@ export class LanguagesComponent {
     colleguesToGerman() {
         let teamplayer = document.getElementById('templayerNeeded') as HTMLElement; teamplayer.innerHTML = 'Teamplayer gesucht?';
         let whatColleguesSaid = document.getElementById('whatColleguesSaid') as HTMLElement; whatColleguesSaid.innerHTML = 'Das sagen meine Kollegen über mich';
+        let project_join = document.getElementById('project_join') as HTMLElement; project_join.innerHTML = 'Projekt Join';
+        let project_join2 = document.getElementById('project_join2') as HTMLElement; project_join2.innerHTML = 'Projekt Join';
+        let thomas_opinion = document.getElementById('thomas_oppinion') as HTMLElement; thomas_opinion.innerHTML = `
+        ‘‘Sangeethan war ein sehr angenehmer<br>
+        Partner. Mit Ihm konnten wir unser<br>
+        Projekt gut umsetzen. Er hat das Board<br>
+        designt und war für den Code zuständig.’’`;
+        let julia_opinion = document.getElementById('julia_oppinion') as HTMLElement; julia_opinion.innerHTML = `
+        ‘‘Sangeethan hat einen sauberen Code <br>
+        geschrieben, welches ermöglicht, <br>
+        dass das Projekt funktioniert. Er war <br>
+        für die Funktionsweise des Projekts zuständig.’’`;
     }
 
     contactToGerman() {
@@ -163,22 +187,23 @@ export class LanguagesComponent {
         let needADeveloper = document.getElementById('needADeveloper') as HTMLElement; needADeveloper.innerHTML = `
             Wir können alle Anregungen und offenen Fragen klären. <br> <b>Ich freue mich auf Sie!</b>`;
         let inputMessage = document.getElementById('clientMessage') as HTMLTextAreaElement; inputMessage.placeholder = 'Nachricht';
-        let readPrivacyPolicy = document.getElementById('read_privacy_policy') as HTMLElement; readPrivacyPolicy.innerHTML = `
-            Ich habe die Datenschutzerklärung gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.`;
+        /*let readPrivacyPolicy = document.getElementById('read_privacy_policy') as HTMLElement; readPrivacyPolicy.innerHTML = `
+            Ich habe die Datenschutzerklärung gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.`;*/
         let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = `Sag Hallo ;)`;
     }
 
     imprintToGerman() {
-        let imprint = document.getElementById('imprint') as HTMLElement; imprint.innerHTML = 'Impressum';
-        let informationAccordingTo = document.getElementById('informationAccording') as HTMLElement; informationAccordingTo.innerHTML = 'Angaben gemäß § 5 DDG';
-        let representedBy = document.getElementById('representedBy') as HTMLElement; representedBy.innerHTML = 'Vertreten durch:';
-        let contactImprint = document.getElementById('contactImprint') as HTMLElement; contactImprint.innerHTML = 'Kontakt:';
-        let telephone = document.getElementById('telephone') as HTMLElement; telephone.innerHTML = 'Telefon:';
+        let imprintTitle = document.getElementById('imprintTitle') as HTMLTitleElement; imprintTitle.innerHTML = 'Impressum';
+        let informationAccordingTo = document.getElementById('informationAccording') as HTMLParagraphElement; informationAccordingTo.innerHTML = 'Angaben gemäß § 5 DDG';
+        let representedBy = document.getElementById('representedBy') as HTMLSpanElement; representedBy.innerHTML = 'Vertreten durch:';
+        let contactImprint = document.getElementById('contactImprint') as HTMLSpanElement; contactImprint.innerHTML = 'Kontakt:';
+        let telephone = document.getElementById('telephone') as HTMLSpanElement; telephone.innerHTML = 'Telefon:';
     }
 
     german() {
-        if (window.location.pathname.endsWith('imprint') || !window.location.href.endsWith('imprint')) {
-            this.headerFooterToGerman();
+        this.headerFooterToGerman();
+        if (window.location.pathname.endsWith('imprint') || window.location.href.endsWith('imprint')) {
+            this.imprintToGerman();
         }
         if (!window.location.href.endsWith('imprint')) {
             let namePresentation = document.getElementById('namePresentation') as HTMLElement; namePresentation.innerHTML = 'Hallo! Ich bin Sangeethan';
@@ -188,7 +213,6 @@ export class LanguagesComponent {
             this.myWorkToGerman();
             this.colleguesToGerman();
             this.contactToGerman();
-            this.imprintToGerman();
         }
         localStorage.setItem("english", 'false');
         localStorage.setItem("german", 'true');
