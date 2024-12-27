@@ -169,8 +169,9 @@ export class WebpageFunctions {
     responsiveArrowAnimation() {
         if (this.pathIsWebpage()) {
             if (window.pageYOffset >= 160) {
-                document.getElementById('arrow')?.classList.remove('arrowAnimation');
+                document.getElementById('scroll_info_responsive')?.classList.add('fadeOutArrowAnimation');
             } else {
+                document.getElementById('scroll_info_responsive')?.classList.remove('fadeOutArrowAnimation');
                 document.getElementById('arrow')?.classList.add('arrowAnimation');
             }
         }

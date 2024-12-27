@@ -1,5 +1,5 @@
 - CONTENT 1920px 
-- SKILLS ICONS RESPONSIVE
+- SKILLS ICONS RESPONSIVE                                   *_*
 
 - RESPONSIVE MENU                                           *_*
 - BILD KOMPRIMIEREN UNTER 1 MB (AM BESTEN HALBES MB)

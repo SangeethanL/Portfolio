@@ -85,6 +85,8 @@ export class LanguagesComponent {
         let inputMessage = document.getElementById('clientMessage') as HTMLTextAreaElement; inputMessage.placeholder = 'Message';
         let readPrivacyPolicy = document.getElementById('read_privacy_policy') as HTMLElement; readPrivacyPolicy.innerHTML = `
         I've read the privacy policy and agree to the processing of my data as outlined.`;
+        let messageSuccessfullySent = document.getElementById('mailSuccess') as HTMLElement; messageSuccessfullySent.innerHTML = `
+        Your message was sent successfully`;
         let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = 'Say hello ;)';
     }
 
@@ -194,6 +196,8 @@ export class LanguagesComponent {
         let inputMessage = document.getElementById('clientMessage') as HTMLTextAreaElement; inputMessage.placeholder = 'Nachricht';
         let readPrivacyPolicy = document.getElementById('read_privacy_policy') as HTMLElement; readPrivacyPolicy.innerHTML = `
             Ich habe die Datenschutzerklärung gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.`;
+        let messageSuccessfullySent = document.getElementById('mailSuccess') as HTMLElement; messageSuccessfullySent.innerHTML = `
+        Die Nachricht wurde erfolgreich abgesendet`;
         let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = `Sag Hallo ;)`;
     }
 
