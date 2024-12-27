@@ -16,7 +16,8 @@
             </div>
 
 
-            <form class="right_side" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" (input)="enableSubmitButton()" (change)="enableSubmitButton()">
+            <form class="right_side" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" 
+            (input)="resetMailSuccessfullySent();enableSubmitButton();" (change)="enableSubmitButton();">
                 <input type="text" placeholder="Name" required id="clientName" [(ngModel)]="contactData.name" name="name" #name="ngModel">
                 @if (!name.valid && name.touched) {
                     <span style="color:red;">Name required</span>
@@ -33,9 +34,7 @@
                     <input type="checkbox" id="checkbox" (change)="check()" #checkbox>
                     <span id="read_privacy_policy">Ich habe die Datenschutzerklärung gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.</span>
                 </div>
-                <!--@if (!checkbox.checked && contactForm.submitted) {
-                    <span style="color:red;">Accept privacy policy</span>
-                }-->
+                <span style="display:none;" id="mailSuccess">Die Nachricht wurde erfolgreich abgesendet</span>
                 <div class="buttonContainerCenter">
                     <div>
                         <button class="buttonGrey" id="sayHello" type="submit" >Say hello ;)</button>

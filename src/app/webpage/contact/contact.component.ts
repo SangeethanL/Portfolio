@@ -18,6 +18,7 @@ export class ContactComponent {
   }
 
   privacyChecked: boolean = false;
+  mailSent: any = false;
 
   http = inject(HttpClient);
 
@@ -57,6 +58,22 @@ export class ContactComponent {
     }
   }
 
+  mailSuccessfullySent() {
+    document.getElementById('checkbox')?.setAttribute('style', 'display: none;');
+    document.getElementById('read_privacy_policy')?.setAttribute('style', 'display: none;');
+    document.getElementById('mailSuccess')?.setAttribute('style', 'display: unset; color:green;');
+    this.mailSent = true;
+  }
+
+  resetMailSuccessfullySent() {
+    if (this.mailSent == false || this.mailSent == true) {
+      this.mailSent = false;
+      document.getElementById('checkbox')?.setAttribute('style', 'display: unset;');
+      document.getElementById('read_privacy_policy')?.setAttribute('style', 'display: unset;');
+      document.getElementById('mailSuccess')?.setAttribute('style', 'display: none;');
+    }
+  }
+
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && this.privacyChecked) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
@@ -67,7 +84,10 @@ export class ContactComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => this.resetCheckbox()
+          complete: () => {
+            this.resetCheckbox();
+            this.mailSuccessfullySent();
+          }
         });
     }
   }

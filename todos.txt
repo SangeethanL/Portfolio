@@ -1,15 +1,15 @@
 - CONTENT 1920px 
 - SKILLS ICONS RESPONSIVE
 
-- RESPONSIVE MENU                                       *_*
+- RESPONSIVE MENU                                           *_*
 - BILD KOMPRIMIEREN UNTER 1 MB (AM BESTEN HALBES MB)
 - GITHUB LINKS AUF PUBLIC
 
-- FOOTER UNTEN VERANKERN
-- IMPRINT MIT ROUTER LINK ÖFFNEN
+- FOOTER UNTEN VERANKERN                                    *_*
+- IMPRINT MIT ROUTER LINK ÖFFNEN                            *_*
 
 - PRIVACY POLICY ERSTELLEN
 
 
-- SAY HELLO ERST WENN ALLES AUSGEFÜLLT IST               *_*
-- FEEDBACK WENN ABGESENDET WURDE
+- SAY HELLO ERST WENN ALLES AUSGEFÜLLT IST                  *_*
+- FEEDBACK WENN ABGESENDET WURDE                            *_*
