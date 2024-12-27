@@ -61,7 +61,6 @@ body {
         animation: button_hover_backwards 0.1s;
         animation-fill-mode: forwards;
     }
-
 }
 
 
@@ -90,6 +89,19 @@ body {
 
 .button {
     @include buttonSettings();
+}
+
+.buttonGrey {
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: #a4a4a4;
+    background-color: unset;
+    border: 2px solid #a4a4a4;
+    border-radius: 10px;
+    width: max-content;
+    height: max-content;
+    padding: 8px;
 }
 
 

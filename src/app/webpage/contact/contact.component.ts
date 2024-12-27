@@ -17,12 +17,12 @@ export class ContactComponent {
     message: "",
   }
 
-  //privacyChecked: boolean = false;
+  privacyChecked: boolean = false;
 
   http = inject(HttpClient);
 
   post = {
-    endPoint: 'http://sangeethan-developer.com/sendMailPHP.php',
+    endPoint: 'https://sangeethan-developer.com/sendMailPHP.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -32,21 +32,33 @@ export class ContactComponent {
     },
   };
 
-  /*check() {
-    if(this.privacyChecked == false) {
+  check() {
+    if (this.privacyChecked == false) {
       this.privacyChecked = true;
     } else if (this.privacyChecked == true) {
       this.privacyChecked = false;
     }
-  }*/
+  }
 
-  /*resetCheckbox() {
+  resetCheckbox() {
     let checkbox = document.getElementById('checkbox') as HTMLInputElement; checkbox.checked = false;
     this.privacyChecked = false;
-  }*/
+  }
+
+  enableSubmitButton() {
+    if (this.contactData.name.length > 0 && this.contactData.email.length > 0 && this.contactData.message.length > 0
+      && this.privacyChecked == true) {
+      document.getElementById('sayHello')?.classList.remove('buttonGrey');
+      document.getElementById('sayHello')?.classList.add('button');
+    }
+    else {
+      document.getElementById('sayHello')?.classList.remove('button');
+      document.getElementById('sayHello')?.classList.add('buttonGrey');
+    }
+  }
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid /*&& this.privacyChecked*/) {
+    if (ngForm.submitted && ngForm.form.valid && this.privacyChecked) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -54,8 +66,8 @@ export class ContactComponent {
           },
           error: (error) => {
             console.error(error);
-          }//,
-          //complete: () => this.resetCheckbox()
+          },
+          complete: () => this.resetCheckbox()
         });
     }
   }

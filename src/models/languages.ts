@@ -61,16 +61,18 @@ export class LanguagesComponent {
         let whatColleguesSaid = document.getElementById('whatColleguesSaid') as HTMLElement; whatColleguesSaid.innerHTML = 'Here what my colleagues said about me';
         let project_join = document.getElementById('project_join') as HTMLElement; project_join.innerHTML = 'Project Join';
         let project_join2 = document.getElementById('project_join2') as HTMLElement; project_join2.innerHTML = 'Project Join';
-        let thomas_opinion = document.getElementById('thomas_oppinion') as HTMLElement; thomas_opinion.innerHTML = `
-        ‘‘Sangeethan was a very pleasant partner. <br>
-        We could realize our project with him very well. <br>
-        He designed the board and he was responsible <br>
-        for the code.’’`;
+        let thomas_opinion = document.getElementById('sydney_oppinion') as HTMLElement; thomas_opinion.innerHTML = `
+        ‘‘The collaboration with Sangeethan was great from the start and<br>
+        very educational until the end. Through his ability to work in a team<br>
+        and his solution-oriented thinking, we were able to find suitable<br>
+        solutions for every problem. His positive nature always encouraged<br>
+        our group in a positive way, which ultimately led to a great project result.<br>
+        Thanks for the collaboration Sangee!’’`;
         let julia_opinion = document.getElementById('julia_oppinion') as HTMLElement; julia_opinion.innerHTML = `
         ‘‘Sangeethan has written a clean code <br>
         which made it possible, that the project <br>
         is working very well. He was responsible <br>
-        that the project is operating correctly.’’`;
+        for the board and also that the project is operating correctly.’’`;
     }
 
     contactToEnglish() {
@@ -81,8 +83,8 @@ export class LanguagesComponent {
         let needADeveloper = document.getElementById('needADeveloper') as HTMLElement; needADeveloper.innerHTML = `We can talk about your questions and ideas. <br>
         <b>I am looking forward hearing from you!</b>`;
         let inputMessage = document.getElementById('clientMessage') as HTMLTextAreaElement; inputMessage.placeholder = 'Message';
-        /*let readPrivacyPolicy = document.getElementById('read_privacy_policy') as HTMLElement; readPrivacyPolicy.innerHTML = `
-        I've read the privacy policy and agree to the processing of my data as outlined.`;*/
+        let readPrivacyPolicy = document.getElementById('read_privacy_policy') as HTMLElement; readPrivacyPolicy.innerHTML = `
+        I've read the privacy policy and agree to the processing of my data as outlined.`;
         let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = 'Say hello ;)';
     }
 
@@ -167,16 +169,19 @@ export class LanguagesComponent {
         let whatColleguesSaid = document.getElementById('whatColleguesSaid') as HTMLElement; whatColleguesSaid.innerHTML = 'Das sagen meine Kollegen über mich';
         let project_join = document.getElementById('project_join') as HTMLElement; project_join.innerHTML = 'Projekt Join';
         let project_join2 = document.getElementById('project_join2') as HTMLElement; project_join2.innerHTML = 'Projekt Join';
-        let thomas_opinion = document.getElementById('thomas_oppinion') as HTMLElement; thomas_opinion.innerHTML = `
-        ‘‘Sangeethan war ein sehr angenehmer<br>
-        Partner. Mit Ihm konnten wir unser<br>
-        Projekt gut umsetzen. Er hat das Board<br>
-        designt und war für den Code zuständig.’’`;
+        let thomas_opinion = document.getElementById('sydney_oppinion') as HTMLElement; thomas_opinion.innerHTML = `
+        ‘‘Die Zusammenarbeit mit Sangeethan gestaltete sich von Anfang<br>
+        bis Ende sehr lehrreich. Durch seine Teamfähigkeit<br>
+        und lösungsorientiertes Denken, konnten wir in der Gruppe<br>
+        zu jedem Problem, gemeinsam eine passende Lösung erarbeiten.<br>
+        Seine positive Art ermutigte unsere Gruppe stets positiv,<br>
+        was am Ende zu einem tollen Projektergebnis führte.<br>
+        Danke für die Zusammenarbeit Sangee!’’`;
         let julia_opinion = document.getElementById('julia_oppinion') as HTMLElement; julia_opinion.innerHTML = `
         ‘‘Sangeethan hat einen sauberen Code <br>
         geschrieben, welches ermöglicht, <br>
         dass das Projekt funktioniert. Er war <br>
-        für die Funktionsweise des Projekts zuständig.’’`;
+        für das Board und für die Funktionsweise des Projekts zuständig.’’`;
     }
 
     contactToGerman() {
@@ -187,8 +192,8 @@ export class LanguagesComponent {
         let needADeveloper = document.getElementById('needADeveloper') as HTMLElement; needADeveloper.innerHTML = `
             Wir können alle Anregungen und offenen Fragen klären. <br> <b>Ich freue mich auf Sie!</b>`;
         let inputMessage = document.getElementById('clientMessage') as HTMLTextAreaElement; inputMessage.placeholder = 'Nachricht';
-        /*let readPrivacyPolicy = document.getElementById('read_privacy_policy') as HTMLElement; readPrivacyPolicy.innerHTML = `
-            Ich habe die Datenschutzerklärung gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.`;*/
+        let readPrivacyPolicy = document.getElementById('read_privacy_policy') as HTMLElement; readPrivacyPolicy.innerHTML = `
+            Ich habe die Datenschutzerklärung gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.`;
         let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = `Sag Hallo ;)`;
     }
 

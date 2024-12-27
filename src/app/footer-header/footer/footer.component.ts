@@ -10,4 +10,10 @@ import { ImprintComponent } from '../../imprint/imprint.component';
 })
 export class FooterComponent {
 
+  goToContact() {
+    if(window.location.pathname.endsWith("/imprint")) {
+      window.location.href = "#contact";
+    }
+  }
+ 
 }

@@ -112,7 +112,7 @@ nav {
     position: fixed;
     display: flex;
     justify-content: center;
-    background: rgb(91, 145, 180);
+    background: #fdfdfd;
     width: 100vw;
     height: 11vh;
     visibility: hidden;
@@ -128,7 +128,7 @@ nav {
         z-index: 54;
 
 
-        img {
+        #logo_responsive {
             width: 50px;
             height: 50px;
             cursor: pointer;
@@ -136,14 +136,14 @@ nav {
 
         #languages {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             opacity: 0;
             transition: all 75ms ease-in-out;
-            width: 30%;
+            width: 25%;
 
             img {
-                width: 35px;
-                height: 35px;
+                width: 29px;
+                height: 29px;
             }
         }
 
@@ -180,7 +180,8 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(63, 101, 125);
+        background: rgb(198,206,232);
+        background: linear-gradient(0deg, rgba(198,206,232,1) 0%, rgba(253,253,253,1) 100%); 
         width: 100vw;
         height: 89vh;
 
@@ -193,7 +194,7 @@ nav {
             a {
                 font-family: "Montserrat", sans-serif;
                 font-size: 23px;
-                color: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
                 text-decoration: none;
             }
         }
@@ -206,8 +207,16 @@ nav {
 }
 
 .fadeInLanguages {
-    opacity: 1 !important;
+    opacity: 0.9 !important;
     transition-delay: 0.1s !important;
+}
+
+.logoResponsiveNormalOpacity {
+    opacity: 0.8 !important;
+}
+
+.logoResponsiveOpenedOpacity {
+    opacity: 0.3 !important;
 }
 
 

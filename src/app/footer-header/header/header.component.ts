@@ -16,6 +16,8 @@ export class HeaderComponent {
     document.getElementById('menu')?.classList.add('display-none');
     document.getElementById('close')?.classList.add('display-unset');
     document.getElementById('languages')?.classList.add('fadeInLanguages');
+    document.getElementById('logo_responsive')?.classList.remove('logoResponsiveNormalOpacity');
+    document.getElementById('logo_responsive')?.classList.add('logoResponsiveOpenedOpacity');
   }
 
   closeMenu() {
@@ -23,6 +25,8 @@ export class HeaderComponent {
     document.getElementById('menu')?.classList.remove('display-none');
     document.getElementById('close')?.classList.remove('display-unset');
     document.getElementById('languages')?.classList.remove('fadeInLanguages');
+    document.getElementById('logo_responsive')?.classList.add('logoResponsiveNormalOpacity');
+    document.getElementById('logo_responsive')?.classList.remove('logoResponsiveOpenedOpacity');
   }
 
   goHome() {
