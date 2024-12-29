@@ -189,7 +189,7 @@ p {
     display: flex;
     flex-direction: $direction;
     justify-content: space-between;
-    margin-bottom: 140px;
+    margin-bottom: 80px;
     width: 100%;
 
     .project_image {
@@ -227,11 +227,6 @@ p {
 
     @include h2($textAlign);
     @include h3($textAlign);
-
-
-    @media (max-width: 1250px) {
-        margin-bottom: 80px;
-    }
 }
 
 /*-------------------------------------------------------------------------------------------------*/
