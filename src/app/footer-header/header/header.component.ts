@@ -30,7 +30,7 @@ export class HeaderComponent {
   }
 
   goHome() {
-    if(window.location.pathname.endsWith("/imprint")) {
+    if(window.location.pathname.endsWith("imprint") || window.location.pathname.endsWith("privacy_policy")) {
       window.location.href = "#link_to_startScreen";
     }
   }
