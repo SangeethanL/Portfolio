@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     width: 100vw;
-    height: 75vh;
+    height: fit-content;
     overflow: hidden;
 
     .content {
@@ -13,14 +13,16 @@
         justify-content: space-between;
         align-items: center;
         font-family: "Montserrat";
-        width: 85vw;
+        width: 80%;
+        max-width: 1920px;
         height: 100%;
+        padding: 50px;
 
         .left_side,
         .right_side {
             position: relative;
             width: 50%;
-            height: 70%;
+            //height: 70%;
         }
     }
 }
@@ -30,7 +32,7 @@ h2 {
     font-family: 'Baloo';
     line-height: 100%;
     margin: unset;
-
+    padding-bottom: 40px;
 }
 
 h1 {
@@ -415,6 +417,9 @@ h2 {
 
 
 @media (max-width: 350px) {
+    .left_side {
+        padding-bottom: 70px;
+    }
     h1 {
         font-size: 32px;
     }

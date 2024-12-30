@@ -2,10 +2,8 @@
     display: flex;
     justify-content: center;
     background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
-    min-width: fit-content;
-    max-width: 100vw;
-    min-height: fit-content;
-    max-height: 75vh;
+    width: 100vw;
+    height: fit-content;
 }
 
 .content {
@@ -15,14 +13,15 @@
     justify-content: space-between;
     font-family: "Montserrat";
     color: white;
-    width: 85vw;
-    height: 80%;
-    margin-top: 2%;
+    width: 80%;
+    max-width: 1920px;
+    height: 100%;
 
     .title {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-bottom: 50px;
     }
 
     h1 {
@@ -46,7 +45,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    margin-top: 20px;
+    padding-bottom: 20px;
 
     div {
         display: flex;

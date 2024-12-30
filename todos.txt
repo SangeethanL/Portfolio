@@ -2,13 +2,13 @@
 - SKILLS ICONS RESPONSIVE                                   *_*
 
 - RESPONSIVE MENU                                           *_*
-- BILD KOMPRIMIEREN UNTER 1 MB (AM BESTEN HALBES MB)
+- BILD KOMPRIMIEREN UNTER 1 MB (AM BESTEN HALBES MB)        *_*
 - GITHUB LINKS AUF PUBLIC
 
 - FOOTER UNTEN VERANKERN                                    *_*
 - IMPRINT MIT ROUTER LINK ÖFFNEN                            *_*
 
-- PRIVACY POLICY ERSTELLEN
+- PRIVACY POLICY ERSTELLEN                                  *_*
 
 
 - SAY HELLO ERST WENN ALLES AUSGEFÜLLT IST                  *_*

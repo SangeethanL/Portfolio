@@ -6,7 +6,8 @@
     justify-content: center;
     background: radial-gradient(71.18% 335.57% at 28.82% -124.4%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
     width: 100vw;
-    height: 35vh;
+    height: fit-content;
+    padding: 50px;
 }
 
 @mixin line_setting {
@@ -16,7 +17,8 @@
     align-items: center;
     font-family: "Montserrat";
     color: white;
-    width: 85vw;
+    width: 85%;
+    max-width: 1920px;
     height: max-content;
 }
 

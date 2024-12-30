@@ -4,7 +4,7 @@
     justify-content: center;
     background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
     width: 100vw;
-    height: 75vh;
+    height: fit-content;
     overflow: hidden;
 
     .content {
@@ -13,7 +13,10 @@
         flex-direction: column;
         align-items: center;
         font-family: "Montserrat";
-        width: 85vw;
+        width: 80%;
+        max-width: 1920px;
+        height: 100%;
+        padding: 40px;
     }
 }
 
@@ -33,7 +36,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 60%;
+    height: 100%;
     width: 100%;
     overflow-y: auto;
 }

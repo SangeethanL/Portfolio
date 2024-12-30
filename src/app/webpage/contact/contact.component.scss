@@ -4,6 +4,7 @@
     justify-content: center;
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
     width: 100vw;
+    height: fit-content;
 }
 
 .content {
@@ -11,9 +12,10 @@
     display: flex;
     flex-direction: column;
     font-family: "Montserrat";
-    width: 85vw;
-    height: fit-content;
-    padding-bottom: 20vh;
+    width: 80%;
+    max-width: 1920px;
+    height: 100%;
+    padding-bottom: 20px;
 }
 
 h1 {
@@ -26,6 +28,7 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 50px;
 
     .left_side,
     .right_side {
@@ -107,7 +110,7 @@ textarea {
     position: absolute;
     width: max-content;
     height: max-content;
-    bottom: 5vh;
+    bottom: 20px;
 
     img {
         width: 36px;
