@@ -1,107 +1,130 @@
+@mixin languagesIcon_Container ($displayNormal, $displayMaxWidth, $width, $left) {
+  position: relative;
+  display: $displayNormal;
+  flex-direction: row;
+  justify-content: center;
+  width: $width;
+  height: 100%;
+  left: $left;
+
+  @media (min-width:1920px) {
+    display: $displayMaxWidth;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+    margin: 5px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+      filter: brightness(1.1);
+      transition: all 125ms ease-in-out;
+    }
+
+    &:not(:hover) {
+      transition: all 125ms ease-in-out;
+    }
+  }
+}
+
 .navigation_container {
-    position: fixed;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 12vh;
+  z-index: 50;
+
+  .content {
+    position: relative;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 12vh;
-    z-index: 50;
+    width: 80%;
+    max-width: 1920px;
+    height: 100%;
+  }
 
-    .empty_space {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 7.5vw;
-        height: 100%;
-
-        img {
-            width: 23px;
-            height: 23px;
-            margin: 5px;
-            cursor: pointer;
-
-            &:hover {
-                opacity: 1;
-                filter: brightness(1.1);
-                transition: all 125ms ease-in-out;
-            }
-
-            &:not(:hover) {
-                transition: all 125ms ease-in-out;
-            }
-        }
-    }
+  .languagesIcon_MaxWidth {
+    @include languagesIcon_Container (none, flex, 7.5%, unset)
+  }
 }
 
 nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  img {
+    width: 43px;
+    height: 45px;
+
+    &:hover {
+      filter: brightness(1.025);
+      transition: all 125ms ease-in-out;
+    }
+  }
+
+  .nav_links {
     position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 85vw;
+    width: 35%;
 
-    img {
-        width: 43px;
-        height: 45px;
+    div {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      min-width: 100px;
+      max-width: 100px;
+    }
+  }
 
-        &:hover {
-            filter: brightness(1.025);
-            transition: all 125ms ease-in-out;
-        }
+  a {
+    font-family: "Montserrat";
+    font-size: 18px;
+    color: #5988FF;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      font-weight: 700;
+      transition: all 125ms ease-in-out;
     }
 
-    .nav_links {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        width: 35%;
-
-        div {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            min-width: 100px;
-            max-width: 100px;
-        }
+    &:not(:hover) {
+      transition: all 125ms ease-in-out;
     }
 
-    a {
-        font-family: "Montserrat";
-        font-size: 18px;
-        color: #5988FF;
-        text-decoration: none;
-        cursor: pointer;
-
-        &:hover {
-            font-weight: 700;
-            transition: all 125ms ease-in-out;
-        }
-
-        &:not(:hover) {
-            transition: all 125ms ease-in-out;
-        }
-
-    }
+  }
 }
 
-
+.languagesIcon_Normal {
+  @include languagesIcon_Container (flex, none, 5%, 4%)
+}
 
 /*------------------------------------------------------------------------------*/
 
 .navigation_background {
-    position: absolute;
-    background: rgb(231, 245, 254);
-    background: linear-gradient(180deg, rgba(231, 245, 254, 1) 88%, rgba(231, 245, 254, 0.8436508392419468) 91%, rgba(231, 245, 254, 0) 100%);
-    width: 100vw;
-    height: 12vh;
-    top: 0;
+  position: absolute;
+  background: rgb(231, 245, 254);
+  background: linear-gradient(180deg, rgba(231, 245, 254, 1) 88%, rgba(231, 245, 254, 0.8436508392419468) 91%, rgba(231, 245, 254, 0) 100%);
+  width: 100vw;
+  height: 12vh;
+  top: 0;
 }
 
 .scroll-font-color {
-    a {
-        color: rgb(27, 27, 27) !important;
-    }
+  a {
+    color: rgb(27, 27, 27) !important;
+  }
 }
 
 
@@ -109,123 +132,123 @@ nav {
 
 
 .header_responsive {
-    position: fixed;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background: #fdfdfd;
+  width: 100vw;
+  height: 11vh;
+  visibility: hidden;
+  z-index: 52;
+
+  nav {
+    position: relative;
     display: flex;
-    justify-content: center;
-    background: #fdfdfd;
-    width: 100vw;
-    height: 11vh;
-    visibility: hidden;
-    z-index: 52;
-
-    nav {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 96vw;
-        height: 100%;
-        z-index: 54;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+    height: 100%;
+    z-index: 54;
 
 
-        #logo_responsive {
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-        }
-
-        #languages {
-            display: flex;
-            justify-content: space-evenly;
-            opacity: 0;
-            transition: all 75ms ease-in-out;
-            width: 25%;
-
-            img {
-                width: 29px;
-                height: 29px;
-            }
-        }
-
-        .menu_close_container {
-            position: relative;
-        }
-
-        #close {
-            display: none;
-        }
+    #logo_responsive {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
     }
+
+    #languages {
+      display: flex;
+      justify-content: space-evenly;
+      opacity: 0;
+      transition: all 75ms ease-in-out;
+      width: 25%;
+
+      img {
+        width: 29px;
+        height: 29px;
+      }
+    }
+
+    .menu_close_container {
+      position: relative;
+    }
+
+    #close {
+      display: none;
+    }
+  }
 }
 
 
 .resonsive_menu {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    transform: translateX(110vw);
-    transition: all 125ms ease-in-out;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(110vw);
+  transition: all 125ms ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: 50;
+
+  .placeholder_top {
     width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    visibility: hidden;
-    z-index: 50;
+    height: 11vh;
+  }
 
-    .placeholder_top {
-        width: 100vw;
-        height: 11vh;
+  .resp_menu_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(198, 206, 232);
+    background: linear-gradient(0deg, rgba(198, 206, 232, 1) 0%, rgba(253, 253, 253, 1) 100%);
+    width: 100vw;
+    height: 89vh;
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      height: 40%;
+
+      a {
+        font-family: "Montserrat", sans-serif;
+        font-size: 23px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+      }
     }
-
-    .resp_menu_content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: rgb(198,206,232);
-        background: linear-gradient(0deg, rgba(198,206,232,1) 0%, rgba(253,253,253,1) 100%); 
-        width: 100vw;
-        height: 89vh;
-
-        nav {
-            display: flex;
-            flex-direction: column;
-            width: 40%;
-            height: 40%;
-
-            a {
-                font-family: "Montserrat", sans-serif;
-                font-size: 23px;
-                color: rgb(0, 0, 0);
-                text-decoration: none;
-            }
-        }
-    }
+  }
 }
 
 .rollOut {
-    transform: translateX(0vw);
-    visibility: visible;
+  transform: translateX(0vw);
+  visibility: visible;
 }
 
 .fadeInLanguages {
-    opacity: 0.9 !important;
-    transition-delay: 0.1s !important;
+  opacity: 0.9 !important;
+  transition-delay: 0.1s !important;
 }
 
 .logoResponsiveNormalOpacity {
-    opacity: 0.8 !important;
+  opacity: 0.8 !important;
 }
 
 .logoResponsiveOpenedOpacity {
-    opacity: 0.3 !important;
+  opacity: 0.3 !important;
 }
 
 
 @media (max-width: 1250px) {
-    .navigation_container {
-        visibility: hidden;
-    }
+  .navigation_container {
+    visibility: hidden;
+  }
 
-    .header_responsive {
-        visibility: visible;
-    }
+  .header_responsive {
+    visibility: visible;
+  }
 }

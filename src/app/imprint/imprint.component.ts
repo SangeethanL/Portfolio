@@ -10,6 +10,10 @@ import { LanguagesComponent } from '../../models/languages';
 })
 export class ImprintComponent {
 
+  constructor() {
+    window.scrollTo(0,0)
+  }
+
   languagesTS = inject(LanguagesComponent);
 
   ngAfterContentInit() { //ngAfterViewInit

@@ -1,15 +1,12 @@
-- CONTENT 1920px 
-- SKILLS ICONS RESPONSIVE                                   *_*
+- CONTENT 1920px -> ALLES                                                   *_*
+- PROJECT INFOS ENGER AN PROJECT IMAGE                                      *_*
 
-- RESPONSIVE MENU                                           *_*
-- BILD KOMPRIMIEREN UNTER 1 MB (AM BESTEN HALBES MB)        *_*
-- GITHUB LINKS AUF PUBLIC
+- ALLE BILDER KOMPRIMIEREN UNTER 1 MB -> ca. 600kb                          *_*
 
-- FOOTER UNTEN VERANKERN                                    *_*
-- IMPRINT MIT ROUTER LINK ÖFFNEN                            *_*
+- SKILLS ICONS BEI RESPONSIVE ETWAS AUSEINANDER MACHEN                      *_*
 
-- PRIVACY POLICY ERSTELLEN                                  *_*
+- COLLEGUES SCROLL BAR RAUSNEHMEN                                           *_*
 
+- FOOTER BEI RESPONSIVE DIE BUTTONS GRÖßER MACHEN UND SCHRIFT AUCH          *_*
 
-- SAY HELLO ERST WENN ALLES AUSGEFÜLLT IST                  *_*
-- FEEDBACK WENN ABGESENDET WURDE                            *_*
+- ROUTER LINKS EINFÜGEN                                                 

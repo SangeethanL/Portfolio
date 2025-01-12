@@ -1,5 +1,5 @@
 <body>
-    <div class="privacy_policy_container">
+    <div class="privacy_policy_container" id="privacyTop">
         <div class="content">
             <h1>Datenschutzerklärung</h1>
             <br id="m716">
@@ -23,17 +23,17 @@
             <p>Stand: 27. Dezember 2024</p>
             <h2>Inhaltsübersicht</h2>
             <ul class="index">
-                <li><a class="index-link" href="/privacy_policy/#m716">Präambel</a></li>
-                <li><a class="index-link" href="/privacy_policy/#m3">Verantwortlicher</a></li>
-                <li><a class="index-link" href="/privacy_policy/#mOverview">Übersicht der Verarbeitungen</a></li>
-                <li><a class="index-link" href="/privacy_policy/#m2427">Maßgebliche Rechtsgrundlagen</a></li>
-                <li><a class="index-link" href="/privacy_policy/#m27">Sicherheitsmaßnahmen</a></li>
-                <li><a class="index-link" href="/privacy_policy/#m10">Rechte der betroffenen Personen</a></li>
-                <li><a class="index-link" href="/privacy_policy/#m225">Bereitstellung des Onlineangebots und
+                <li><a class="index-link" (click)="goToParagraph('#m716')">Präambel</a></li>
+                <li><a class="index-link" (click)="goToParagraph('#m3')">Verantwortlicher</a></li>
+                <li><a class="index-link" (click)="goToParagraph('#mOverview')">Übersicht der Verarbeitungen</a></li>
+                <li><a class="index-link" (click)="goToParagraph('#m2427')">Maßgebliche Rechtsgrundlagen</a></li>
+                <li><a class="index-link" (click)="goToParagraph('#m27')">Sicherheitsmaßnahmen</a></li>
+                <li><a class="index-link" (click)="goToParagraph('#m10')">Rechte der betroffenen Personen</a></li>
+                <li><a class="index-link" (click)="goToParagraph('#m225')">Bereitstellung des Onlineangebots und
                         Webhosting</a></li>
-                <li><a class="index-link" href="/privacy_policy/#m367">Registrierung, Anmeldung und Nutzerkonto</a></li>
-                <li><a class="index-link" href="/privacy_policy/#m182">Kontakt- und Anfrageverwaltung</a></li>
-                <li><a class="index-link" href="/privacy_policy/#m42">Begriffsdefinitionen</a></li>
+                <li><a class="index-link" (click)="goToParagraph('#m367')">Registrierung, Anmeldung und Nutzerkonto</a></li>
+                <li><a class="index-link" (click)="goToParagraph('#m182')">Kontakt- und Anfrageverwaltung</a></li>
+                <li><a class="index-link" (click)="goToParagraph('#m42')">Begriffsdefinitionen</a></li>
             </ul>
             <br id="m3">
             <br>
@@ -41,7 +41,7 @@
             <br>
             <h2>Verantwortlicher</h2>
             <p>Sangeethan L.<br>Straße<br>PLZ Ort</p>
-            <p>E-Mail-Adresse: contact[at]sangeethan-developer.com</p>
+            <p>E-Mail-Adresse: contact&#64;sangeethan-developer.com</p>
 
             <br id="mOverview">
             <br>
@@ -466,10 +466,10 @@
                     Speichern,
                     das Übermitteln oder das Löschen. </li>
             </ul>
-            <p class="seal"><a href="https://datenschutz-generator.de/"
+            <!--<p class="seal"><a href="https://datenschutz-generator.de/"
                     title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken." target="_blank"
                     rel="noopener noreferrer nofollow">Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas
-                    Schwenke</a></p>
+                    Schwenke</a></p>-->
         </div>
     </div>
 </body>

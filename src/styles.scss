@@ -27,8 +27,23 @@ body {
 }
 
 .language_img_onScroll {
-    width: 21px !important;
-    height: 21px !important;
+    width: 23px !important;
+    height: 23px !important;
+}
+
+.hideBR {
+    @media (max-width: 1440px) {
+        br {
+        display: none !important;
+    }
+    }
+}
+
+
+#read_privacy_policy a {
+    color: #0000EE;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 
@@ -53,7 +68,7 @@ body {
     cursor: pointer;
 
     &:hover {
-        animation: button_hover 0.3s;
+        animation: button_hover 0.2s;
         animation-fill-mode: forwards;
     }
 
@@ -69,8 +84,7 @@ body {
     display: flex;
     flex-direction: row !important;
     justify-content: $justify;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 12px;
 
     button {
         @include buttonSettings();

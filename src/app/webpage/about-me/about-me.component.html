@@ -35,10 +35,10 @@
             </div>
         </div>
 
-        <div class="right_side">
-            <div class="rightSide_mainPart">
+       
+            <div class="right_side">
                 <div>
-                    <p id="about_me_main">
+                    <p id="about_me_main" class="hideBR">
                         Ich bin Frontend Developer und wohnhaft in Stuttgart.<br>
                         Mit meinen Kenntnissen bin ich in der Lage, Ideen von Designern und Unternehmen in echte
                         Projekte umzusetzen. <br>
@@ -51,14 +51,14 @@
                         Kontaktieren Sie mich, für ein persönliches Gespräch. 
                     </p>
                     <div id="contact_me_BtnContainer">
-                        <a href="#contact_link">
+                        <a (click)="webpageComponent.goToContact()">
                             <button class="button" id="sendMessage">Kontaktieren</button>
                         </a>
                     </div>
                 </div>
 
             </div>
-        </div>
+
 
     </div>
 

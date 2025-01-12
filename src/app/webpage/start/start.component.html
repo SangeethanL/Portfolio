@@ -15,7 +15,7 @@
             </div>
 
             <div class="image_container">
-                <img src="./../../../assets/start/picture2-2_2.png">
+                <img src="./../../../assets/start/picture2.png">
             </div>
 
             <div id="scroll_info_responsive" style="display:none;"> <!-- RESPONSIVE -->
@@ -28,7 +28,6 @@
         </div>
 
         <div class="right_side">
-            <div class="placeholder_right_side"></div>
 
             <div class="title">
                 <div>
@@ -55,7 +54,7 @@
                         </a>
                     </div>
                     <div (mouseenter)="switchToLeft('mail')" (mouseleave)="returnToRight('mail')">
-                        <a href="#contact">
+                        <a (click)="webpageComponent.goToContact()">
                             <img src="./../../../assets/start/mail.png" id="mail">
                         </a>
                     </div>

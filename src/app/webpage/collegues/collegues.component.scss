@@ -46,13 +46,20 @@
     justify-content: space-evenly;
     width: 100%;
     padding-bottom: 20px;
+    height: fit-content;
 
-    div {
+    .single-review {
         display: flex;
         flex-direction: column;
         color: white;
         border-radius: 10px;
+        max-width: 50%;
         margin: 18px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
 
         .collegue_name {
             font-size: 24px;
@@ -65,6 +72,7 @@
         }
 
         p {
+            word-wrap: break-word;
             font-size: 18px;
             font-weight: 400;
             margin-top: 35px;
@@ -74,35 +82,18 @@
 
 @media (max-width: 1250px) {
     .content {
-        width: 96vw !important;
+        width: 96% !important;
     }
 }
 
 @media (max-width: 1080px) {
-    .collegues_container {
-        height: 60vh;
-    }
-
-    .content {
-        height: 90%;
-    }
-
-    .title {
-        height: 20%;
-    }
 
     .reviews {
-        height: 70%;
         overflow-x: auto;
 
-        span {
-            height: 17.5%;
-            overflow: hidden;
-        }
-
         p {
-            height: 65%;
-            margin-top: 2px !important;
+            max-height: 280px;
+            margin-top: 30px !important;
             overflow-y: auto;
         }
     }
@@ -111,12 +102,10 @@
 
 @media (max-width: 900px) {
 
-    .content {
-        width: 96vw;
-    }
-
     .reviews {
-        div {
+        flex-direction: column;
+        .single-review {
+            max-width: 100%;
             margin: 16px !important;
         }
 
@@ -130,10 +119,6 @@
 
         p {
             font-size: 18px !important;
-
-            br {
-                display: none;
-            }
         }
     }
 
@@ -150,9 +135,6 @@
 
 @media (max-width: 650px) {
 
-    .title {
-        margin-bottom: 40px;
-    }
 
     h1 {
         font-size: 40px !important;
@@ -171,6 +153,10 @@
 }
 
 @media (max-width: 500px) {
+    .title {
+        padding-bottom: 40px !important;
+    }
+
     h1 {
         font-size: 35px !important;
     }
@@ -180,7 +166,7 @@
     }
 
     .reviews {
-        div {
+        .single-review {
             margin: 16px;
         }
 
@@ -200,10 +186,6 @@
 
 @media (max-width: 400px) {
 
-    .title {
-        margin-bottom: 43px !important;
-    }
-
     h1 {
         font-size: 33px !important;
     }
@@ -213,7 +195,7 @@
     }
 
     .reviews {
-        div {
+        .single-review {
             margin: 12px !important;
         }
 
@@ -229,9 +211,6 @@
 }
 
 @media (max-width: 350px) {
-    .title {
-        margin-bottom: 50px !important;
-    }
 
     h1 {
         font-size: 30px !important;
@@ -243,10 +222,6 @@
 
     .reviews {
 
-        span {
-            height: fit-content;
-        }
-
         .collegue_name {
             font-size: 16px !important;
         }
@@ -257,7 +232,6 @@
 
         p {
             font-size: 12px !important;
-            margin-top: 12px !important;
         }
 
     }

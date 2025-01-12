@@ -1,16 +1,26 @@
 import { Component, inject } from '@angular/core';
 import { LanguagesComponent } from '../../../models/languages';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
+  constructor(private router: Router) {
+  }
   languagesTS = inject(LanguagesComponent);
- 
+
+  scrollIntoView(id: string) {
+    this.router.navigateByUrl('/')
+    .then(
+      () => document.querySelector(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
+  }
+
   openMenu() {
     document.getElementById('responsive_menu')?.classList.add('rollOut');
     document.getElementById('menu')?.classList.add('display-none');
@@ -30,13 +40,13 @@ export class HeaderComponent {
   }
 
   goHome() {
-    if(window.location.pathname.endsWith("imprint") || window.location.pathname.endsWith("privacy_policy")) {
-      window.location.href = "#link_to_startScreen";
+    if (window.location.href.endsWith("imprint") || window.location.href.includes("privacyPolicy")) {
+      this.router.navigateByUrl('/')
     }
   }
 
   activateCursor() {
-    if(window.location.pathname.endsWith("/imprint")) {
+    if (window.location.href.endsWith("imprint") || window.location.href.includes("privacyPolicy")) {
       document.getElementById('logo')?.classList.add('cursor');
     }
   }

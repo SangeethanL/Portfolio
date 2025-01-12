@@ -1,4 +1,5 @@
-import { Component} from '@angular/core';
+import { Component, inject} from '@angular/core';
+import { WebpageComponent } from '../webpage.component';
 
 @Component({
   selector: 'app-start',
@@ -8,8 +9,8 @@ import { Component} from '@angular/core';
   styleUrl: './start.component.scss'
 })
 export class StartComponent {
-
-
+ webpageComponent = inject(WebpageComponent);
+ 
   switchToLeft(image: string) {
     document.getElementById(image)?.classList.remove('return');
     document.getElementById(image)?.classList.add('hover_side_icons');

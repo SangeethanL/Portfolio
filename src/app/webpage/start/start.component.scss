@@ -27,11 +27,7 @@
         height: 100%;
         z-index: 1;
 
-        .left_side {
-            width: 50%;
-        }
-
-        .right_side {
+        .left_side, .right_side  {
             width: 50%;
         }
 
@@ -58,18 +54,14 @@
     position: relative;
     display: flex;
     flex-direction: column;
-
-    .placeholder_right_side {
-        position: relative;
-        margin-bottom: 25vh;
-    }
+    justify-content: flex-end !important;
+    height: 100%;
 }
 
 .title {
     position: relative;
     display: flex;
     justify-content: center;
-    margin-bottom: 10vh;
 
     div {
         position: relative;
@@ -96,7 +88,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    height: 100%;
+    height: 45%;
 
     .scrollSection {
         position: relative;
@@ -338,38 +330,38 @@
         overflow: hidden;
     }
 
-    .titleContainer_responsive {
-        display: unset;
-    }
-
     .image_container {
         display: flex;
         justify-content: center;
         width: 100%;
     }
 
-    #ellipse {
-        width: 48vw !important;
+    .titleContainer_responsive {
+        display: unset;
     }
 
     #scroll_info_responsive {
         display: unset !important;
     }
+
+    #ellipse {
+        width: 48% !important;
+    }
 }
 
 @media (max-width: 1250px) {
     .content {
-        width: 96vw !important;
+        width: 96% !important;
     }
     
     #ellipse {
-        width: 47vw !important;
+        width: 47% !important;
     }
 }
 
 @media (max-width: 1080px) {
     #ellipse {
-        width: 52vw !important;
+        width: 52% !important;
         height: 535px !important;
     }
 
@@ -413,7 +405,7 @@
 
 @media (max-width: 800px) {
     #ellipse {
-        width: 55vw !important;
+        width: 55% !important;
         height: 450px !important;
     }
 
@@ -432,28 +424,28 @@
 
 @media (max-width: 750px) {
     #ellipse {
-        width: 55vw !important;
+        width: 55% !important;
         height: 412px !important;
     }
 }
 
 @media (max-width: 680px) {
     #ellipse {
-        width: 65vw !important;
+        width: 65% !important;
         height: 405px !important;
     }
 }
 
 @media (max-width: 580px) {
     #ellipse {
-        width: 68vw !important;
+        width: 68% !important;
         height: 400px !important;
     }
 }
 
 @media (max-width: 550px) {
     #ellipse {
-        width: 75vw !important;
+        width: 75% !important;
         height: 385px !important;
     }
     
@@ -467,27 +459,27 @@
 
 @media (max-width: 500px) {
     #ellipse {
-        width: 80vw !important;
+        width: 80% !important;
         height: 375px !important;
     }
 }
 
 @media (max-width: 470px) {
     #ellipse {
-        width: 85vw !important;
+        width: 85% !important;
     }
 }
 
 @media (max-width: 440px) {
     #ellipse {
-        width: 90vw !important;
+        width: 90% !important;
         height: 365px !important;
     }
 }
 
 @media (max-width: 420px) {
     #ellipse {
-        width: 90vw !important;
+        width: 90% !important;
         height: 352px !important;
     }
 
@@ -505,7 +497,7 @@
 
 @media (max-width: 370px) {
     #ellipse {
-        width: 102vw !important;
+        width: 102% !important;
         height: 337px !important;
     }
 
@@ -530,7 +522,7 @@
 
 @media (max-width: 330px) {
     #ellipse {
-        width: 97vw !important;
+        width: 97% !important;
         height: 330px !important;
     }
 

@@ -6,6 +6,7 @@ import { MyWorkComponent } from './my-work/my-work.component';
 import { ContactComponent } from './contact/contact.component';
 import { ColleguesComponent } from './collegues/collegues.component';
 import { LanguagesComponent } from '../../models/languages';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-webpage',
@@ -16,9 +17,20 @@ import { LanguagesComponent } from '../../models/languages';
 })
 export class WebpageComponent {
 
+  constructor(private router: Router) {
+    window.scrollTo(0, 0);
+  }
+
+  goToContact() {
+    this.router.navigateByUrl('/').then(
+      () => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    )
+  }
+
   languagesTS = inject(LanguagesComponent);
 
   ngAfterContentInit() { //ngAfterViewInit
     this.languagesTS.loadLanguage();
   }
+  
 }

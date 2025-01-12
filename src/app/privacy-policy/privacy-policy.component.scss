@@ -1,12 +1,19 @@
 .privacy_policy_container {
-    display: flex;
-    justify-content: center;
-    font-family: "Montserrat";
-    width: 100vw;
-    margin-top: 12vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat";
+  width: 100vw;
+  margin-top: 12vh;
 }
 
 .content {
-    width: 85vw;
-    height: fit-content;
+  width: 80%;
+  max-width: 1920px;
+  height: fit-content;
+}
+
+.index-link {
+  color: #0000EE;
+  text-decoration: underline;
+  cursor: pointer;
 }

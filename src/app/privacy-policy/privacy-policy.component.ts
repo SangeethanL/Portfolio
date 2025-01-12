@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,inject } from '@angular/core';
+import { LanguagesComponent } from '../../models/languages';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -8,5 +9,19 @@ import { Component } from '@angular/core';
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
+
+  constructor() {
+    window.scrollTo(0,0)
+  }
+
+  languagesTS = inject(LanguagesComponent);
+
+  goToParagraph(id:string) {
+    document.querySelector(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  ngAfterContentInit() { //ngAfterViewInit
+    this.languagesTS.loadLanguage();
+  }
 
 }

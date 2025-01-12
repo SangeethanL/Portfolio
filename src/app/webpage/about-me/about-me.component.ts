@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { WebpageComponent } from '../webpage.component';
 
 @Component({
   selector: 'app-about-me',
@@ -9,4 +10,5 @@ import { Component } from '@angular/core';
 })
 export class AboutMeComponent {
 
+  webpageComponent = inject(WebpageComponent);
 }

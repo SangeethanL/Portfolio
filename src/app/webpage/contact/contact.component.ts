@@ -1,15 +1,25 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
+import { RouterLink, RouterOutlet } from '@angular/router'
+import { LanguagesComponent } from '../../../models/languages';
+import { NgIf } from '@angular/common';
+
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink, RouterOutlet, NgIf],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+
+  languagesTS = inject(LanguagesComponent)
+
+  goTop() {
+    document.querySelector('#startScreen_link')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 
   contactData = {
     name: "",
@@ -92,4 +102,7 @@ export class ContactComponent {
     }
   }
 
+  ngAfterContentInit() { //ngAfterViewInit
+    this.languagesTS.loadLanguage();
+  }
 }

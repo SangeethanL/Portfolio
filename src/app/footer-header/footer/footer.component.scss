@@ -7,7 +7,8 @@
     background: radial-gradient(71.18% 335.57% at 28.82% -124.4%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
     width: 100vw;
     height: fit-content;
-    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 @mixin line_setting {
@@ -17,7 +18,7 @@
     align-items: center;
     font-family: "Montserrat";
     color: white;
-    width: 85%;
+    width: 80%;
     max-width: 1920px;
     height: max-content;
 }
@@ -84,6 +85,9 @@
 
 
 @media (max-width: 1250px) {
+    .footer_container {
+        padding: unset;
+    }
     .line_1, .line_2 {
         position: relative;
         display: flex;
@@ -115,24 +119,24 @@
 
 @media (max-width: 400px) {
     .icons_footer img, .icons_footer div {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
     }
 
     .line_1 {
-        font-size: 16px;
+        font-size: 20px;
         margin-bottom: 10px;
         .frontend_logo {
             width: 44px;
             height: 52px;
         }
         img, span {
-            margin-bottom: 10px;
+            margin-bottom: 17px;
         }
     }
 
     .line_2 {
-        font-size: 12px;
+        font-size: 16px;
     }
    
 }

@@ -1,16 +1,26 @@
-import { Injectable } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
+
+
+@Component({
+    selector: 'app-language',
+    standalone: true,
+    imports: [],
+    template: '',
+    styles: ''
+})
 
 @Injectable({
     providedIn: 'root'
 })
 
+
 export class LanguagesComponent {
 
-    pathnameWebpage() {
-        return window.location.href.endsWith('') || window.location.href.endsWith('#startScreen_link') ||
-            window.location.href.endsWith('#aboutMe_link') || window.location.href.endsWith('#skillSet_link') ||
-            window.location.href.endsWith('#myWork_link')
+    constructor() {
     }
+
+    loadEnglish: any;
+    loadGerman: any;
 
     headerFooterToEnglish() {
         let aboutMe = document.getElementById('about_me') as HTMLElement; aboutMe.innerHTML = 'About me';
@@ -30,8 +40,8 @@ export class LanguagesComponent {
         let iAm = document.getElementById('i_am') as HTMLElement; iAm.innerHTML = 'I am';
         let locatedIn = document.getElementById('locatedIn') as HTMLElement; locatedIn.innerHTML = `located in <br> Stuttgart`;
         let remoteWork = document.getElementById('remoteWork') as HTMLElement; remoteWork.innerHTML = `open to work <br> remote`;
-        let about_me_main = document.getElementById('about_me_main') as HTMLElement; about_me_main.innerHTML = `
-            I am a Front-end developer based in Stuttgart,<br>
+        let about_me_main = document.getElementById('about_me_main') as HTMLElement; about_me_main.innerHTML =
+            `I am a Front-end developer based in Stuttgart,<br>
             Germany. I am able to realize the ideas of designers <br>
             and companies in real projects.<br>
             Therefore I would like to start a position as junior web developer. <br>
@@ -57,21 +67,21 @@ export class LanguagesComponent {
     }
 
     colleguesToEnglish() {
-        let teamplayer = document.getElementById('templayerNeeded') as HTMLElement; teamplayer.innerHTML = 'Need a teamplayer?';
+        let teamplayer = document.getElementById('teamplayerNeeded') as HTMLElement; teamplayer.innerHTML = 'Need a teamplayer?';
         let whatColleguesSaid = document.getElementById('whatColleguesSaid') as HTMLElement; whatColleguesSaid.innerHTML = 'Here what my colleagues said about me';
         let project_join = document.getElementById('project_join') as HTMLElement; project_join.innerHTML = 'Project Join';
         let project_join2 = document.getElementById('project_join2') as HTMLElement; project_join2.innerHTML = 'Project Join';
         let thomas_opinion = document.getElementById('sydney_oppinion') as HTMLElement; thomas_opinion.innerHTML = `
-        ‘‘The collaboration with Sangeethan was great from the start and<br>
-        very educational until the end. Through his ability to work in a team<br>
-        and his solution-oriented thinking, we were able to find suitable<br>
-        solutions for every problem. His positive nature always encouraged<br>
-        our group in a positive way, which ultimately led to a great project result.<br>
-        Thanks for the collaboration Sangee!’’`;
+        ‘‘The collaboration with Sangeethan was great from the start and
+        very educational until the end. Through his ability to work in a team
+        and his solution-oriented thinking, we were able to find suitable
+        solutions for every problem. His positive nature always encouraged
+        our group in a positive way, which ultimately led to a great project result.
+        Thanks for the collaboration Sangee!’’`
         let julia_opinion = document.getElementById('julia_oppinion') as HTMLElement; julia_opinion.innerHTML = `
-        ‘‘Sangeethan has written a clean code <br>
-        which made it possible, that the project <br>
-        is working very well. He was responsible <br>
+        ‘‘Sangeethan has written a clean code
+        which made it possible, that the project
+        is working very well. He was responsible
         for the board and also that the project is operating correctly.’’`;
     }
 
@@ -83,8 +93,6 @@ export class LanguagesComponent {
         let needADeveloper = document.getElementById('needADeveloper') as HTMLElement; needADeveloper.innerHTML = `We can talk about your questions and ideas. <br>
         <b>I am looking forward hearing from you!</b>`;
         let inputMessage = document.getElementById('clientMessage') as HTMLTextAreaElement; inputMessage.placeholder = 'Message';
-        let readPrivacyPolicy = document.getElementById('read_privacy_policy') as HTMLElement; readPrivacyPolicy.innerHTML = `
-        I've read the <a href="privacy_policy">privacy policy</a> and agree to the processing of my data as outlined.`;
         let messageSuccessfullySent = document.getElementById('mailSuccess') as HTMLElement; messageSuccessfullySent.innerHTML = `
         Your message was sent successfully`;
         let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = 'Say hello ;)';
@@ -99,13 +107,18 @@ export class LanguagesComponent {
     }
 
     english() {
+        this.loadEnglish = true;
+        this.loadGerman = false;
         this.headerFooterToEnglish();
-        if (window.location.pathname.endsWith('imprint') || window.location.href.endsWith('imprint')) {
+        if (/*window.location.pathname.endsWith('imprint') ||*/ window.location.href.endsWith('imprint')) {
             this.imprintToEnglish();
         }
-        if (!window.location.href.endsWith('imprint')) {
-            let namePresentation = document.getElementById('namePresentation') as HTMLElement; namePresentation.innerHTML = 'Hello! I am Sangeethan';
-            let namePresentationResp = document.getElementById('namePresentationResp') as HTMLElement; namePresentationResp.innerHTML = 'Hello! I am Sangeethan';
+        if (!window.location.href.endsWith('imprint') || !window.location.href.includes('privacyPolicy')) {
+            if (window.screen.width > 1440) {
+                let namePresentation = document.getElementById('namePresentation') as HTMLElement; namePresentation.innerHTML = 'Hello! I am Sangeethan';
+            } else {
+                let namePresentationResp = document.getElementById('namePresentationResp') as HTMLElement; namePresentationResp.innerHTML = 'Hello! I am Sangeethan';
+            }
             this.aboutMeToEnglish();
             let skills = document.getElementById('skills') as HTMLElement; skills.innerHTML = `Skill set`;
             this.myWorkToEnglish();
@@ -142,7 +155,7 @@ export class LanguagesComponent {
         let locatedIn = document.getElementById('locatedIn') as HTMLElement; locatedIn.innerHTML = `wohnhaft in <br> Stuttgart`;
         let remoteWork = document.getElementById('remoteWork') as HTMLElement; remoteWork.innerHTML = `bereit remote <br> zu arbeiten`;
         let about_me_main = document.getElementById('about_me_main') as HTMLElement; about_me_main.innerHTML = `
-        Ich bin Frontend Developer und wohnhaft in Stuttgart.<br>
+        Ich bin Frontend Developer und wohnhaft in Stuttgart. <br>
         Mit meinen Kenntnissen bin ich in der Lage, Ideen von Designern und Unternehmen in echte Projekte umzusetzen. <br>
         Daher würde ich gerne eine Stelle als Junior Web Developer aufnehmen. <br>
         Meine Fähigkeiten komplexe Probleme zu lösen <br>
@@ -167,22 +180,22 @@ export class LanguagesComponent {
     }
 
     colleguesToGerman() {
-        let teamplayer = document.getElementById('templayerNeeded') as HTMLElement; teamplayer.innerHTML = 'Teamplayer gesucht?';
+        let teamplayer = document.getElementById('teamplayerNeeded') as HTMLElement; teamplayer.innerHTML = 'Teamplayer gesucht?';
         let whatColleguesSaid = document.getElementById('whatColleguesSaid') as HTMLElement; whatColleguesSaid.innerHTML = 'Das sagen meine Kollegen über mich';
         let project_join = document.getElementById('project_join') as HTMLElement; project_join.innerHTML = 'Projekt Join';
         let project_join2 = document.getElementById('project_join2') as HTMLElement; project_join2.innerHTML = 'Projekt Join';
         let thomas_opinion = document.getElementById('sydney_oppinion') as HTMLElement; thomas_opinion.innerHTML = `
-        ‘‘Die Zusammenarbeit mit Sangeethan gestaltete sich von Anfang<br>
-        bis Ende sehr lehrreich. Durch seine Teamfähigkeit<br>
-        und lösungsorientiertes Denken, konnten wir in der Gruppe<br>
-        zu jedem Problem, gemeinsam eine passende Lösung erarbeiten.<br>
-        Seine positive Art ermutigte unsere Gruppe stets positiv,<br>
-        was am Ende zu einem tollen Projektergebnis führte.<br>
+        ‘‘Die Zusammenarbeit mit Sangeethan gestaltete sich von Anfang
+        bis Ende sehr lehrreich. Durch seine Teamfähigkeit
+        und lösungsorientiertes Denken, konnten wir in der Gruppe
+        zu jedem Problem, gemeinsam eine passende Lösung erarbeiten.
+        Seine positive Art ermutigte unsere Gruppe stets positiv,
+        was am Ende zu einem tollen Projektergebnis führte.
         Danke für die Zusammenarbeit Sangee!’’`;
         let julia_opinion = document.getElementById('julia_oppinion') as HTMLElement; julia_opinion.innerHTML = `
-        ‘‘Sangeethan hat einen sauberen Code <br>
-        geschrieben, welches ermöglicht, <br>
-        dass das Projekt funktioniert. Er war <br>
+        ‘‘Sangeethan hat einen sauberen Code
+        geschrieben, welches ermöglicht,
+        dass das Projekt funktioniert. Er war
         für das Board und für die Funktionsweise des Projekts zuständig.’’`;
     }
 
@@ -194,8 +207,6 @@ export class LanguagesComponent {
         let needADeveloper = document.getElementById('needADeveloper') as HTMLElement; needADeveloper.innerHTML = `
             Wir können alle Anregungen und offenen Fragen klären. <br> <b>Ich freue mich auf Sie!</b>`;
         let inputMessage = document.getElementById('clientMessage') as HTMLTextAreaElement; inputMessage.placeholder = 'Nachricht';
-        let readPrivacyPolicy = document.getElementById('read_privacy_policy') as HTMLElement; readPrivacyPolicy.innerHTML = `
-            Ich habe die <a href="privacy_policy">Datenschutzerklärung</a> gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.`;
         let messageSuccessfullySent = document.getElementById('mailSuccess') as HTMLElement; messageSuccessfullySent.innerHTML = `
         Die Nachricht wurde erfolgreich abgesendet`;
         let sayHello = document.getElementById('sayHello') as HTMLElement; sayHello.innerHTML = `Sag Hallo ;)`;
@@ -210,46 +221,47 @@ export class LanguagesComponent {
     }
 
     german() {
-        this.headerFooterToGerman();
-        if (window.location.pathname.endsWith('imprint') || window.location.href.endsWith('imprint')) {
-            this.imprintToGerman();
+            this.loadGerman = true;
+            this.loadEnglish = false;
+            this.headerFooterToGerman();
+            if (/*window.location.pathname.endsWith('imprint') ||*/ window.location.href.endsWith('imprint')) {
+                this.imprintToGerman();
+            }
+            if (!window.location.href.endsWith('imprint') || !window.location.href.includes('privacyPolicy')) {
+                if (window.screen.width > 1440) {
+                    let namePresentation = document.getElementById('namePresentation') as HTMLElement; namePresentation.innerHTML = 'Hallo! Ich bin Sangeethan';
+                } else {
+                    let namePresentationResp = document.getElementById('namePresentationResp') as HTMLElement; namePresentationResp.innerHTML = 'Hallo! Ich bin Sangeethan';
+                }
+                this.aboutMeToGerman();
+                let skills = document.getElementById('skills') as HTMLElement; skills.innerHTML = `Skills`;
+                this.myWorkToGerman();
+                this.colleguesToGerman();
+                this.contactToGerman();
+            }
+            localStorage.setItem("english", 'false');
+            localStorage.setItem("german", 'true');
         }
-        if (!window.location.href.endsWith('imprint')) {
-            let namePresentation = document.getElementById('namePresentation') as HTMLElement; namePresentation.innerHTML = 'Hallo! Ich bin Sangeethan';
-            let namePresentationResp = document.getElementById('namePresentationResp') as HTMLElement; namePresentationResp.innerHTML = 'Hallo! Ich bin Sangeethan';
-            this.aboutMeToGerman();
-            let skills = document.getElementById('skills') as HTMLElement; skills.innerHTML = `Skills`;
-            this.myWorkToGerman();
-            this.colleguesToGerman();
-            this.contactToGerman();
+
+
+
+        loadLanguage() {
+            let getEnglish = localStorage.getItem('english');
+            if (getEnglish) {
+                this.loadEnglish = JSON.parse(getEnglish);
+            }
+            let getGerman = localStorage.getItem('german');
+            if (getGerman) {
+                this.loadGerman = JSON.parse(getGerman);
+            }
+            if (this.loadEnglish == true) {
+                this.english();
+            } else if (this.loadGerman == true) {
+                this.german();
+            }
+            else {
+                this.german();
+            }
         }
-        localStorage.setItem("english", 'false');
-        localStorage.setItem("german", 'true');
+
     }
-
-
-
-    loadLanguage() {
-        let loadEnglish: any;
-        let loadGerman: any;
-        let getEnglish = localStorage.getItem('english');
-        if (getEnglish) {
-            loadEnglish = JSON.parse(getEnglish);
-        }
-        let getGerman = localStorage.getItem('german');
-        if (getGerman) {
-            loadGerman = JSON.parse(getGerman);
-        }
-        if (loadEnglish == true) {
-            this.english();
-        } else if (loadGerman == true) {
-            this.german();
-        } else {
-            this.german();
-        }
-    }
-
-
-
-
-}

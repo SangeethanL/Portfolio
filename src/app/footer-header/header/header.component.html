@@ -1,30 +1,34 @@
 <div class="navigation_container" id="navigation">
     <div id="navigation_background"></div>
-    <div class="empty_space">
-    </div>
+    <div class="content">
 
-    <nav>
-        <div>
-            <img src="./../../../assets/frontend_logo.png" (click)="goHome()" (mouseover)="activateCursor()" id="logo">
+        <nav>
+            <div>
+                <img src="./../../../assets/frontend_logo.png" (click)="goHome()" (mouseover)="activateCursor()"
+                    id="logo">
+            </div>
+            <div class="nav_links" id="nav_links">
+                <div>
+                    <a (click)="scrollIntoView('#aboutMe_link')" id="about_me">Über mich</a>
+                </div>
+                <div>
+                    <a (click)="scrollIntoView('#skillSet_link')" id="skill_set">Skills</a>
+                </div>
+                <div>
+                    <a (click)="scrollIntoView('#myWork_link')" id="my_work">Projekte</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="languagesIcon_MaxWidth">
+            <img src="./../../../assets/english.png" (click)="languagesTS.english()">
+            <img src="./../../../assets/german.png" (click)="languagesTS.german()">
         </div>
-        <div class="nav_links" id="nav_links">
-            <div>
-                <a href="#aboutMe_link" id="about_me">Über mich</a>
-            </div>
-            <div>
-                <a href="#skillSet_link" id="skill_set">Skills</a>
-            </div>
-            <div>
-                <a href="#myWork_link" id="my_work">Projekte</a>
-            </div>
-        </div>
-    </nav>
-
-    <div class="empty_space">
-        <img src="./../../../assets/english.png" (click)="languagesTS.english()" id="english">
-        <img src="./../../../assets/german.png" (click)="languagesTS.german()" id="german">
     </div>
-
+    <div class="languagesIcon_Normal">
+        <img src="./../../../assets/english.png" (click)="languagesTS.english()" id="englishMaxWidth">
+        <img src="./../../../assets/german.png" (click)="languagesTS.german()" id="germanMaxWidth">
+    </div>
 </div>
 
 
@@ -37,7 +41,8 @@
 <div class="header_responsive">
 
     <nav>
-        <img src="./../../../assets/frontend_logo.png" id="logo_responsive" class="logoResponsiveNormalOpacity" (click)="goHome()">
+        <img src="./../../../assets/frontend_logo.png" id="logo_responsive" class="logoResponsiveNormalOpacity"
+            (click)="goHome()">
         <div id="languages">
             <img src="./../../../assets/english.png" (click)="languagesTS.english();" id="english">
             <img src="./../../../assets/german.png" (click)="languagesTS.german();" id="german">
@@ -52,10 +57,10 @@
         <div class="placeholder_top"></div>
         <div class="resp_menu_content">
             <nav>
-                <a href="#startScreen_link" (click)="closeMenu()">Start</a>
-                <a href="#aboutMe_link" (click)="closeMenu()" id="respAboutMe">Über mich</a>
-                <a href="#skillSet_link" (click)="closeMenu()" id="respSkillSet">Skills</a>
-                <a href="#myWork_link" (click)="closeMenu()" id="respMyWork">Projekte</a>
+                <a (click)="scrollIntoView('#startScreen_link');closeMenu()">Start</a>
+                <a (click)="scrollIntoView('#aboutMe_link');closeMenu()" id="respAboutMe">Über mich</a>
+                <a (click)="scrollIntoView('#skillSet_link');closeMenu()" id="respSkillSet">Skills</a>
+                <a (click)="scrollIntoView('#myWork_link');closeMenu()" id="respMyWork">Projekte</a>
             </nav>
         </div>
     </div>

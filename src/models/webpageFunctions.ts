@@ -30,14 +30,11 @@ export class WebpageFunctions {
     footerTop: any;
     footerOffset: any;
 
-    pathIsWebpage() {
-        return window.location.href.endsWith('') || window.location.href.endsWith('#startScreen_link') ||
-            window.location.href.endsWith('#aboutMe_link') || window.location.href.endsWith('#skillSet_link') ||
-            window.location.href.endsWith('#myWork_link')
+    pathIsWebpageComponent() {
+        return window.location.href.endsWith('') || window.location.href.endsWith('home')
     }
 
     init() {
-        if (this.pathIsWebpage()) {
             this.skillsTop = document.getElementById('skills')?.getBoundingClientRect().bottom;
             this.skillsOffset = this.skillsTop + window.pageYOffset;
 
@@ -62,7 +59,6 @@ export class WebpageFunctions {
 
             this.footerTop = document.getElementById('frontend_logo')?.getBoundingClientRect().top;
             this.footerOffset = this.footerTop + window.pageYOffset;
-        }
     }
 
 
@@ -135,9 +131,9 @@ export class WebpageFunctions {
     fixHeader() {
         document.getElementById('navigation_background')?.classList.add('navigation_background');
         document.getElementById('nav_links')?.classList.add('scroll-font-color');
-        document.getElementById('english')?.classList.add('language_img_onScroll');
-        document.getElementById('german')?.classList.add('language_img_onScroll');
-        if (this.pathIsWebpage()) {
+        document.getElementById('englishMaxWidth')?.classList.add('language_img_onScroll');
+        document.getElementById('germanMaxWidth')?.classList.add('language_img_onScroll');
+        if (this.pathIsWebpageComponent()) {
             this.fullLoadScrollInformation();
         }
     }
@@ -145,9 +141,9 @@ export class WebpageFunctions {
     defixHeader() {
         document.getElementById('navigation_background')?.classList.remove('navigation_background');
         document.getElementById('nav_links')?.classList.remove('scroll-font-color');
-        document.getElementById('english')?.classList.remove('language_img_onScroll');
-        document.getElementById('german')?.classList.remove('language_img_onScroll');
-        if (this.pathIsWebpage()) {
+        document.getElementById('englishMaxWidth')?.classList.remove('language_img_onScroll');
+        document.getElementById('germanMaxWidth')?.classList.remove('language_img_onScroll');
+        if (this.pathIsWebpageComponent()) {
             this.resetScrollInformation();
         }
     }
@@ -167,7 +163,7 @@ export class WebpageFunctions {
     }
 
     responsiveArrowAnimation() {
-        if (this.pathIsWebpage()) {
+        if (this.pathIsWebpageComponent()) {
             if (window.pageYOffset >= 160) {
                 document.getElementById('scroll_info_responsive')?.classList.add('fadeOutArrowAnimation');
             } else {

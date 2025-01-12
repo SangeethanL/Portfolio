@@ -44,6 +44,7 @@ p {
     rotate: 50deg !important;
     scale: 1 !important;
     opacity: 1 !important;
+    transition: all 125ms ease-in-out;
     z-index: 40 !important;
 }
 
@@ -52,6 +53,7 @@ p {
     rotate: -50deg !important;
     scale: 1 !important;
     opacity: 1 !important;
+    transition: all 125ms ease-in-out;
     z-index: 40 !important;
 }
 
@@ -87,13 +89,14 @@ p {
 
 /*-------------------------------------------------------------------------------------------------*/
 
-@mixin project_image($imgLeft: 0vw, $imgRight: 0vw) {
-    img {
+@mixin project_image() {
+
+    #joinImg,
+    #sharkieImg,
+    #pokedexImg {
         filter: grayscale(100%);
         width: 620px;
         height: 320px;
-        margin-left: $imgLeft;
-        margin-right: $imgRight;
         z-index: 10;
 
         &:not(:hover) {
@@ -186,11 +189,11 @@ p {
     }
 }
 
-@mixin work_container($direction: row, $imgRight: 0vw, $imgLeft: 0vw, $arrowNormal: unset, $arrowReverse: unset, $infoBoxPosition: flex-start, $numberPosition: flex-end, $textAlign: start) {
+@mixin work_container($direction: row, $imgRight: 0%, $imgLeft: 0%, $arrowNormal: unset, $arrowReverse: unset, $infoBoxPosition: flex-start, $numberPosition: flex-end, $textAlign: start) {
     position: relative;
     display: flex;
     flex-direction: $direction;
-    justify-content: space-between;
+    justify-content: row;
     margin-bottom: 80px;
     width: 100%;
 
@@ -198,7 +201,9 @@ p {
         position: relative;
         display: flex;
         align-items: center;
-        @include project_image($imgLeft, $imgRight);
+        margin-left: $imgLeft;
+        margin-right: $imgRight;
+        @include project_image();
 
         @include arrow($arrowNormal, $arrowReverse);
     }
@@ -209,8 +214,8 @@ p {
         flex-direction: column;
         justify-content: space-between;
         align-items: $infoBoxPosition;
-        z-index: 35 !important;
         width: 100%;
+        z-index: 35 !important;
         @include numberOfContainer($numberPosition);
 
         .project_infos_content {
@@ -241,11 +246,11 @@ span {
 
 
 .work_container_normal {
-    @include work_container($imgRight: 8vw, $arrowNormal: 600px);
+    @include work_container($imgRight: 8%, $arrowNormal: 600px);
 }
 
 .work_container_reverse {
-    @include work_container(row-reverse, $imgLeft: 8vw, $arrowReverse: 600px, $infoBoxPosition: flex-end, $numberPosition: flex-start, $textAlign: end);
+    @include work_container(row-reverse, $imgLeft: 8%, $arrowReverse: 600px, $infoBoxPosition: flex-end, $numberPosition: flex-start, $textAlign: end);
 }
 
 
@@ -306,6 +311,7 @@ span {
 
 
 @media (max-width: 1440px) {
+
     .ellipse_1,
     .ellipse_2,
     .ellipse_3,
@@ -316,7 +322,7 @@ span {
 
 @media (max-width: 1250px) {
     .content {
-        width: 96vw !important;
+        width: 96% !important;
     }
 
     #joinArrow,
@@ -340,11 +346,10 @@ span {
         display: flex;
         justify-content: center;
         width: 100%;
-
+        margin-left: unset !important;
+        margin-right: unset !important;
         img {
             filter: grayscale(0%) !important;
-            margin-left: unset !important;
-            margin-right: unset !important;
         }
     }
 
