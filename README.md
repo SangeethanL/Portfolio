@@ -7,14 +7,15 @@ Link IMG
 
 ### Informations
 
-My portfolio is developed as a single-page applications. Users can scroll between pages without <br>
+My portfolio is developed as a single-page application. Users can scroll between pages without <br>
 leaving the index page.<br>
 It also contains some web-effects like onscroll, onmouse, etc.<br>
-The responsive mode for mobile devices is also set up.
+For mobile devices responsive mode is also set up.
 
 Link IMG
 
 ## Coding Informations
 
-This project was created in Angular with HTML, Typescript and SCSS as major developing languages. <br>
-Scroll through to have an insight of this webpage.
+This project was created with Angular. HTML, Typescript and SCSS are the major developing languages. <br>
+Scroll through to have an insight of this webpage.<br>
+<a href="www.sangeethan-developer.com" target="_blank">www.sangeethan-developer.com</a>
