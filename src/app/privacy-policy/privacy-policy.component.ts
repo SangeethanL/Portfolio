@@ -20,7 +20,7 @@ export class PrivacyPolicyComponent {
     document.querySelector(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
-  ngAfterContentInit() { //ngAfterViewInit
+  ngAfterContentInit() {
     this.languagesTS.loadLanguage();
   }
 

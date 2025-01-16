@@ -19,11 +19,6 @@ export class AppComponent {
   webpageTS = inject(WebpageFunctions);
 
   constructor() {
-    /*setTimeout(() => {
-      this.webpageTS.init();
-      this.webpageTS.scroll();
-    }, 2000);
-    window.addEventListener('scroll', this.scroll, true); //third parameter*/
   }
 
   ngAfterContentChecked() {
@@ -39,11 +34,4 @@ export class AppComponent {
   ngOnDestroy() {
     window.removeEventListener('scroll', this.scroll, true);
   }
-
-  /*@HostListener('window:scroll', ['$event']) // for window scroll events
-onScroll(event:any) {
- console.log('NEEEE')
-}*/
-
-
 }

@@ -102,7 +102,7 @@ export class ContactComponent {
     }
   }
 
-  ngAfterContentInit() { //ngAfterViewInit
+  ngAfterContentInit() {
     this.languagesTS.loadLanguage();
   }
 }

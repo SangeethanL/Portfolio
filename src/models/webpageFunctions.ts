@@ -67,9 +67,6 @@ export class WebpageFunctions {
         if (window.pageYOffset + window.innerHeight > (imgOffset + (imgHeight / 2))) {
             document.getElementById(imgId)?.setAttribute("style", "opacity: 1 !important;scale: 1; transition: all 125ms ease-in-out;");
         }
-        /*else {
-            document.getElementById(imgId)?.setAttribute("style", "opacity: 0 !important;scale: 0.9; transition: all 125ms ease-in-out;");
-        }*/
     }
 
     fadeContactField(fieldOffset: any, plusOffset: number, fieldId: string) {
@@ -99,9 +96,7 @@ export class WebpageFunctions {
             }
             if (window.pageYOffset + window.innerHeight > (this.skillsOffset + 225)) {
                 document.getElementById(`${i}`)?.setAttribute("style", `opacity: 1 !important; transition-delay: ${milliseconds}ms;`);
-            } /*else {
-                document.getElementById(`${i}`)?.setAttribute("style", `opacity: 0;`);
-            }*/
+            }
         }
     }
 
@@ -172,13 +167,4 @@ export class WebpageFunctions {
             }
         }
     }
-
-    /*window.onscroll = function () {
-            scroll();
-            if (pathIsWebpage()) {
-                fadeItems();
-                fadeSkillsIcons();
-            }
-        };
-    */
 }

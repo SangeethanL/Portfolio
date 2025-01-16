@@ -110,7 +110,7 @@ export class LanguagesComponent {
         this.loadEnglish = true;
         this.loadGerman = false;
         this.headerFooterToEnglish();
-        if (/*window.location.pathname.endsWith('imprint') ||*/ window.location.href.endsWith('imprint')) {
+        if (window.location.href.endsWith('imprint')) {
             this.imprintToEnglish();
         }
         if (!window.location.href.endsWith('imprint') || !window.location.href.includes('privacyPolicy')) {
@@ -224,7 +224,7 @@ export class LanguagesComponent {
             this.loadGerman = true;
             this.loadEnglish = false;
             this.headerFooterToGerman();
-            if (/*window.location.pathname.endsWith('imprint') ||*/ window.location.href.endsWith('imprint')) {
+            if (window.location.href.endsWith('imprint')) {
                 this.imprintToGerman();
             }
             if (!window.location.href.endsWith('imprint') || !window.location.href.includes('privacyPolicy')) {

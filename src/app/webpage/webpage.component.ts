@@ -29,7 +29,7 @@ export class WebpageComponent {
 
   languagesTS = inject(LanguagesComponent);
 
-  ngAfterContentInit() { //ngAfterViewInit
+  ngAfterContentInit() {
     this.languagesTS.loadLanguage();
   }
   
